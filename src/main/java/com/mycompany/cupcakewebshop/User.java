@@ -9,11 +9,11 @@ public class User {
     private String password;
     private int balance;
 
-    public User(String username, String password, int balance)
+    public User(String username, String password)
     {
         this.username = username;
         this.password = password;
-        this.balance = balance;
+        balance = 50;
     }
     
 
