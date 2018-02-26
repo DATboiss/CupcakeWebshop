@@ -28,8 +28,14 @@ public class DataAccessObject {
             String username = rs.getString("username");
             String password = rs.getString("password");
             int balance = rs.getInt("balance");
-            user = new User(username, password, balance);
+            user = new User(username, password);
         }
+        return user;
+    }
+    
+    public User newUser(String username, String password)
+    {
+        User user = null;
         return user;
     }
     
