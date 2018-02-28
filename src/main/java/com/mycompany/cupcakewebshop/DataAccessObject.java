@@ -40,7 +40,7 @@ public class DataAccessObject
     public void newUser(String username, String pw, int balance) throws SQLException
     {
         Statement stmt = conn.getConnection().createStatement();
-        String sql = "insert into login (email,password,balance) values ('" + username + "','" + pw + "','" + balance + "');";
+        String sql = "insert into login (email,password,balance) values ('" + username + "','" + pw + "'," + balance + ");";
         try
         {
             stmt.executeUpdate(sql);
