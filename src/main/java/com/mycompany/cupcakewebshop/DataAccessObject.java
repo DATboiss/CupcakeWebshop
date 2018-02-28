@@ -36,7 +36,36 @@ public class DataAccessObject
         return user;
     }
 
-    //TODO finish adding user
+    public Bottom getBottom(String bottomName) throws SQLException
+    {
+        Statement stmt = conn.getConnection().createStatement();
+        String sql = "select * from bottoms where name = " + "'" + bottomName + "';";
+        Bottom bottom = null;
+        ResultSet rs = stmt.executeQuery(sql);
+        if (rs.next())
+        {
+            String name = rs.getString("name");
+            int price = rs.getInt("price");
+            bottom = new Bottom(name, price);
+        }
+        return bottom;
+    }
+
+    public Topping getTopping(String toppingName) throws SQLException
+    {
+        Statement stmt = conn.getConnection().createStatement();
+        String sql = "select * from toppings where name = " + "'" + toppingName + "';";
+        Topping topping = null;
+        ResultSet rs = stmt.executeQuery(sql);
+        if (rs.next())
+        {
+            String name = rs.getString("name");
+            int price = rs.getInt("price");
+            topping = new Topping(name, price);
+        }
+        return topping;
+    }
+
     public void newUser(String username, String pw, int balance) throws SQLException
     {
         Statement stmt = conn.getConnection().createStatement();
@@ -50,5 +79,3 @@ public class DataAccessObject
         }
     }
 }
-
-
