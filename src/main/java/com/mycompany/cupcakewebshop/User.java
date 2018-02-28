@@ -5,15 +5,15 @@ package com.mycompany.cupcakewebshop;
  * @author emilv
  */
 public class User {
-    private String username;
+    private String email;
     private String password;
     private int balance;
 
-    public User(String username, String password)
+    public User(String email, String password, int balance)
     {
-        this.username = username;
+        this.email = email;
         this.password = password;
-        balance = 50;
+        this.balance = balance;
     }
     
 
