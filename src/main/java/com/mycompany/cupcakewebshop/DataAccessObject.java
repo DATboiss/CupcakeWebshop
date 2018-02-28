@@ -23,7 +23,7 @@ public class DataAccessObject
     public User getUser(String name) throws SQLException
     {
         Statement stmt = conn.getConnection().createStatement();
-        String sql = "select * from login where name = " + "'" + name + "';";
+        String sql = "select * from login where email = " + "'" + name + "';";
         User user = null;
         ResultSet rs = stmt.executeQuery(sql);
         if (rs.next())
