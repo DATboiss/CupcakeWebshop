@@ -31,7 +31,7 @@ public class DataAccessObject
             String username = rs.getString("username");
             String password = rs.getString("password");
             int balance = rs.getInt("balance");
-            user = new User(username, password);
+            user = new User(username, password, balance);
         }
         return user;
     }
