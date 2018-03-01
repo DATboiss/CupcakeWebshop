@@ -132,7 +132,6 @@ public class DataAccessObject {
         boolean isTrue = false;
         Statement stmt = conn.getConnection().createStatement();
         String sql = "select * from login where email = '" + username + "';";
-        User user = null;
         ResultSet rs = stmt.executeQuery(sql);
         if (rs.next()) isTrue = true;
         return isTrue;
