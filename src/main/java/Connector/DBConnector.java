@@ -11,7 +11,7 @@ public class DBConnector
     //Constants
     private static final String IP = "46.101.158.228";
     private static final int PORT = 3306;
-    public static final String DATABASE = "CupcakeWebshop";
+    public static final String DATABASE = "webshop_cupcake";
     private static final String USERNAME = "testuser";
     private static final String PASSWORD = "password123";
 
