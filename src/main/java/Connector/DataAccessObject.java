@@ -104,9 +104,9 @@ public class DataAccessObject {
         return toppings;
     }
 
-    public void newUser(String email, String pw, int balance) throws SQLException {
+    public void newUser(String email, String pw, int balance, String name, String zip) throws SQLException {
         Statement stmt = conn.getConnection().createStatement();
-        String sql = "insert into login (email,password,balance) values ('" + email + "','" + pw + "'," + balance + ");";
+        String sql = "insert into login (email, password, balance, name , zip) values ('" + email + "','" + pw + "'," + balance + ",'" + name + "','" + zip + ");";
         try {
             stmt.executeUpdate(sql);
         } catch (SQLException ex) {
