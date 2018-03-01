@@ -59,7 +59,7 @@ public class DataAccessObject
     {
         Statement stmt = conn.getConnection().createStatement();
         String sql = "select * from bottoms;";
-        ArrayList<Bottom> bottoms = new ArrayList<Bottom>();
+        ArrayList<Bottom> bottoms = new ArrayList();
         Bottom bottom = null;
         ResultSet rs = null;
         try
