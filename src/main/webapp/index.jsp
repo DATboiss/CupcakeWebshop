@@ -25,9 +25,10 @@
             <label for="password"<b>Password</b></label>
             <input type="password" placeholder="Enter Password" name="password"/>
 
-            <button type="submit" value="Login" value="login">Login</button>
+            <a href="Shop.jsp">Login</a>
+            <a> - </a>
 
-                <a href="Registration.jsp">Signup</a>
+            <a href="Registration.jsp">Signup</a>
 
     </body>
 </html>
