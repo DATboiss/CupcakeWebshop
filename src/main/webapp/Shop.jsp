@@ -4,15 +4,15 @@
     Author     : emilv
 --%>
 
-<%@page import="com.mycompany.cupcakewebshop.Bottom"%>
-<%@page import="com.mycompany.cupcakewebshop.DataAccessObject"%>
-<%@page import="java.util.ArrayList"%>
-<%@page import="com.mycompany.cupcakewebshop.Topping"%>
-<%@page import="com.mycompany.cupcakewebshop.User"%>
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page import="Constructors.Bottom" %>
+<%@page import="Connector.DataAccessObject" %>
+<%@page import="java.util.ArrayList" %>
+<%@page import="Constructors.Topping" %>
+<%@page import="Constructors.User" %>
+<%@page contentType="text/html" pageEncoding="UTF-8" %>
 <!DOCTYPE html>
 
-<% com.mycompany.cupcakewebshop.DataAccessObject DAO = new DataAccessObject(); %>
+<% DataAccessObject DAO = new DataAccessObject(); %>
 <% ArrayList<Topping> toppings = DAO.getToppings(); %>
 <% ArrayList<Bottom> bottoms = DAO.getBottoms(); %>
 <% %>
@@ -27,6 +27,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
+        <% session.getAttribute(email); %>
         <div>Cutetastic cupcakes</div>
         <form method="POST" action="Shopping cart">
             <p> Choose your favourite bottom and toppings</p
@@ -35,9 +36,9 @@
                 <option value="
                         <%toppings.get(i).getName(); %>
                         >
-                        <% toppings.get(i).getName();}%>
+                        <% toppings.get(i).getName();} %>
             </select>
-            <select name="Buttoms">
+            <select name="Bottoms">
               <% for (int j = 0; j < 5; j++) { %> 
                 <option value="
                         <%bottoms.get(j).getName(); %>
