@@ -53,16 +53,28 @@
                 </option>
             </select>
             <br><input type="submit" value="Add to cart">
-            <% cart.add(new Cupcake(request.getParameter("Toppings"), request.getParameter("Bottoms")));%>
-            <% out.println("Your shopping cart:");%>
-            <br>
-            <%for (Cupcake cake : cart)
-                {
-                    out.print(cake.getTop() + " " + cake.getBot());
-            %> <br> 
-
-            <% }
-            %>
         </form>
+        <form method="POST" action="Confirmation.jsp">
+            <input type="submit" value="Continue">
+        </form>
+        <form method="POST" action="Shop.jsp">
+            <input type="submit" value="Cancel" name="cancel">
+            <% if (request.getParameter("cancel") != null)
+                {
+                    cart.clear();
+                }%>
+        </form>
+        <% cart.add(new Cupcake(request.getParameter("Toppings"), request.getParameter("Bottoms")));%>
+        <br><b>
+            <% out.println("Your shopping cart:");%></b>
+        <br>
+        <%for (Cupcake cake : cart)
+            {
+                if (cake != null)
+                out.print(cake.getTop() + " " + cake.getBot());
+        %> <br> 
+
+        <% }
+        %>
     </body>
 </html>
