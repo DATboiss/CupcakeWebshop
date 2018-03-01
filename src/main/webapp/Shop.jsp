@@ -12,9 +12,9 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 
-<%DataAccessObject DAO = new DataAccessObject(); %>
-<%ArrayList<Topping> toppings = DAO.getToppings(); %>
-<%ArrayList<Bottom> bottoms = DAO.getBottoms(); %>
+<% com.mycompany.cupcakewebshop.DataAccessObject DAO = new DataAccessObject(); %>
+<% ArrayList<Topping> toppings = DAO.getToppings(); %>
+<% ArrayList<Bottom> bottoms = DAO.getBottoms(); %>
 <% %>
 <% %>
 <% %>
@@ -29,25 +29,20 @@
     <body>
         <div>Cutetastic cupcakes</div>
         <form method="POST" action="Shopping cart">
-            <p> Choose your favourite bottom and toppings</p>
+            <p> Choose your favourite bottom and toppings</p
             <select name="Toppings">
-                <% for (int i = 0; i < 9; i++) {
-                %> <option value="<%toppings.get(i).getName(); %>
-} %>
-                <option value="Chocolate">Chocolate 5,-</option>
-                <option value="Blueberry"></option>
-                <option value="Raspberry">Frame type 3</option>
-                <option value="Crispy">Frame type 3</option>
-                <option value="Strawberry">Frame type 3</option>
-                <option value="Rum/raisin">Frame type 3</option>
-                <option value="Orange">Frame type 3</option>
-                <option value="Lemon">Frame type 3</option>
-                <option value="Blue cheese">Frame type 3</option>
+                <% for (int i = 0; i < 9; i++) { %> 
+                <option value="
+                        <%toppings.get(i).getName(); %>
+                        >
+                        <% toppings.get(i).getName();}%>
             </select>
             <select name="Buttoms">
-                <option value="Frame type 1">Frame type 1</option>
-                <option value="Frame type 2">Frame type 2</option>
-                <option value="Frame type ">Frame type 3</option>
+              <% for (int j = 0; j < 5; j++) { %> 
+                <option value="
+                        <%bottoms.get(j).getName(); %>
+                        >
+                        <% bottoms.get(j).getName();} %>
             </select>
             <br><input type="submit" value="Continue">
         </form>

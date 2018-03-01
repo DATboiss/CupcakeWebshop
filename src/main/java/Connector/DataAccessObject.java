@@ -1,5 +1,8 @@
-package com.mycompany.cupcakewebshop;
+package Connector;
 
+import Constructors.Bottom;
+import Constructors.User;
+import Constructors.Topping;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;

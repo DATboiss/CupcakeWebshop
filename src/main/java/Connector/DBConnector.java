@@ -1,4 +1,4 @@
-package com.mycompany.cupcakewebshop;
+package Connector;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
