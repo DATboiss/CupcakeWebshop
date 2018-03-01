@@ -22,25 +22,25 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
-    <body>
+    <body>  
         <% session.getAttribute("email"); %>
         <div>Cutetastic cupcakes</div>
         <form method="POST" action="Shopping cart">
             <p> Choose your favourite bottom and toppings</p>
             <select name="Toppings">
-                <% for (int i = 0; i < 9; i++) { %> 
+                <% for (Topping topping : toppings) { %> 
                 <option value="
-                        <%toppings.get(i).getName(); %>
+                        <%topping.getName(); %>
                         ">
-                    <% toppings.get(i).getName();} %>
+                    <% topping.getName();} %>
                 </option>
             </select>
             <select name="Bottoms">
-                <% for (int j = 0; j < 5; j++) { %> 
+                <% for (Bottom bottom : bottoms) { %> 
                 <option value="
-                        <%bottoms.get(j).getName(); %>
+                        <%bottom.getName(); %>
                         ">
-                    <% bottoms.get(j).getName();} %>
+                    <% bottom.getName();} %>
                 </option>
             </select>
             <br><input type="submit" value="Continue">
