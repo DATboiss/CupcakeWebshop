@@ -12,7 +12,7 @@
         <title>Registration</title>
     </head>
     <body>
-        <form method="post" action="registration.jsp">
+        <form method="post" action="reg.jsp">
             <center>
                 <table border="1" width="30%" cellpadding="5">
                     <thead>
@@ -23,19 +23,23 @@
                     <tbody>
                         <tr>
                             <td>First Name</td>
-                            <td><input type="text" name="fname" value="" /></td>
+                            <td><input type="text" name="fname" value="fname" /></td>
                         </tr>
                         <tr>
-                            <td>Last Name</td>
-                            <td><input type="text" name="lname" value="" /></td>
+                            <td>Address</td>
+                            <td><input type="text" name="Address" value="address" /></td>
+                        </tr>
+                        <tr>
+                            <td>Zip</td>
+                            <td><input type="text" name="postalcode" value="postalcode" /></td>
                         </tr>
                         <tr>
                             <td>Email</td>
-                            <td><input type="text" name="email" value="" /></td>
+                            <td><input type="text" name="email" value="email" /></td>
                         </tr>
                         <tr>
                             <td>Password</td>
-                            <td><input type="password" name="password" value="" /></td>
+                            <td><input type="password" name="password" value="password" /></td>
                         </tr>
                         <tr>
                                    <td colspan="2"> <a href="regSuccess.jsp">Submit</a></td>
