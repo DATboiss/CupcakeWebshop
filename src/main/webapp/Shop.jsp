@@ -39,7 +39,7 @@
                 <%for (Topping topping : toppings)
                     { %> 
                 <option value="<%out.print(topping.getName()); %>">
-                    <% out.println(topping.getName());
+                    <% out.println(topping.getName() + " " + topping.getPrice() + " kr.");
                         } %>
                 </option>
             </select>
@@ -48,7 +48,7 @@
                     { %> 
                 <option value="
                         <%out.print(bottom.getName()); %>">
-                    <% out.println(bottom.getName());
+                    <% out.println(bottom.getName() + " " + bottom.getPrice() + " kr.");
                         } %>
                 </option>
             </select>
