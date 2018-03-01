@@ -33,7 +33,7 @@ public class Cupcake
     @Override
     public String toString()
     {
-        return "Cupcake{" + "top=" + top + ", bot=" + bot + '}';
+        return "Cupcake" + "top=" + top + ", bot=" + bot + '}';
     }
     
     
