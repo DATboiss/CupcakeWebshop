@@ -40,7 +40,7 @@
                 <option value="
                         <%bottom.getName(); %>
                         ">
-                    <% bottom.getName();} %>
+                    <% out.println(bottom.getName());} %>
                 </option>
             </select>
             <br><input type="submit" value="Continue">
