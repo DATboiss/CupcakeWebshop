@@ -29,7 +29,13 @@ public class Bottom
     {
         return price;
     }
+
+    @Override
+    public String toString()
+    {
+        return  name +  price + " kr.";
+    }
     
-    
+     
     
 }

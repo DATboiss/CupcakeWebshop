@@ -11,6 +11,7 @@ package Constructors;
  */
 public class Topping
 {
+
     String name;
     int price;
 
@@ -29,7 +30,11 @@ public class Topping
     {
         return price;
     }
-    
-    
-    
+
+    @Override
+    public String toString()
+    {
+        return name + price + " kr.";
+    }
+
 }
