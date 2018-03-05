@@ -3,6 +3,7 @@ package Connector;
 import Constructors.Bottom;
 import Constructors.User;
 import Constructors.Topping;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -103,14 +104,24 @@ public class DataAccessObject {
         }
         return toppings;
     }
-
-    public void newUser(String email, String pw, int balance, String name, String address, String zip) throws SQLException {
-        Statement stmt = conn.getConnection().createStatement();
-        String sql = "insert into login (email, password, balance, name, address, zip) values ('" + email + "','" + pw + "'," + balance + ",'" + name + "','" + address + "','" + zip + "');";
+    //husk booleans til at tilføje new users
+    public boolean newUser(String email, String pw, int balance, String name, String address, String zip) throws SQLException {
+        String sql = "insert into login (email, password, balance, name, address, zip) values (?, ?, ?,?,?,?);";
+        String sql1 = "insert into login (email, password, balance, name, address, zip) values ('" + email + "','" + pw + "'," + balance + ",'" + name + "','" + address + "','" + zip + "');";
+        PreparedStatement stmt = conn.getConnection().prepareStatement(sql);
+        stmt.setString(1, email);
+        stmt.setString(2, pw);
+        stmt.setInt(3, balance);
+        stmt.setString(4, name);
+        stmt.setString(5, address);
+        stmt.setString(6, zip);
         try {
             stmt.executeUpdate(sql);
+            return true;
+            
         } catch (SQLException ex) {
             Logger.getLogger(DataAccessObject.class.getName()).log(Level.SEVERE, null, ex);
+            return false;
         }
     }
 
