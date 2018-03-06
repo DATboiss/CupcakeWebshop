@@ -24,8 +24,9 @@ public class DataAccessObject {
     }
 
     public User getUser(String name) throws SQLException {
-        Statement stmt = conn.getConnection().createStatement();
-        String sql = "select * from login where email = " + "'" + name + "';";
+        String sql = "select * from login where email = '?';";
+        PreparedStatement stmt = conn.getConnection().prepareStatement(sql);
+        stmt.setString(1, name);
         User user = null;
         ResultSet rs = stmt.executeQuery(sql);
         if (rs.next()) {
@@ -38,8 +39,9 @@ public class DataAccessObject {
     }
 
     public Bottom getBottom(String bottomName) throws SQLException {
-        Statement stmt = conn.getConnection().createStatement();
-        String sql = "select * from bottoms where name = " + "'" + bottomName + "';";
+        String sql = "select * from bottoms where name = '?';";
+        PreparedStatement stmt = conn.getConnection().prepareStatement(sql);
+        stmt.setString(1, bottomName);
         Bottom bottom = null;
         ResultSet rs = stmt.executeQuery(sql);
         if (rs.next()) {
@@ -72,8 +74,9 @@ public class DataAccessObject {
     }
 
     public Topping getTopping(String toppingName) throws SQLException {
-        Statement stmt = conn.getConnection().createStatement();
-        String sql = "select * from toppings where name = " + "'" + toppingName + "';";
+        String sql = "select * from toppings where name = '?';";
+        PreparedStatement stmt = conn.getConnection().prepareStatement(sql);
+        stmt.setString(1, toppingName);
         Topping topping = null;
         ResultSet rs = stmt.executeQuery(sql);
         if (rs.next()) {
@@ -104,10 +107,11 @@ public class DataAccessObject {
         }
         return toppings;
     }
+    
     //husk booleans til at tilføje new users
     public boolean newUser(String email, String pw, int balance, String name, String address, String zip) throws SQLException {
         String sql = "insert into login (email, password, balance, name, address, zip) values (?, ?, ?,?,?,?);";
-        String sql1 = "insert into login (email, password, balance, name, address, zip) values ('" + email + "','" + pw + "'," + balance + ",'" + name + "','" + address + "','" + zip + "');";
+        //String sql1 = "insert into login (email, password, balance, name, address, zip) values ('" + email + "','" + pw + "'," + balance + ",'" + name + "','" + address + "','" + zip + "');";
         PreparedStatement stmt = conn.getConnection().prepareStatement(sql);
         stmt.setString(1, email);
         stmt.setString(2, pw);
@@ -123,28 +127,5 @@ public class DataAccessObject {
             Logger.getLogger(DataAccessObject.class.getName()).log(Level.SEVERE, null, ex);
             return false;
         }
-    }
-
-    public void userInfo(String email, String name, String address, int zip, int balance) throws SQLException {
-
-        Statement stmt = conn.getConnection().createStatement();
-        String sq1 = "insert into customerinfo (email, name, adresse, postalcode, balance) values ('" + email + "','" + name + "','" + address + "'," + zip + "," + balance + ");";
-            try {
-            stmt.executeUpdate(sq1);
-        } catch (SQLException ex) {
-            Logger.getLogger(DataAccessObject.class.getName()).log(Level.SEVERE, null, ex);
-
-        }
-            //help
-    }
-    
-    public boolean hasUser(String username) throws SQLException
-    {
-        boolean isTrue = false;
-        Statement stmt = conn.getConnection().createStatement();
-        String sql = "select * from login where email = '" + username + "';";
-        ResultSet rs = stmt.executeQuery(sql);
-        if (rs.next()) isTrue = true;
-        return isTrue;
     }
 }
