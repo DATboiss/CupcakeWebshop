@@ -1,6 +1,5 @@
 package Servlets;
 
-
 import Connector.DataAccessObject;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -17,7 +16,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author wtfak
  */
-@WebServlet(urlPatterns = {"/RegistrationServlet"})
+@WebServlet(name = "RegistrationServlet", urlPatterns = {"/RegistrationServlet"})
 public class RegistrationServlet extends HttpServlet {
 
     /**
@@ -34,9 +33,25 @@ public class RegistrationServlet extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
-      String nextJSP = "/Registration.jsp";
+            String email = request.getParameter("email");
+            String pw = request.getParameter("pw");
+            String pw2 = request.getParameter("pw2");
+            String balance = request.getParameter("balance");
+            String name = request.getParameter("fName");
+            String address = request.getParameter("address");
+            String zip = request.getParameter("zip");
+
+            DataAccessObject dao = new DataAccessObject();
+            if (pw.equals(pw2)) {
+
+                dao.newUser(email, pw, 0, name, address, zip);
+
+            }
+            String nextJSP = "/regSuccess.jsp";
             RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(nextJSP);
             dispatcher.forward(request, response);
+        } catch (Exception ex) {
+            Logger.getLogger(RegistrationServlet.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 
@@ -64,25 +79,9 @@ public class RegistrationServlet extends HttpServlet {
      * @throws IOException if an I/O error occurs
      */
     @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        try {
-            String email = request.getParameter("email");
-            String pw = request.getParameter("pw");
-            String pw2 = request.getParameter("pw2");
-            String balance = request.getParameter("balance");
-            String name = request.getParameter("fName");
-            String address = request.getParameter("address");
-            String zip = request.getParameter("zip");
-
-            DataAccessObject dao = new DataAccessObject();
-            if (pw.equals(pw2)) {
-
-                dao.newUser(email, pw, 0, name, address, zip);
-
-            }
-        } catch (Exception ex) {
-            Logger.getLogger(RegistrationServlet.class.getName()).log(Level.SEVERE, null, ex);
-        }
+    protected void doPost(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        processRequest(request, response);
     }
 
     /**
