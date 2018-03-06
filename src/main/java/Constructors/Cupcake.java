@@ -11,21 +11,21 @@ package Constructors;
  */
 public class Cupcake
 {
-    String top;
-    String bot;
+    Topping top;
+    Bottom bot;
 
-    public Cupcake(String top, String bot)
+    public Cupcake(Topping top, Bottom bot)
     {
         this.top = top;
         this.bot = bot;
     }
 
-    public String getTop()
+    public Topping getTop()
     {
         return top;
     }
 
-    public String getBot()
+    public Bottom getBot()
     {
         return bot;
     }

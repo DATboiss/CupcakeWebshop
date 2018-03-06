@@ -4,6 +4,7 @@
     Author     : emilv
 --%>
 
+<%@page import="java.util.List"%>
 <%@page import="Constructors.Cupcake"%>
 <%@page contentType="text/html" pageEncoding="UTF-8" %>
 <%@page import="Constructors.Bottom" %>
@@ -13,10 +14,9 @@
 <%@page import="Constructors.User" %>
 <!DOCTYPE html>
 
-<% DataAccessObject DAO = new DataAccessObject(); %>
-<% ArrayList<Topping> toppings = DAO.getToppings(); %>
-<% ArrayList<Bottom> bottoms = DAO.getBottoms(); %> 
-<% ArrayList<Cupcake> cart = (ArrayList<Cupcake>) session.getAttribute("item");
+<% List<Topping> toppings = (ArrayList<Topping>) request.getSession().getAttribute("toppingList");%>
+ <% List<Bottom> bottoms = (ArrayList<Bottom>) request.getSession().getAttribute("bottomList"); %>
+ <% ArrayList<Cupcake> cart = (ArrayList<Cupcake>) session.getAttribute("item");
     if (cart == null)
     {
         cart = new ArrayList();
@@ -64,11 +64,11 @@
                     cart.clear();
                 }%>
         </form>
-        <% cart.add(new Cupcake(request.getParameter("Toppings"), request.getParameter("Bottoms")));%>
         <br><b>
             <% out.println("Your shopping cart:");%></b>
         <br>
-        <%for (Cupcake cake : cart)
+        <%
+            for (Cupcake cake : cart)
             {
                 if (cake != null)
                 out.print(cake.getTop() + " " + cake.getBot());
