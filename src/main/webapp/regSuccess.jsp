@@ -9,10 +9,18 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Welcome</title>
     </head>
     <body>
-        <h1>RegistrationSuccessful. Welcome to the shop!
-             <a href='index.jsp'>Return to login.</a></h1>
+        <div>
+            
+        <form method="post" action="Login.jsp">
+            
+            <h1>Registration Successful.</h1>
+            
+            <input type="submit" name="return" value="Return to the login page">
+            
+        </form>
+        </div>
+             
     </body>
 </html>

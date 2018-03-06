@@ -9,28 +9,36 @@
 
 <html>
     <head>
+    <center>
         <title>Please enter your credentials</title>
 
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    </head>
-    <body>
+        </head>
 
-        <form action="index.jsp" method="post"/>
+        <body>
+            <form action="LoginServlet" method="post">
 
 
-        <div class="container">
-            <label for="email"<b>Email</b></label>
-            <input type="text" placeholder="Enter Email" name="email"/>
+                <div class="container">
+                    <h1>Welcome to the Cup Cake Shop. Login below pls</h1>
+                    <label for="email"<b>Email</b></label>
+                    <input type="text" placeholder="Enter Email" name="email">
 
-            <label for="password"<b>Password</b></label>
-            <input type="password" placeholder="Enter Password" name="password"/>
+                    <label for="password"<b>Password</b></label>
+                    <input type="password" placeholder="Enter Password" name="pw">
 
-            <a href="Shop.jsp">Login</a>
-            <a> - </a>
+                    <label for="submit"<b> </b></label>
+                    <input type="submit" name="submit" value="submit">
+                </div>
 
-            <a href="Registration.jsp">Signup</a>
 
-    </body>
+            </form>
+            <form action="RegistrationServlet" method="post">
+                <input type="submit" name="register" value="register here">
+            </form>
+
+    </center>
+</body>
 </html>
 
 

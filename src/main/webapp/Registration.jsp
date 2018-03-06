@@ -12,41 +12,18 @@
         <title>Registration</title>
     </head>
     <body>
-        <form method="post" action="reg.jsp">
+        <form action="RegistrationServlet" method="post">
             <center>
-                <table border="1" width="30%" cellpadding="5">
-                    <thead>
-                        <tr>
-                            <th colspan="2">Enter Information Here</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>First Name</td>
-                            <td><input type="text" name="fname" value="fname" /></td>
-                        </tr>
-                        <tr>
-                            <td>Address</td>
-                            <td><input type="text" name="Address" value="address" /></td>
-                        </tr>
-                        <tr>
-                            <td>Zip</td>
-                            <td><input type="text" name="postalcode" value="postalcode" /></td>
-                        </tr>
-                        <tr>
-                            <td>Email</td>
-                            <td><input type="text" name="email" value="email" /></td>
-                        </tr>
-                        <tr>
-                            <td>Password</td>
-                            <td><input type="password" name="password" value="password" /></td>
-                        </tr>
-                        <tr>
-                                   <td colspan="2"> <a href="regSuccess.jsp">Submit</a></td>
-
-                        </tr>
-                    </tbody>
-                </table>
+                Email: <input type="text" name="email"><br></br>
+                Password: <input type="password" name="pw"><br></br>
+                Repeat password: <input type="password" name="pw2"><br></br>
+                Decired starting balance: <input type="number" name="balance"><br></br>
+                Full name: <input type="texr" name="fName"><br></br>
+                Address: <input type="text" name="address"><br></br>
+                Zip code: <input type="text" name="zip"><br></br>
+                
+                <input type="submit" name="submit" value="submit">
+                                 
             </center>
         </form>
     </body>
