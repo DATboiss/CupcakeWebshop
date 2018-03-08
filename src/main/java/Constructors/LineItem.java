@@ -11,7 +11,12 @@ package Constructors;
  */
 public class LineItem
 {
-    int id, qty, price, bot_id, top_id, order_id;
+    private int id;
+    private int qty;
+    private int price; 
+    private int bot_id;
+    private int top_id;
+    private int order_id;
 
     public LineItem(int id, int qty, int price, int bot_id, int top_id, int order_id)
     {

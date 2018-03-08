@@ -11,8 +11,8 @@ package Constructors;
  */
 public class Bottom
 {
-    String name;
-    int price;
+    private String name;
+    private int price;
 
     public Bottom(String name, int price)
     {

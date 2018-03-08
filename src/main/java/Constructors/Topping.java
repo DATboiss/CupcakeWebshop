@@ -12,8 +12,8 @@ package Constructors;
 public class Topping
 {
 
-    String name;
-    int price;
+    private String name;
+    private int price;
 
     public Topping(String name, int price)
     {
