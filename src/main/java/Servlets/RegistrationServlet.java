@@ -46,10 +46,10 @@ public class RegistrationServlet extends HttpServlet {
 
                 dao.newCustomer(email, pw, 0, name, address, zip);
 
-            }
             String nextJSP = "/regSuccess.jsp";
             RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(nextJSP);
             dispatcher.forward(request, response);
+            }
         } catch (Exception ex) {
             Logger.getLogger(RegistrationServlet.class.getName()).log(Level.SEVERE, null, ex);
         }
