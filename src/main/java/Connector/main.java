@@ -14,7 +14,7 @@ public class main
     public static void main(String[] args) throws Exception
     {
         DataAccessObject dao = new DataAccessObject();
-        dao.newUser("adam@adam.com", "adams123", 50, "Adam_Saidane", "egedal", "2980");
+        dao.newCustomer("adam@adam.com", "adams123", 50, "Adam_Saidane", "egedal", "2980");
     }
     
 }

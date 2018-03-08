@@ -44,7 +44,7 @@ public class RegistrationServlet extends HttpServlet {
             DataAccessObject dao = new DataAccessObject();
             if (pw.equals(pw2)) {
 
-                dao.newUser(email, pw, 0, name, address, zip);
+                dao.newCustomer(email, pw, 0, name, address, zip);
 
             }
             String nextJSP = "/regSuccess.jsp";

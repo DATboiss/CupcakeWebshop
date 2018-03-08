@@ -1,6 +1,7 @@
 package Connector;
 
 import Constructors.Bottom;
+import Constructors.LineItem;
 import Constructors.User;
 import Constructors.Topping;
 import java.sql.PreparedStatement;
@@ -23,30 +24,49 @@ public class DataAccessObject {
         this.conn = new DBConnector();
     }
 
-    public User getUser(String name) throws SQLException {
-        String sql = "select * from login where email = '?';";
+    public User getUser(String email) throws SQLException {
+        String sql = "select * from customer where cust_email = '?';";
         PreparedStatement stmt = conn.getConnection().prepareStatement(sql);
-        stmt.setString(1, name);
+        stmt.setString(1, email);
         User user = null;
-        ResultSet rs = stmt.executeQuery(sql);
+        ResultSet rs = stmt.executeQuery();
         if (rs.next()) {
-            String username = rs.getString("email");
-            String password = rs.getString("password");
-            int balance = rs.getInt("balance");
+            String username = rs.getString("cust_email");
+            String password = rs.getString("cust_password");
+            int balance = rs.getInt("cust_balance");
             user = new User(username, password, balance);
         }
         return user;
     }
+    
+    public LineItem getLineItem(int prodID) throws SQLException {
+        String sql = "select * from product where prod_id = '?';";
+        PreparedStatement stmt = conn.getConnection().prepareStatement(sql);
+        stmt.setInt(1, prodID);
+        LineItem lineItem = null;
+        ResultSet rs = stmt.executeQuery();
+        if (rs.next()) {
+            int id = rs.getInt("prod_ID");
+            String name = rs.getString("prod_name");
+            int qty = rs.getInt("prod_qty");
+            int price = rs.getInt("prod_qty");
+            int bottomID = rs.getInt("bottom_bot_id");
+            int toppingID = rs.getInt("topping_top_id");
+            int orderID = rs.getInt("order_order_id");
+            lineItem = new LineItem(id, name, qty, price, bottomID, toppingID, orderID);
+        }
+        return lineItem;
+    }
 
     public Bottom getBottom(String bottomName) throws SQLException {
-        String sql = "select * from bottoms where name = '?';";
+        String sql = "select * from bottom where name = '?';";
         PreparedStatement stmt = conn.getConnection().prepareStatement(sql);
         stmt.setString(1, bottomName);
         Bottom bottom = null;
-        ResultSet rs = stmt.executeQuery(sql);
+        ResultSet rs = stmt.executeQuery();
         if (rs.next()) {
-            String name = rs.getString("name");
-            int price = rs.getInt("price");
+            String name = rs.getString("bot_name");
+            int price = rs.getInt("bot_price");
             bottom = new Bottom(name, price);
         }
         return bottom;
@@ -54,15 +74,15 @@ public class DataAccessObject {
 
     public ArrayList<Bottom> getBottoms() throws Exception {
         Statement stmt = conn.getConnection().createStatement();
-        String sql = "select * from bottoms;";
+        String sql = "select * from bottom;";
         ArrayList<Bottom> bottoms = new ArrayList();
         Bottom bottom = null;
         ResultSet rs = null;
         try {
             rs = stmt.executeQuery(sql);
             while (rs.next()) {
-                String name = rs.getString("name");
-                int price = rs.getInt("price");
+                String name = rs.getString("bot_name");
+                int price = rs.getInt("bot_price");
                 bottom = new Bottom(name, price);
                 bottoms.add(bottom);
 
@@ -74,14 +94,14 @@ public class DataAccessObject {
     }
 
     public Topping getTopping(String toppingName) throws SQLException {
-        String sql = "select * from toppings where name = '?';";
+        String sql = "select * from topping where name = '?';";
         PreparedStatement stmt = conn.getConnection().prepareStatement(sql);
         stmt.setString(1, toppingName);
         Topping topping = null;
-        ResultSet rs = stmt.executeQuery(sql);
+        ResultSet rs = stmt.executeQuery();
         if (rs.next()) {
-            String name = rs.getString("name");
-            int price = rs.getInt("price");
+            String name = rs.getString("top_name");
+            int price = rs.getInt("top_price");
             topping = new Topping(name, price);
         }
         return topping;
@@ -89,15 +109,15 @@ public class DataAccessObject {
 
     public ArrayList<Topping> getToppings() throws Exception {
         Statement stmt = conn.getConnection().createStatement();
-        String sql = "select * from toppings;";
+        String sql = "select * from topping;";
         ArrayList<Topping> toppings = new ArrayList<Topping>();
         Topping topping = null;
         ResultSet rs = null;
         try {
             rs = stmt.executeQuery(sql);
             while (rs.next()) {
-                String name = rs.getString("name");
-                int price = rs.getInt("price");
+                String name = rs.getString("top_name");
+                int price = rs.getInt("top_price");
                 topping = new Topping(name, price);
                 toppings.add(topping);
 
@@ -109,9 +129,8 @@ public class DataAccessObject {
     }
     
     //husk booleans til at tilføje new users
-    public boolean newUser(String email, String pw, int balance, String name, String address, String zip) throws SQLException {
-        String sql = "insert into login (email, password, balance, name, address, zip) values (?, ?, ?,?,?,?);";
-        //String sql1 = "insert into login (email, password, balance, name, address, zip) values ('" + email + "','" + pw + "'," + balance + ",'" + name + "','" + address + "','" + zip + "');";
+    public boolean newCustomer(String email, String pw, int balance, String name, String address, String zip) throws SQLException {
+        String sql = "insert into customer (cust_email, cust_password, cust_balance, cust_name, cust_address, cust_zip) values (?, ?, ?,?,?,?);";
         PreparedStatement stmt = conn.getConnection().prepareStatement(sql);
         stmt.setString(1, email);
         stmt.setString(2, pw);
@@ -120,7 +139,7 @@ public class DataAccessObject {
         stmt.setString(5, address);
         stmt.setString(6, zip);
         try {
-            stmt.executeUpdate(sql);
+            stmt.executeUpdate();
             return true;
             
         } catch (SQLException ex) {
@@ -128,4 +147,26 @@ public class DataAccessObject {
             return false;
         }
     }
+    
+     public boolean newLineItem(String name, int qty, int price, int bottomID, int toppingID, int orderID) throws SQLException {
+        String sql = "insert into product (prod_qty, prod_price, bottom_bot_id, topping_top_id, order_order_id) "
+                + "values (?, ?, ?, ?, ?, ?);";
+        PreparedStatement stmt = conn.getConnection().prepareStatement(sql);
+        stmt.setString(1, name);
+        stmt.setInt(2, qty);
+        stmt.setInt(3, price);
+        stmt.setInt(4, bottomID);
+        stmt.setInt(5, toppingID);
+        stmt.setInt(6, orderID);
+        try {
+            stmt.executeUpdate();
+            return true;
+            
+        } catch (SQLException ex) {
+            Logger.getLogger(DataAccessObject.class.getName()).log(Level.SEVERE, null, ex);
+            return false;
+        }
+    }
+     
+     
 }
