@@ -213,7 +213,6 @@ public class DataAccessObject
 
     }
 
-    //emil er gayy hahahhahahah 10hif9s
     public ArrayList<Order> getOrders() throws SQLException
     {
         Statement stmt = conn.getConnection().createStatement();
