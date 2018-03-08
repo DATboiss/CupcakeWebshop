@@ -39,7 +39,10 @@ public class DataAccessObject
             String mail = rs.getString("cust_email");
             String password = rs.getString("cust_password");
             int balance = rs.getInt("cust_balance");
-            customer = new Customer(mail, password, balance);
+            String name = rs.getString("cust_name");
+            String address = rs.getString("cust_address");
+            int zip = rs.getInt("cust_zip");
+            customer = new Customer(mail, password, balance, name, address, zip);
         }
         return customer;
     }
