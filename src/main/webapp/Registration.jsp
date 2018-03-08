@@ -32,7 +32,7 @@
                 <p>Email:</p><input type="text" name="email"><br>
                 <p>Password:</p><input type="password" name="pw"><br>
                 <p>Repeat password:</p> <input type="password" name="pw2"><br>
-                <p>Decired starting balance:</p> <input type="number" name="balance"><br>
+                <p>Desired starting balance:</p> <input type="number" name="balance"><br>
                 <p>Full name:</p> <input type="texr" name="fName"><br>
                 <p>Address:</p> <input type="text" name="address"><br>
                 <p>Zip code:</p> <input type="text" name="zip"><br>
