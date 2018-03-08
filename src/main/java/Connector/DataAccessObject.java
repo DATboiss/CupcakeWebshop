@@ -36,13 +36,14 @@ public class DataAccessObject
         ResultSet rs = stmt.executeQuery();
         if (rs.next())
         {
+            int id = rs.getInt("cust_id");
             String mail = rs.getString("cust_email");
             String password = rs.getString("cust_password");
             int balance = rs.getInt("cust_balance");
             String name = rs.getString("cust_name");
             String address = rs.getString("cust_address");
             int zip = rs.getInt("cust_zip");
-            customer = new Customer(mail, password, balance, name, address, zip);
+            customer = new Customer(id, mail, password, balance, name, address, zip);
         }
         return customer;
     }
@@ -77,9 +78,10 @@ public class DataAccessObject
         ResultSet rs = stmt.executeQuery();
         if (rs.next())
         {
+            int id = rs.getInt("bot_id");
             String name = rs.getString("bot_name");
             int price = rs.getInt("bot_price");
-            bottom = new Bottom(name, price);
+            bottom = new Bottom(id, name, price);
         }
         return bottom;
     }
@@ -96,9 +98,10 @@ public class DataAccessObject
             rs = stmt.executeQuery(sql);
             while (rs.next())
             {
+                int id = rs.getInt("bot_id");
                 String name = rs.getString("bot_name");
                 int price = rs.getInt("bot_price");
-                bottom = new Bottom(name, price);
+                bottom = new Bottom(id, name, price);
                 bottoms.add(bottom);
 
             }
@@ -118,9 +121,10 @@ public class DataAccessObject
         ResultSet rs = stmt.executeQuery();
         if (rs.next())
         {
+            int id = rs.getInt("top_id");
             String name = rs.getString("top_name");
             int price = rs.getInt("top_price");
-            topping = new Topping(name, price);
+            topping = new Topping(id, name, price);
         }
         return topping;
     }
@@ -137,9 +141,10 @@ public class DataAccessObject
             rs = stmt.executeQuery(sql);
             while (rs.next())
             {
+                int id = rs.getInt("top_id");
                 String name = rs.getString("top_name");
                 int price = rs.getInt("top_price");
-                topping = new Topping(name, price);
+                topping = new Topping(id, name, price);
                 toppings.add(topping);
 
             }
@@ -228,10 +233,10 @@ public class DataAccessObject
             rs = stmt.executeQuery(sql);
             while (rs.next())
             {
-                int order_id = rs.getInt("order_id");
-                int order_total_price = rs.getInt("order_total_price");
-                int customer_id = rs.getInt("customer_cust_id");
-                order = new Order(order_id, order_total_price, customer_id);
+                int id = rs.getInt("order_id");
+                int totalPrice = rs.getInt("order_total_price");
+                int custID = rs.getInt("customer_cust_id");
+                order = new Order(id, totalPrice, custID);
                 orders.add(order);
 
             }
@@ -255,10 +260,10 @@ public class DataAccessObject
             rs = stmt.executeQuery();
             while (rs.next())
             {
-                int order_id = rs.getInt("order_id");
-                int order_total_price = rs.getInt("order_total_price");
-                int customer_id = rs.getInt("customer_cust_id");
-                order = new Order(order_id, order_total_price, customer_id);
+                int orderID = rs.getInt("order_id");
+                int totalPrice = rs.getInt("order_total_price");
+                int custID = rs.getInt("customer_cust_id");
+                order = new Order(orderID, totalPrice, custID);
                 orders.add(order);
 
             }

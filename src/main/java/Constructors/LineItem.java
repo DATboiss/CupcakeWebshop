@@ -30,8 +30,38 @@ public class LineItem
         this.order_id = order_id;
     }
 
-    
+    public int getId()
+    {
+        return id;
+    }
 
-    
-    
+    public String getName()
+    {
+        return name;
+    }
+
+    public int getQty()
+    {
+        return qty;
+    }
+
+    public int getPrice()
+    {
+        return price;
+    }
+
+    public int getBot_id()
+    {
+        return bot_id;
+    }
+
+    public int getTop_id()
+    {
+        return top_id;
+    }
+
+    public int getOrder_id()
+    {
+        return order_id;
+    }
 }

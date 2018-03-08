@@ -11,17 +11,31 @@ package Constructors;
  */
 public class Order
 {
-    private int order_id;
-    private int order_total_price;
-    private int customer_id;
+    private int orderID;
+    private int totalPrice;
+    private int customerID;
 
-    public Order(int order_id, int order_total_price, int customer_id)
+    public Order(int orderID, int totalPrice, int customerID)
     {
-        this.order_id = order_id;
-        this.order_total_price = order_total_price;
-        this.customer_id = customer_id;
+        this.orderID = orderID;
+        this.totalPrice = totalPrice;
+        this.customerID = customerID;
+    }    
+
+    public int getOrderID()
+    {
+        return orderID;
     }
-    
+
+    public int getTotalPrice()
+    {
+        return totalPrice;
+    }
+
+    public int getCustomerID()
+    {
+        return customerID;
+    }
     
     
 }
