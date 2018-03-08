@@ -1,0 +1,49 @@
+ .brownReg {
+     height: 100%;
+     border-style: solid;
+     border-color: brown;
+     color: whitesmoke;
+     text-shadow: 2px 0 0 #000, -2px 0 0 #000, 0 2px 0 #000, 0 -2px 0 #000, 1px 1px #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000;
+
+
+     background-image: url(https://wallpaperscraft.com/image/cupcakes_cream_chocolate_candy_coffee_corn_dessert_sweet_pastry_leaf_yellow_autumn_94492_1920x1080.jpg);
+     background-size: auto 100%;
+ }
+
+ .brownReg p {
+     text-decoration-color: aliceblue;
+ }
+
+ .login {
+     height: 100%;
+     color:crimson;
+     background-image: url(https://png.pngtree.com/thumb_back/fw800/back_pic/03/66/65/8057b06f56324a1.jpg);
+     
+     background-repeat: no-repeat;
+     background-size: 100%;
+     
+ }
+
+.login p {
+
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: chocolate;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: mintcream;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
