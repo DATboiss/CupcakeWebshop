@@ -11,15 +11,18 @@ package Constructors;
  */
 public class LineItem
 {
-    int qty;
-    Cupcake cupcake;
+    int id, qty, price, bot_id, top_id, order_id;
 
-    public LineItem(int qty, Cupcake cupcake)
+    public LineItem(int id, int qty, int price, int bot_id, int top_id, int order_id)
     {
+        this.id = id;
         this.qty = qty;
-        this.cupcake = cupcake;
+        this.price = price;
+        this.bot_id = bot_id;
+        this.top_id = top_id;
+        this.order_id = order_id;
     }
-    
+
     
     
 }
