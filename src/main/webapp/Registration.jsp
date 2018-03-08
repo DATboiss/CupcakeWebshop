@@ -6,25 +6,42 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Registration</title>
-    </head>
-    <body>
-        <form action="RegistrationServlet" method="post">
+    <link href="RegStylesheet.css" rel="stylesheet">
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Registration</title>
+</head>
+
+<body>
+    <ul>
+        <li><a href="LoginServlet">Home</a></li>
+        <li><a href="Shoppingcart">Shoppingcart</a></li>
+       <!-- <li><a href="contact.asp">My User</a></li> -->
+        
+    </ul>
+    <form action="RegistrationServlet" method="post">
+        <div class="cupcakeimg">
+
+        </div>
+
+        <div class="brownReg">
             <center>
-                Email: <input type="text" name="email"><br></br>
-                Password: <input type="password" name="pw"><br></br>
-                Repeat password: <input type="password" name="pw2"><br></br>
-                Decired starting balance: <input type="number" name="balance"><br></br>
-                Full name: <input type="texr" name="fName"><br></br>
-                Address: <input type="text" name="address"><br></br>
-                Zip code: <input type="text" name="zip"><br></br>
-                
+                <p>Email:</p><input type="text" name="email"><br>
+                <p>Password:</p><input type="password" name="pw"><br>
+                <p>Repeat password:</p> <input type="password" name="pw2"><br>
+                <p>Decired starting balance:</p> <input type="number" name="balance"><br>
+                <p>Full name:</p> <input type="texr" name="fName"><br>
+                <p>Address:</p> <input type="text" name="address"><br>
+                <p>Zip code:</p> <input type="text" name="zip"><br>
+
                 <input type="submit" name="submit" value="submit">
-                                 
             </center>
-        </form>
-    </body>
+        </div>
+
+
+    </form>
+</body>
 </html>

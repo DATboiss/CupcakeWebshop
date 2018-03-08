@@ -9,35 +9,50 @@
 
 <html>
     <head>
+    <link href="RegStylesheet.css" rel="stylesheet">
+
+    <title>Please enter your credentials</title>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+</head>
+
+
+<body>
+    <ul>
+        <li><a href="LoginServlet">Home</a></li>
+       <!-- <li><a href="contact.asp">My User</a></li> -->
+        
+    </ul>
+
     <center>
-        <title>Please enter your credentials</title>
 
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        </head>
-
-        <body>
+        <div class="backgroundLogin">
+        <div class="login">
             <form action="LoginServlet" method="post">
+                <h1>Welcome to the Cup Cake Shop! Please login below :)</h1>
+                <p>Email:</p>
+                <p><input type="text" placeholder="Enter Email" name="email"></p>
+
+                <p>Password:</p>
+                <p><input type="password" placeholder="Enter Password" name="pw"></p>
 
 
-                <div class="container">
-                    <h1>Welcome to the Cup Cake Shop. Login below pls</h1>
-                    <label for="email"<b>Email</b></label>
-                    <input type="text" placeholder="Enter Email" name="email">
-
-                    <label for="password"<b>Password</b></label>
-                    <input type="password" placeholder="Enter Password" name="pw">
-
-                    <label for="submit"<b> </b></label>
-                    <input type="submit" name="submit" value="submit">
-                </div>
-
-
+                <p><input type="submit" name="submit" value="Submit"></p>
             </form>
-            <form action="RegistrationServlet" method="post">
-                <input type="submit" name="register" value="register here">
+
+            <form action="UselessForwarsServlet" method="post">
+
+                <p> <input type="submit" name="register" value="Register"></p>
             </form>
+
+        </div>
+            </div>
+
 
     </center>
+
+
+
 </body>
 </html>
 
