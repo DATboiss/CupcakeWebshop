@@ -3,7 +3,7 @@ package Connector;
 import Constructors.Bottom;
 import Constructors.LineItem;
 import Constructors.Order;
-import Constructors.User;
+import Constructors.Customer;
 import Constructors.Topping;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -27,21 +27,21 @@ public class DataAccessObject
         this.conn = new DBConnector();
     }
 
-    public User getUser(String email) throws SQLException
+    public Customer getCustomer(String email) throws SQLException
     {
         String sql = "select * from customer where cust_email = '?';";
         PreparedStatement stmt = conn.getConnection().prepareStatement(sql);
         stmt.setString(1, email);
-        User user = null;
+        Customer customer = null;
         ResultSet rs = stmt.executeQuery();
         if (rs.next())
         {
-            String username = rs.getString("cust_email");
+            String mail = rs.getString("cust_email");
             String password = rs.getString("cust_password");
             int balance = rs.getInt("cust_balance");
-            user = new User(username, password, balance);
+            customer = new Customer(mail, password, balance);
         }
-        return user;
+        return customer;
     }
 
     public LineItem getLineItem(int prodID) throws SQLException

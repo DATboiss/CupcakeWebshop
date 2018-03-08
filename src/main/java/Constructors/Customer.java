@@ -4,7 +4,7 @@ package Constructors;
  *
  * @author emilv
  */
-public class User {
+public class Customer {
     private String email;
     private String name;
     private String password;
@@ -13,7 +13,7 @@ public class User {
     private int zip; 
 
   
-    public User(String email, String password, int balance)
+    public Customer(String email, String password, int balance)
     {
         this.email = email;
         this.password = password;
