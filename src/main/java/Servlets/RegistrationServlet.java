@@ -36,7 +36,7 @@ public class RegistrationServlet extends HttpServlet {
             String email = request.getParameter("email");
             String pw = request.getParameter("pw");
             String pw2 = request.getParameter("pw2");
-            String balance = request.getParameter("balance");
+            int balance = (Integer.parseInt(request.getParameter("balance")));
             String name = request.getParameter("fName");
             String address = request.getParameter("address");
             String zip = request.getParameter("zip");
@@ -44,11 +44,16 @@ public class RegistrationServlet extends HttpServlet {
             DataAccessObject dao = new DataAccessObject();
             if (pw.equals(pw2)) {
 
-                dao.newCustomer(email, pw, 0, name, address, zip);
+                dao.newCustomer(email, pw, balance, name, address, zip);
 
             String nextJSP = "/regSuccess.jsp";
             RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(nextJSP);
             dispatcher.forward(request, response);
+            } else {
+            String nextJSP = "/ErrorPage";
+            RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(nextJSP);
+            dispatcher.forward(request, response);
+                
             }
         } catch (Exception ex) {
             Logger.getLogger(RegistrationServlet.class.getName()).log(Level.SEVERE, null, ex);

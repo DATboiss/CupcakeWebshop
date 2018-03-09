@@ -48,6 +48,35 @@ public class DataAccessObject
         return customer;
     }
 
+    public Customer checkCustomer(String email, String password) throws SQLException
+    {
+        String sql = "select * from customer where cust_email = ? and cust_password = ?;";
+        PreparedStatement stmt = conn.getConnection().prepareStatement(sql);
+        stmt.setString(1, email);
+        stmt.setString(2, password);
+        Customer customer = null;
+        try
+        {
+            ResultSet rs = stmt.executeQuery();
+            if (rs.next())
+            {
+                int id = rs.getInt("cust_id");
+                String mail = rs.getString("cust_email");
+                String pw = rs.getString("cust_password");
+                int balance = rs.getInt("cust_balance");
+                String name = rs.getString("cust_name");
+                String address = rs.getString("cust_address");
+                int zip = rs.getInt("cust_zip");
+                customer = new Customer(id, mail, pw, balance, name, address, zip);
+            }
+        } catch (SQLException ex)
+        {
+            Logger.getLogger(DataAccessObject.class.getName()).log(Level.SEVERE, null, ex);
+
+        }
+        return customer;
+    }
+
     public LineItem getLineItem(int prodID) throws SQLException
     {
         String sql = "select * from product where prod_id = '?';";

@@ -1,9 +1,12 @@
 package Servlets;
 
-
-
+import Connector.DataAccessObject;
+import Constructors.Customer;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -14,10 +17,12 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author wtfak
  */
-
-
-@WebServlet(urlPatterns = {"/LoginServlet"})
-public class LoginServlet extends HttpServlet {
+@WebServlet(urlPatterns =
+{
+    "/LoginServlet"
+})
+public class LoginServlet extends HttpServlet
+{
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -29,19 +34,28 @@ public class LoginServlet extends HttpServlet {
      * @throws IOException if an I/O error occurs
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        response.setContentType("text/html;charset=UTF-8");
-        try (PrintWriter out = response.getWriter()) {
+            throws ServletException, IOException, Exception
+    {
+        DataAccessObject dao = new DataAccessObject();
+        Customer login = dao.checkCustomer(request.getParameter("email"), request.getParameter("pw"));
+
+        if (login != null)
+        {
+            response.setContentType("text/html;charset=UTF-8");
+            String nextJSP = "/Shoppingcart";
+            RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(nextJSP);
+            dispatcher.forward(request, response);
+        } else
+        {
+            response.setContentType("text/html;charset=UTF-8");
+            String nextJSP = "/ErrorPage";
+            RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(nextJSP);
+            dispatcher.forward(request, response);
+
+        }
+        try (PrintWriter out = response.getWriter())
+        {
             /* TODO output your page here. You may use following sample code. */
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet LoginServlet</title>");            
-            out.println("</head>");
-            out.println("<body>");
-            out.println("<h1>Servlet LoginServlet at " + request.getContextPath() + "</h1>");
-            out.println("</body>");
-            out.println("</html>");
         }
     }
 
@@ -56,8 +70,15 @@ public class LoginServlet extends HttpServlet {
      */
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        processRequest(request, response);
+            throws ServletException, IOException
+    {
+        try
+        {
+            processRequest(request, response);
+        } catch (Exception ex)
+        {
+            Logger.getLogger(LoginServlet.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 
     /**
@@ -69,10 +90,16 @@ public class LoginServlet extends HttpServlet {
      * @throws IOException if an I/O error occurs
      */
     @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String email = request.getParameter("email");
-        String pw = request.getParameter("pw");
-        boolean submitPress = request.getParameter("submit") != null;
+    protected void doPost(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException
+    {
+        try
+        {
+            processRequest(request, response);
+        } catch (Exception ex)
+        {
+            Logger.getLogger(LoginServlet.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 
     /**
@@ -81,7 +108,8 @@ public class LoginServlet extends HttpServlet {
      * @return a String containing servlet description
      */
     @Override
-    public String getServletInfo() {
+    public String getServletInfo()
+    {
         return "Short description";
     }// </editor-fold>
 

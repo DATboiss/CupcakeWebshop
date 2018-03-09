@@ -60,6 +60,14 @@ public class Customer {
         return zip;
     }
 
+    @Override
+    public String toString()
+    {
+        return "Customer{" + "id=" + id + ", email=" + email + ", password=" + password + ", balance=" + balance + ", name=" + name + ", address=" + address + ", zip=" + zip + '}';
+    }
+    
+    
+
    
     
 }
