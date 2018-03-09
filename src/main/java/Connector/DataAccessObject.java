@@ -100,7 +100,7 @@ public class DataAccessObject
 
     public Bottom getBottom(String bottomName) throws SQLException
     {
-        String sql = "select * from bottom where name = ?;";
+        String sql = "select * from bottom where bot_name = ?;";
         PreparedStatement stmt = conn.getConnection().prepareStatement(sql);
         stmt.setString(1, bottomName);
         Bottom bottom = null;
@@ -143,7 +143,7 @@ public class DataAccessObject
 
     public Topping getTopping(String toppingName) throws SQLException
     {
-        String sql = "select * from topping where name = '?';";
+        String sql = "select * from topping where top_name = ?;";
         PreparedStatement stmt = conn.getConnection().prepareStatement(sql);
         stmt.setString(1, toppingName);
         Topping topping = null;
