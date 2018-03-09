@@ -41,6 +41,7 @@ public class LoginServlet extends HttpServlet
 
         if (login != null)
         {
+            request.setAttribute("Customer", login);
             response.setContentType("text/html;charset=UTF-8");
             String nextJSP = "/Shoppingcart";
             RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(nextJSP);
