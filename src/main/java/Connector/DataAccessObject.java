@@ -71,7 +71,7 @@ public class DataAccessObject
 
     public Bottom getBottom(String bottomName) throws SQLException
     {
-        String sql = "select * from bottom where name = '?';";
+        String sql = "select * from bottom where name = ?;";
         PreparedStatement stmt = conn.getConnection().prepareStatement(sql);
         stmt.setString(1, bottomName);
         Bottom bottom = null;
@@ -158,7 +158,7 @@ public class DataAccessObject
     //husk booleans til at tilføje new users
     public boolean newCustomer(String email, String pw, int balance, String name, String address, String zip) throws SQLException
     {
-        String sql = "insert into customer (cust_email, cust_password, cust_balance, cust_name, cust_address, cust_zip) values (?, ?, ?,?,?,?);";
+        String sql = "insert into `customer` (`cust_email`, `cust_password`, `cust_balance`, `cust_name`, `cust_address`, `cust_zip`) values (?, ?, ?, ?, ?, ?);";
         PreparedStatement stmt = conn.getConnection().prepareStatement(sql);
         stmt.setString(1, email);
         stmt.setString(2, pw);
@@ -180,7 +180,7 @@ public class DataAccessObject
 
     public boolean newLineItem(String name, int qty, int price, int bottomID, int toppingID, int orderID) throws SQLException
     {
-        String sql = "insert into product (prod_qty, prod_price, bottom_bot_id, topping_top_id, order_order_id) "
+        String sql = "insert into product (prod_name, prod_qty, prod_price, bottom_bot_id, topping_top_id, order_order_id) "
                 + "values (?, ?, ?, ?, ?, ?);";
         PreparedStatement stmt = conn.getConnection().prepareStatement(sql);
         stmt.setString(1, name);
@@ -201,13 +201,12 @@ public class DataAccessObject
         }
     }
 
-    public boolean newOrder(int order_id, int order_total_price, int customer_id) throws SQLException
+    public boolean newOrder(int order_total_price, int customer_id) throws SQLException
     {
-        String sql = "insert into order (order_id, order_total_price, customer_cust_id) values (?, ?, ?);";
+        String sql = "insert into order (order_total_price, customer_cust_id) values (?, ?);";
         PreparedStatement stmt = conn.getConnection().prepareStatement(sql);
-        stmt.setInt(1, order_id);
-        stmt.setInt(2, order_total_price);
-        stmt.setInt(3, customer_id);
+        stmt.setInt(1, order_total_price);
+        stmt.setInt(2, customer_id);
         try
         {
             stmt.executeUpdate();
