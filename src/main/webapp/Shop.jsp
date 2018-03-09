@@ -64,7 +64,7 @@
                     <input type="submit" value="Continue">
                     
                 </form>
-                <form method="POST" action="Shop.jsp">
+                <form method="POST" action="clearShoppingcart">
                     <p><input type="submit" value="Cancel" name="cancel"></p>
                     <% if (request.getParameter("cancel") != null) {
                             cart.clear();
