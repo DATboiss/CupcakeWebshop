@@ -14,7 +14,13 @@ public class main
     public static void main(String[] args) throws Exception
     {
         DataAccessObject dao = new DataAccessObject();
-        System.out.println(dao.checkCustomer("adamsaidweqwane@hotmail.com", "adam123"));
+        System.out.println("==newCustomer==");
+        System.out.println(dao.newCustomer("dskfædsl@gmail.com", "kasper123", 5, "Kasper Ø", "Lyngbyvej 30", "9000"));
+        System.out.println("==newLineItem==");
+        System.out.println(dao.newLineItem("ChocolateNutmeg", 3, 5, 3, 1, 1));
+        System.out.println("==newOrder==");
+        System.out.println(dao.newOrder(10, 1));
+        
     }
     
 }
