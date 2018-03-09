@@ -30,7 +30,13 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
-    <body>  
+    <body> 
+        <ul>
+        <li><a href="LoginServlet">Home</a></li>
+        <li><a href="Shoppingcart">Shoppingcart</a></li>
+        <li><a href="contact.asp">My User</a></li>
+        
+    </ul>
         <% session.getAttribute("email"); %>
         <div>Cutetastic cupcakes</div>
         <form method="POST" action="Shop.jsp">

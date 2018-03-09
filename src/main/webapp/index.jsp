@@ -19,7 +19,7 @@
 
 <body>
     <ul>
-        <li><a href="LoginServlet">Home</a></li>
+        <li><a href="index.jsp">Home</a></li>
        <!-- <li><a href="contact.asp">My User</a></li> -->
         
     </ul>

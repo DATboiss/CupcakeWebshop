@@ -1,31 +1,36 @@
- .brownReg {
-     height: 100%;
-     border-style: solid;
-     border-color: brown;
-     color: whitesmoke;
-     text-shadow: 2px 0 0 #000, -2px 0 0 #000, 0 2px 0 #000, 0 -2px 0 #000, 1px 1px #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000;
+.brownReg {
+    height: 100%;
+    border-style: solid;
+    border-color: brown;
+    color: whitesmoke;
+    text-shadow: 2px 0 0 #000, -2px 0 0 #000, 0 2px 0 #000, 0 -2px 0 #000, 1px 1px #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000;
 
 
-     background-image: url(https://wallpaperscraft.com/image/cupcakes_cream_chocolate_candy_coffee_corn_dessert_sweet_pastry_leaf_yellow_autumn_94492_1920x1080.jpg);
-     background-size: auto 100%;
-     background-repeat: no-repeat;
- }
+    background-image: url(https://wallpaperscraft.com/image/cupcakes_cream_chocolate_candy_coffee_corn_dessert_sweet_pastry_leaf_yellow_autumn_94492_1920x1080.jpg);
+    background-size: auto 100%;
+    background-color: graytext;
+    
+}
 
- .brownReg p {
-     text-decoration-color: aliceblue;
- }
+.brownReg p {
+    text-decoration-color: aliceblue;
+}
 
- .login {
-     height: 100%;
-     color:crimson;
-     background-image: url(https://png.pngtree.com/thumb_back/fw800/back_pic/03/66/65/8057b06f56324a1.jpg);
-     
-     background-repeat: no-repeat;
-     background-size: 100%;
-     
- }
+.login {
+    height: 100%;
+    color:crimson;
+    
 
-.login p {
+
+}
+
+.backgroundLogin {
+    height: 100%;
+    background: url(https://png.pngtree.com/thumb_back/fw800/back_pic/03/66/65/8057b06f56324a1.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 
 }
 
