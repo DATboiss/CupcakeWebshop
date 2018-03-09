@@ -4,19 +4,18 @@
     Author     : emilv
 --%>
 
-<%@page import="java.util.List"%>
-<%@page import="Constructors.Cupcake"%>
+<%@page import="Constructors.LineItem"%>
 <%@page contentType="text/html" pageEncoding="UTF-8" %>
+<%@page import="java.util.List"%>
 <%@page import="Constructors.Bottom" %>
 <%@page import="Connector.DataAccessObject" %>
 <%@page import="java.util.ArrayList" %>
 <%@page import="Constructors.Topping" %>
-<%@page import="Constructors.User" %>
 <!DOCTYPE html>
 
 <% List<Topping> toppings = (ArrayList<Topping>) request.getSession().getAttribute("toppingList");%>
  <% List<Bottom> bottoms = (ArrayList<Bottom>) request.getSession().getAttribute("bottomList"); %>
- <% ArrayList<Cupcake> cart = (ArrayList<Cupcake>) session.getAttribute("item");
+ <% ArrayList<LineItem> cart = (ArrayList<LineItem>) session.getAttribute("item");
     if (cart == null)
     {
         cart = new ArrayList();
@@ -74,13 +73,10 @@
             <% out.println("Your shopping cart:");%></b>
         <br>
         <%
-            for (Cupcake cake : cart)
-            {
-                if (cake != null)
-                out.print(cake.getTop() + " " + cake.getBot());
         %> <br> 
 
-        <% }
+        <% 
+// add arraylist here
         %>
     </body>
 </html>
