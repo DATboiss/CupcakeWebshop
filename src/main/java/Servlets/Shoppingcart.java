@@ -70,6 +70,10 @@ public class Shoppingcart extends HttpServlet
                 LineItem item = new LineItem(0, selectTop.getName() + " " + selectBot.getName(), 0, totalPrice, selectBot.getId(), selectTop.getId(), 0);
                 itemList.add(item);
             }
+            if (request.getParameter("Cancel") != null)
+            {
+                itemList.clear();
+            }
             request.getSession().setAttribute("itemList", itemList);
             String nextJSP = "/Shop.jsp";
             RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(nextJSP);

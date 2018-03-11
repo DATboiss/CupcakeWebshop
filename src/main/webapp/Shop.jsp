@@ -64,7 +64,7 @@
                 <input type="submit" value="Continue">
 
             </form>
-            <form method="POST" action="clearShoppingcart">
+            <form method="POST" action="Shoppingcart">
                 <p><input type="submit" value="Cancel" name="cancel"></p>
                     <% session.setAttribute("top", request.getParameter("Toppings"));
                         session.setAttribute("bot", request.getParameter("Bottoms"));
