@@ -32,6 +32,14 @@
                 <p>Email:</p><input type="text" name="email"><br>
                 <p>Password:</p><input type="password" name="pw"><br>
                 <p>Repeat password:</p> <input type="password" name="pw2"><br>
+                <div class="errorMessage">
+                <%
+                    if(null!=request.getAttribute("errorMessage"))
+                    {
+                        out.println(request.getAttribute("errorMessage"));
+                    }
+                    %>
+                    </div>
                 <p>Desired starting balance:</p> <input type="number" name="balance"><br>
                 <p>Full name:</p> <input type="texr" name="fName"><br>
                 <p>Address:</p> <input type="text" name="address"><br>

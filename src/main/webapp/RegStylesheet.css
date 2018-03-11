@@ -1,3 +1,7 @@
+.errorMessage {
+    color: #ff0000;
+    font-size: 20px;
+}
 .brownReg {
     height: 100%;
     border-style: solid;
@@ -23,7 +27,6 @@
 
 
 }
-
 .backgroundLogin {
     height: 100%;
     background: url(https://png.pngtree.com/thumb_back/fw800/back_pic/03/66/65/8057b06f56324a1.jpg) no-repeat center center fixed;
