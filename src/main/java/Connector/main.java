@@ -20,7 +20,7 @@ public class main
     {
         DataAccessObject dao = new DataAccessObject();
         System.out.println("==newCustomer==");
-        System.out.println(dao.newCustomer("dæsdsl@gmail.com", "kasper123", 5, "Kasper Ø", "Lyngbyvej 30", "9000"));
+        System.out.println(dao.newCustomer("hejmeddig@gmail.com", "kasper123", 5, "Kasper Ø", "Lyngbyvej 30", "9000"));
         System.out.println("");
 
         System.out.println("==getBottom==");
