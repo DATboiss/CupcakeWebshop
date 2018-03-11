@@ -15,11 +15,7 @@
 
 <% List<Topping> toppings = (ArrayList<Topping>) request.getSession().getAttribute("toppingList");%>
 <% List<Bottom> bottoms = (ArrayList<Bottom>) request.getSession().getAttribute("bottomList"); %>
-<% ArrayList<LineItem> cart = (ArrayList<LineItem>) session.getAttribute("item");
-    if (cart == null) {
-        cart = new ArrayList();
-        session.setAttribute("item", cart);
-    }
+<% ArrayList<LineItem> cart = (ArrayList<LineItem>) request.getSession().getAttribute("itemList");
 %>
 
 <html>
@@ -33,53 +29,63 @@
         <ul>
             <li><a href="index.jsp">Home</a></li>
             <li><a href="Shoppingcart">Shoppingcart</a></li>
-            
+
             <!--<li><a href="contact.asp">My User</a></li> -->
 
         </ul>
         <% session.getAttribute("email"); %>
-         <div class="shopcart">
-        <h1>Cutetastic cupcakes</h1>
-        <form method="POST" action="Shop.jsp">
-           
+        <div class="shopcart">
+            <h1>Cutetastic cupcakes</h1>
+            <form method="POST" action="Shoppingcart">
                 <p> Choose your favourite bottom and toppings</p>
-                <select id= "selectedTopping" name="Toppings">
-                    <%for (Topping topping : toppings) { %> 
+                <p>Toppings</p>
+                <select  name="Toppings">
+                    <%for (Topping topping : toppings)
+                        { %> 
                     <option value="<%out.print(topping.getName()); %>">
                         <% out.println(topping.getName() + " " + topping.getPrice() + " kr.");
-                        } %>
+                            } %>
                     </option>
                 </select>
-                <select id="selectedBottom" name="Bottoms">
-                    <% for (Bottom bottom : bottoms) { %> 
-                    <option value="
-                            <%out.print(bottom.getName()); %>">
+                <p>Bottoms</p>
+                <select name="Bottoms"> 
+                    <% for (Bottom bottom : bottoms)
+                        { %> 
+                    <option value="<%out.print(bottom.getName()); %>">
                         <% out.println(bottom.getName() + " " + bottom.getPrice() + " kr.");
-                        } %>
+                            } %>
                     </option>
+
                 </select>
-                    <br><p><input type="submit" value="Add to cart"></p>
-                </form>
-                <form method="POST" action="Confirmation.jsp">
-                    <input type="submit" value="Continue">
-                    
-                </form>
-                <form method="POST" action="clearShoppingcart">
-                    <p><input type="submit" value="Cancel" name="cancel"></p>
-                    <% if (request.getParameter("cancel") != null) {
+
+                <br><p><input type="submit" value="Add to cart" name="add"></p>
+            </form>
+            <form method="POST" action="Confirmation.jsp">
+                <input type="submit" value="Continue">
+
+            </form>
+            <form method="POST" action="clearShoppingcart">
+                <p><input type="submit" value="Cancel" name="cancel"></p>
+                    <% session.setAttribute("top", request.getParameter("Toppings"));
+                        session.setAttribute("bot", request.getParameter("Bottoms"));
+                        if (request.getParameter("cancel") != null)
+                        {
                             cart.clear();
                         }%>
-                    
-                </form>
-                <br><b>
-                    <% out.println("Your shopping cart:");%></b>
-                <br>
-                <%
-                %> <br> 
 
-                <%
-// add arraylist here
-%>
-         </div>
-                </body>
-                </html>
+            </form>
+            <br><b>
+                <% out.println("Your shopping cart:");%></b>
+            <br>
+            <%  //Test to see if it's working
+                out.println("is cart empty??");
+                out.println(cart.isEmpty() + " " + cart.size());
+                for (LineItem item : cart)
+                {
+            %> <p> <%  out.println(item.getName() + " " + item.getPrice() + " kr."); %> </p><%
+                }
+
+            %>
+        </div>
+    </body>
+</html>
