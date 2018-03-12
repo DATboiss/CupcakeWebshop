@@ -79,7 +79,7 @@ public class DataAccessObject
 
     public LineItem getLineItem(int prodID) throws SQLException
     {
-        String sql = "select * from product where prod_id = '?';";
+        String sql = "select * from product where prod_id = ?";
         PreparedStatement stmt = conn.getConnection().prepareStatement(sql);
         stmt.setInt(1, prodID);
         LineItem lineItem = null;
