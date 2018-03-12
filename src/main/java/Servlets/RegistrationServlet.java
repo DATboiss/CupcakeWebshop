@@ -16,8 +16,12 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author wtfak
  */
-@WebServlet(name = "RegistrationServlet", urlPatterns = {"/RegistrationServlet"})
-public class RegistrationServlet extends HttpServlet {
+@WebServlet(name = "RegistrationServlet", urlPatterns =
+{
+    "/RegistrationServlet"
+})
+public class RegistrationServlet extends HttpServlet
+{
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -29,9 +33,11 @@ public class RegistrationServlet extends HttpServlet {
      * @throws IOException if an I/O error occurs
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
+            throws ServletException, IOException
+    {
         response.setContentType("text/html;charset=UTF-8");
-        try (PrintWriter out = response.getWriter()) {
+        try (PrintWriter out = response.getWriter())
+        {
             /* TODO output your page here. You may use following sample code. */
             String email = request.getParameter("email");
             String pw = request.getParameter("pw");
@@ -42,20 +48,23 @@ public class RegistrationServlet extends HttpServlet {
             String zip = request.getParameter("zip");
 
             DataAccessObject dao = new DataAccessObject();
-            if (pw.equals(pw2)) {
+            if (pw.equals(pw2))
+            {
 
                 dao.newCustomer(email, pw, balance, name, address, zip);
+                String nextJSP = "/regSuccess.jsp";
+                RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(nextJSP);
+                dispatcher.forward(request, response);
+            } else
+            {
+            request.setAttribute("errorMessage", "Passwords do not match.");
+                String nextJSP = "/Registration.jsp";
+                RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(nextJSP);
+                dispatcher.forward(request, response);
 
-            String nextJSP = "/regSuccess.jsp";
-            RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(nextJSP);
-            dispatcher.forward(request, response);
-            } else {
-            String nextJSP = "/ErrorPage";
-            RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(nextJSP);
-            dispatcher.forward(request, response);
-                
             }
-        } catch (Exception ex) {
+        } catch (Exception ex)
+        {
             Logger.getLogger(RegistrationServlet.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
@@ -71,7 +80,8 @@ public class RegistrationServlet extends HttpServlet {
      */
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
+            throws ServletException, IOException
+    {
         processRequest(request, response);
     }
 
@@ -85,7 +95,8 @@ public class RegistrationServlet extends HttpServlet {
      */
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
+            throws ServletException, IOException
+    {
         processRequest(request, response);
     }
 
@@ -95,7 +106,8 @@ public class RegistrationServlet extends HttpServlet {
      * @return a String containing servlet description
      */
     @Override
-    public String getServletInfo() {
+    public String getServletInfo()
+    {
         return "Short description";
     }// </editor-fold>
 
