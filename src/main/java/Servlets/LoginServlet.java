@@ -39,23 +39,27 @@ public class LoginServlet extends HttpServlet
         DataAccessObject dao = new DataAccessObject();
         Customer login = dao.checkCustomer(request.getParameter("email"), request.getParameter("pw"));
 
+        response.setContentType("text/html;charset=UTF-8");
+        try (PrintWriter out = response.getWriter())
+        {
         if (login != null)
         {
-            request.setAttribute("Customer", login);
-            response.setContentType("text/html;charset=UTF-8");
+            request.getSession().setAttribute("Customer", login);
             String nextJSP = "/Shoppingcart";
+            RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(nextJSP);
+            dispatcher.forward(request, response);
+        } if (request.getParameter("register") != null)
+        {
+            String nextJSP = "/Registration.jsp";
             RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(nextJSP);
             dispatcher.forward(request, response);
         } else
         {
-            response.setContentType("text/html;charset=UTF-8");
             String nextJSP = "/ErrorPage";
             RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(nextJSP);
             dispatcher.forward(request, response);
 
         }
-        try (PrintWriter out = response.getWriter())
-        {
             /* TODO output your page here. You may use following sample code. */
         }
     }

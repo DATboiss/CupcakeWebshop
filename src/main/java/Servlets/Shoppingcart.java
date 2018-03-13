@@ -7,6 +7,7 @@ package Servlets;
 
 import Connector.DataAccessObject;
 import Constructors.Bottom;
+import Constructors.Customer;
 import Constructors.LineItem;
 import Constructors.Topping;
 import java.io.IOException;
@@ -53,6 +54,8 @@ public class Shoppingcart extends HttpServlet
             request.getSession().setAttribute("bottomList", bottomList);
             request.getSession().setAttribute("toppingList", toppingList);
             ArrayList<LineItem> itemList = (ArrayList<LineItem>) request.getSession().getAttribute("itemList");
+            Customer loggedIn = ((Customer) request.getSession().getAttribute("Customer"));
+            request.getSession().setAttribute("Customer", loggedIn);
             if (itemList == null)
             {
                 itemList = new ArrayList();
@@ -67,9 +70,33 @@ public class Shoppingcart extends HttpServlet
                 Topping selectTop = DAO.getTopping(top);
                 Bottom selectBot = DAO.getBottom(bot);
                 int totalPrice = (selectTop.getPrice() + selectBot.getPrice());
-                LineItem item = new LineItem(0, selectTop.getName() + " " + selectBot.getName(), 0, totalPrice, selectBot.getId(), selectTop.getId(), 0);
+                int amount = (Integer.parseInt(request.getParameter("amount")));
+                boolean updatedQty = false;
+
+                LineItem item = new LineItem(0, selectTop.getName() + " " + selectBot.getName(), amount, totalPrice, selectBot.getId(), selectTop.getId(), 0);
+                for (int i = 0; i < itemList.size(); i++)
+                {
+                    if (itemList.get(i).getName().equals(top + " " + bot))
+                    {
+                        itemList.get(i).setQty(amount + itemList.get(i).getQty());
+                    }
+
+                }
                 itemList.add(item);
+//                for (LineItem lineItem : itemList)
+//                {
+//                    if (lineItem.getName().equals(top + " " + bot))
+//                    {
+//                        int previous = lineItem.getQty();
+//                        item.setQty(amount += previous);
+//                        updatedQty = true;
+//                    } else{
+
+//                    }
+//
+//                }
             }
+
             if (request.getParameter("Cancel") != null)
             {
                 itemList.clear();

@@ -30,6 +30,12 @@ public class LineItem
         this.order_id = order_id;
     }
 
+    public void setQty(int qty)
+    {
+        this.qty = qty;
+    }
+    
+    
     public int getId()
     {
         return id;

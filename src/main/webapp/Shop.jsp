@@ -4,6 +4,7 @@
     Author     : emilv
 --%>
 
+<%@page import="Constructors.Customer"%>
 <%@page import="Constructors.LineItem"%>
 <%@page contentType="text/html" pageEncoding="UTF-8" %>
 <%@page import="java.util.List"%>
@@ -16,6 +17,7 @@
 <% List<Topping> toppings = (ArrayList<Topping>) request.getSession().getAttribute("toppingList");%>
 <% List<Bottom> bottoms = (ArrayList<Bottom>) request.getSession().getAttribute("bottomList"); %>
 <% ArrayList<LineItem> cart = (ArrayList<LineItem>) request.getSession().getAttribute("itemList");
+   Customer user = ((Customer) request.getSession().getAttribute("Customer"));
 %>
 
 <html>
@@ -29,13 +31,14 @@
         <ul>
             <li><a href="index.jsp">Home</a></li>
             <li><a href="Shoppingcart">Shoppingcart</a></li>
-
+            <ul class="">
+            <li><a><% out.println(user.getName()); %></a></li>
+            </ul>
             <!--<li><a href="contact.asp">My User</a></li> -->
 
         </ul>
-        <% session.getAttribute("email"); %>
         <div class="shopcart">
-            <h1>Cutetastic cupcakes</h1>
+            <h1>Welcome to Cutetastic cupcakes </h1>
             <form method="POST" action="Shoppingcart">
                 <p> Choose your favourite bottom and toppings</p>
                 <p>Toppings</p>
@@ -57,6 +60,7 @@
                     </option>
 
                 </select>
+                    <input type="number" name="amount" placeholder="Amount"><br>
 
                 <br><p><input type="submit" value="Add to cart" name="add"></p>
             </form>
@@ -82,7 +86,7 @@
                 out.println(cart.isEmpty() + " " + cart.size());
                 for (LineItem item : cart)
                 {
-            %> <p> <%  out.println(item.getName() + " " + item.getPrice() + " kr."); %> </p><%
+            %> <p> <%  out.println(item.getQty() + " " + item.getName() + " " + item.getPrice() + " kr."); %> </p><%
                 }
 
             %>
