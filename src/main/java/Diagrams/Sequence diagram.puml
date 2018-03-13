@@ -1,0 +1,33 @@
+@startuml
+
+title "Login - Sequence Diagram"
+
+actor User
+boundary Shop.jsp
+boundary Confirmation.jsp
+participant ShoppingCart
+participant ShopConfirmation
+participant DataAccessObject as DAO
+database CupcakeWebshop as DB
+
+User -> Shop.jsp 
+Shop.jsp -> ShoppingCart : request.getSession().getAttribute()
+ShoppingCart -> DAO : getBottoms() \n getToppings()
+DAO -> ShoppingCart : List<Bottom> \n List<Topping>
+ShoppingCart -> Shop.jsp : List<Bottom> & List<Topping>
+User -> Shop.jsp : choose cupcake and qty
+Shop.jsp -> ShoppingCart : itemList.add(new LineItem())
+ShoppingCart -> Shop.jsp : print itemList
+User -> Shop.jsp : Order list of cupcakes
+Shop.jsp -> ShopConfirmation : forward(request, response)
+ShopConfirmation -> DAO : newOrder()
+DAO -> DB : executeUpdate()
+DB -> ShopConfirmation : OK
+ShopConfirmation -> DAO : newLineItem
+DAO -> DB : executeUpdate()
+DB -> ShopConfirmation : OK
+ShopConfirmation -> Confirmation.jsp : forward(request, response)
+Confirmation.jsp -> User : Order confirmed. Shows order
+
+
+@enduml

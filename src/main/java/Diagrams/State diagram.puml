@@ -1,0 +1,42 @@
+@startuml
+
+Title Logging in
+State "ErrorPage" as error
+
+
+
+
+note left of LoggedIn
+Username and role
+stored in session
+end note
+
+[*] --> index.jsp
+index.jsp --> LoginServlet
+LoginServlet --> Registration.jsp
+Registration.jsp --> RegistrationServlet
+RegistrationServlet --> Registration.jsp : Registration fails
+RegistrationServlet --> regSucces.jsp  : Registration succesfull
+
+state userAccess {
+LoginServlet --> Shop.jsp
+regSucces.jsp --> ShopppingCart
+ShoppingCart --> Shop.jsp
+Shop.jsp --> ShoppingCart : Add lineitem to shopping cart
+Shop.jsp --> OrderConfirmation : Place order
+OrderConfirmation --> Confirmation.jsp
+Confirmation.jsp --> ShoppingCart
+NavBar --> index.jsp
+NavBar --> MyAccountServlet
+NavBar --> ShoppingCart
+}
+
+state adminAccess {
+NavBar --> AdminServlet
+AdminServlet --> Admin.jsp 
+Admin.jsp --> AdminServlet : Search orders etc.
+}
+
+OrderConfirmation --> [*]
+
+@enduml

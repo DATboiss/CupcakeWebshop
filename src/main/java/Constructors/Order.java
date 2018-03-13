@@ -11,20 +11,20 @@ package Constructors;
  */
 public class Order
 {
-    private int orderID;
+    private int id;
     private int totalPrice;
     private int customerID;
 
     public Order(int orderID, int totalPrice, int customerID)
     {
-        this.orderID = orderID;
+        this.id = orderID;
         this.totalPrice = totalPrice;
         this.customerID = customerID;
     }    
 
     public int getOrderID()
     {
-        return orderID;
+        return id;
     }
 
     public int getTotalPrice()
