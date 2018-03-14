@@ -11,7 +11,7 @@ Username and role
 stored in session
 end note
 
-[*] --> index.jsp
+[*] -> index.jsp
 index.jsp --> LoginServlet
 LoginServlet --> Registration.jsp
 Registration.jsp --> RegistrationServlet
@@ -20,15 +20,16 @@ RegistrationServlet --> regSucces.jsp  : Registration succesfull
 
 state userAccess {
 LoginServlet --> Shop.jsp
-regSucces.jsp --> ShopppingCart
+regSucces.jsp --> ShoppingCart
 ShoppingCart --> Shop.jsp
 Shop.jsp --> ShoppingCart : Add lineitem to shopping cart
 Shop.jsp --> OrderConfirmation : Place order
 OrderConfirmation --> Confirmation.jsp
-Confirmation.jsp --> ShoppingCart
+
 NavBar --> index.jsp
 NavBar --> MyAccountServlet
 NavBar --> ShoppingCart
+
 }
 
 state adminAccess {
@@ -37,6 +38,6 @@ AdminServlet --> Admin.jsp
 Admin.jsp --> AdminServlet : Search orders etc.
 }
 
-OrderConfirmation --> [*]
+Confirmation.jsp --> [*]
 
 @enduml
