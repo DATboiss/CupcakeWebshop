@@ -3,9 +3,19 @@
 title Login
 actor User
 boundary Index.jsp
+boundary Shop.jsp
 participant Session
-participant ShoppingCart
+participant LoginServlet
+participant DataAccessObject as DAO
+Database CupcakeWebshop as DB
 
 
+User -> Index.jsp : Enters login information
+Index.jsp -> LoginServlet : forward()
+LoginServlet -> DAO : checkCustomer()
+DAO -> DB : executeQuery()
+LoginServlet -> Session : getSession().setAttribute()
+LoginServlet -> Shop.jsp : forward()
+Shop.jsp -> User : Gets shown shop page
 
 @enduml
