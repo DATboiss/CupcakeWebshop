@@ -267,14 +267,14 @@ public class DataAccessObject
     }
 
     /**
-     *
+     * Creates a new LineItem. An Order is needed in order to make this object. 
      * @param name
      * @param qty
      * @param price
      * @param bottomID
      * @param toppingID
      * @param orderID
-     * @return
+     * @return boolean
      * @throws SQLException
      */
     public boolean newLineItem(String name, int qty, int price, int bottomID, int toppingID, int orderID) throws SQLException
@@ -301,10 +301,11 @@ public class DataAccessObject
     }
 
     /**
-     *
+     * Add an order to database. PreparedStatements are used to protect from SQL injections. Method will return true if succesfully added to database.
+     * Otherwise it will return false if add was either by already used email or that the database is down
      * @param order_total_price
      * @param customer_id
-     * @return
+     * @return boolean
      * @throws SQLException
      */
     public boolean newOrder(int order_total_price, int customer_id) throws SQLException
@@ -327,8 +328,9 @@ public class DataAccessObject
     }
 
     /**
-     *
-     * @return
+     * Gives an ArrrayList of all orders. This is used to show a list of all orders. Methods used to administrators
+     * @param
+     * @return ArrayList<Order> 
      * @throws SQLException
      */
     public ArrayList<Order> getOrders() throws SQLException
@@ -358,9 +360,9 @@ public class DataAccessObject
     }
 
     /**
-     *
+     * Gives an ArrrayList of user specific orders. This is used to show the list of orders for an customer
      * @param id
-     * @return
+     * @return ArrayList<Order> 
      * @throws SQLException
      */
     public ArrayList<Order> getOrders(int id) throws SQLException
@@ -391,3 +393,4 @@ public class DataAccessObject
     }
 
 }
+
