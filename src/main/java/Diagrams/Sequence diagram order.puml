@@ -1,0 +1,25 @@
+@startuml
+
+title Order cupcakes
+
+actor User
+boundary Shop.jsp
+boundary Confirmation.jsp
+participant Session
+participant ShopConfirmation
+participant DataAccessObject as DAO
+database CupcakeWebshop as DB
+
+
+User -> Shop.jsp : Order list of cupcakes
+Shop.jsp -> ShopConfirmation : forward()
+ShopConfirmation -> Session : getSession().getAttribute()
+ShopConfirmation -> DAO : newOrder()
+DAO -> DB : executeUpdate()
+ShopConfirmation -> DAO : newLineItem()
+DAO -> DB : executeUpdate()
+ShopConfirmation -> Confirmation.jsp : forward()
+Confirmation.jsp -> User : Order confirmed. Shows order
+
+
+@enduml

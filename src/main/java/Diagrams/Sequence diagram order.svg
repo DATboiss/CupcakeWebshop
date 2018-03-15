@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="497px" preserveAspectRatio="none" style="width:881px;height:497px;" version="1.1" viewBox="0 0 881 497" width="881px" zoomAndPan="magnify">
+    <defs>
+        <filter height="300%" id="f1pge2hx5booil" width="300%" x="-1" y="-1">
+            <feGaussianBlur result="blurOut" stdDeviation="2.0"/>
+            <feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/>
+            <feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/>
+            <feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/>
+        </filter>
+    </defs>
+    <g>
+        <text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="112" x="391.25" y="24.5332">Order cupcakes</text>
+        <line style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 5.0,5.0;" x1="25" x2="25" y1="119.2188" y2="412.3828"/>
+        <line style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 5.0,5.0;" x1="176" x2="176" y1="119.2188" y2="412.3828"/>
+        <line style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 5.0,5.0;" x1="271" x2="271" y1="119.2188" y2="412.3828"/>
+        <line style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 5.0,5.0;" x1="369" x2="369" y1="119.2188" y2="412.3828"/>
+        <line style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 5.0,5.0;" x1="544.5" x2="544.5" y1="119.2188" y2="412.3828"/>
+        <line style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 5.0,5.0;" x1="687.5" x2="687.5" y1="119.2188" y2="412.3828"/>
+        <line style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 5.0,5.0;" x1="825.5" x2="825.5" y1="119.2188" y2="412.3828"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="29" x="8" y="116.1426">User</text>
+        <ellipse cx="25.5" cy="44.6094" fill="#FEFECE" filter="url(#f1pge2hx5booil)" rx="8" ry="8" style="stroke: #A80036; stroke-width: 2.0;"/>
+        <path d="M25.5,52.6094 L25.5,79.6094 M12.5,60.6094 L38.5,60.6094 M25.5,79.6094 L12.5,94.6094 M25.5,79.6094 L38.5,94.6094 " fill="#FEFECE" filter="url(#f1pge2hx5booil)" style="stroke: #A80036; stroke-width: 2.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="29" x="8" y="425.916">User</text>
+        <ellipse cx="25.5" cy="438.9922" fill="#FEFECE" filter="url(#f1pge2hx5booil)" rx="8" ry="8" style="stroke: #A80036; stroke-width: 2.0;"/>
+        <path d="M25.5,446.9922 L25.5,473.9922 M12.5,454.9922 L38.5,454.9922 M25.5,473.9922 L12.5,488.9922 M25.5,473.9922 L38.5,488.9922 " fill="#FEFECE" filter="url(#f1pge2hx5booil)" style="stroke: #A80036; stroke-width: 2.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="55" x="146" y="116.1426">Shop.jsp</text>
+        <path d="M156,73.6094 L156,97.6094 M156,85.6094 L173,85.6094 " fill="#FEFECE" filter="url(#f1pge2hx5booil)" style="stroke: #A80036; stroke-width: 2.0;"/>
+        <ellipse cx="185" cy="85.6094" fill="#FEFECE" filter="url(#f1pge2hx5booil)" rx="12" ry="12" style="stroke: #A80036; stroke-width: 2.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="55" x="146" y="425.916">Shop.jsp</text>
+        <path d="M156,432.9922 L156,456.9922 M156,444.9922 L173,444.9922 " fill="#FEFECE" filter="url(#f1pge2hx5booil)" style="stroke: #A80036; stroke-width: 2.0;"/>
+        <ellipse cx="185" cy="444.9922" fill="#FEFECE" filter="url(#f1pge2hx5booil)" rx="12" ry="12" style="stroke: #A80036; stroke-width: 2.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="102" x="217" y="116.1426">Confirmation.jsp</text>
+        <path d="M250.5,73.6094 L250.5,97.6094 M250.5,85.6094 L267.5,85.6094 " fill="#FEFECE" filter="url(#f1pge2hx5booil)" style="stroke: #A80036; stroke-width: 2.0;"/>
+        <ellipse cx="279.5" cy="85.6094" fill="#FEFECE" filter="url(#f1pge2hx5booil)" rx="12" ry="12" style="stroke: #A80036; stroke-width: 2.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="102" x="217" y="425.916">Confirmation.jsp</text>
+        <path d="M250.5,432.9922 L250.5,456.9922 M250.5,444.9922 L267.5,444.9922 " fill="#FEFECE" filter="url(#f1pge2hx5booil)" style="stroke: #A80036; stroke-width: 2.0;"/>
+        <ellipse cx="279.5" cy="444.9922" fill="#FEFECE" filter="url(#f1pge2hx5booil)" rx="12" ry="12" style="stroke: #A80036; stroke-width: 2.0;"/>
+        <rect fill="#FEFECE" filter="url(#f1pge2hx5booil)" height="31.6094" style="stroke: #A80036; stroke-width: 1.5;" width="64" x="335" y="82.6094"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="50" x="342" y="104.1426">Session</text>
+        <rect fill="#FEFECE" filter="url(#f1pge2hx5booil)" height="31.6094" style="stroke: #A80036; stroke-width: 1.5;" width="64" x="335" y="411.3828"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="50" x="342" y="432.916">Session</text>
+        <rect fill="#FEFECE" filter="url(#f1pge2hx5booil)" height="31.6094" style="stroke: #A80036; stroke-width: 1.5;" width="127" x="479.5" y="82.6094"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="113" x="486.5" y="104.1426">ShopConfirmation</text>
+        <rect fill="#FEFECE" filter="url(#f1pge2hx5booil)" height="31.6094" style="stroke: #A80036; stroke-width: 1.5;" width="127" x="479.5" y="411.3828"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="113" x="486.5" y="432.916">ShopConfirmation</text>
+        <rect fill="#FEFECE" filter="url(#f1pge2hx5booil)" height="31.6094" style="stroke: #A80036; stroke-width: 1.5;" width="130" x="620.5" y="82.6094"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="116" x="627.5" y="104.1426">DataAccessObject</text>
+        <rect fill="#FEFECE" filter="url(#f1pge2hx5booil)" height="31.6094" style="stroke: #A80036; stroke-width: 1.5;" width="130" x="620.5" y="411.3828"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="116" x="627.5" y="432.916">DataAccessObject</text>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="116" x="764.5" y="116.1426">CupcakeWebshop</text>
+        <path d="M807.5,65.6094 C807.5,55.6094 825.5,55.6094 825.5,55.6094 C825.5,55.6094 843.5,55.6094 843.5,65.6094 L843.5,91.6094 C843.5,101.6094 825.5,101.6094 825.5,101.6094 C825.5,101.6094 807.5,101.6094 807.5,91.6094 L807.5,65.6094 " fill="#FEFECE" filter="url(#f1pge2hx5booil)" style="stroke: #000000; stroke-width: 1.5;"/>
+        <path d="M807.5,65.6094 C807.5,75.6094 825.5,75.6094 825.5,75.6094 C825.5,75.6094 843.5,75.6094 843.5,65.6094 " fill="none" style="stroke: #000000; stroke-width: 1.5;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="116" x="764.5" y="425.916">CupcakeWebshop</text>
+        <path d="M807.5,438.9922 C807.5,428.9922 825.5,428.9922 825.5,428.9922 C825.5,428.9922 843.5,428.9922 843.5,438.9922 L843.5,464.9922 C843.5,474.9922 825.5,474.9922 825.5,474.9922 C825.5,474.9922 807.5,474.9922 807.5,464.9922 L807.5,438.9922 " fill="#FEFECE" filter="url(#f1pge2hx5booil)" style="stroke: #000000; stroke-width: 1.5;"/>
+        <path d="M807.5,438.9922 C807.5,448.9922 825.5,448.9922 825.5,448.9922 C825.5,448.9922 843.5,448.9922 843.5,438.9922 " fill="none" style="stroke: #000000; stroke-width: 1.5;"/>
+        <polygon fill="#A80036" points="164.5,147.2188,174.5,151.2188,164.5,155.2188,168.5,151.2188" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <line style="stroke: #A80036; stroke-width: 1.0;" x1="25.5" x2="170.5" y1="151.2188" y2="151.2188"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="127" x="32.5" y="146.7139">Order list of cupcakes</text>
+        <polygon fill="#A80036" points="533,177.5703,543,181.5703,533,185.5703,537,181.5703" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <line style="stroke: #A80036; stroke-width: 1.0;" x1="176.5" x2="539" y1="181.5703" y2="181.5703"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="49" x="183.5" y="177.0654">forward()</text>
+        <polygon fill="#A80036" points="380,207.9219,370,211.9219,380,215.9219,376,211.9219" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <line style="stroke: #A80036; stroke-width: 1.0;" x1="374" x2="544" y1="211.9219" y2="211.9219"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="152" x="386" y="207.417">getSession().getAttribute()</text>
+        <polygon fill="#A80036" points="675.5,238.2734,685.5,242.2734,675.5,246.2734,679.5,242.2734" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <line style="stroke: #A80036; stroke-width: 1.0;" x1="545" x2="681.5" y1="242.2734" y2="242.2734"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="63" x="552" y="237.7686">newOrder()</text>
+        <polygon fill="#A80036" points="813.5,268.625,823.5,272.625,813.5,276.625,817.5,272.625" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <line style="stroke: #A80036; stroke-width: 1.0;" x1="687.5" x2="819.5" y1="272.625" y2="272.625"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="95" x="694.5" y="268.1201">executeUpdate()</text>
+        <polygon fill="#A80036" points="675.5,298.9766,685.5,302.9766,675.5,306.9766,679.5,302.9766" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <line style="stroke: #A80036; stroke-width: 1.0;" x1="545" x2="681.5" y1="302.9766" y2="302.9766"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="80" x="552" y="298.4717">newLineItem()</text>
+        <polygon fill="#A80036" points="813.5,329.3281,823.5,333.3281,813.5,337.3281,817.5,333.3281" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <line style="stroke: #A80036; stroke-width: 1.0;" x1="687.5" x2="819.5" y1="333.3281" y2="333.3281"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="95" x="694.5" y="328.8232">executeUpdate()</text>
+        <polygon fill="#A80036" points="282,359.6797,272,363.6797,282,367.6797,278,363.6797" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <line style="stroke: #A80036; stroke-width: 1.0;" x1="276" x2="544" y1="363.6797" y2="363.6797"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="49" x="288" y="359.1748">forward()</text>
+        <polygon fill="#A80036" points="36.5,390.0313,26.5,394.0313,36.5,398.0313,32.5,394.0313" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <line style="stroke: #A80036; stroke-width: 1.0;" x1="30.5" x2="270" y1="394.0313" y2="394.0313"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="172" x="42.5" y="389.5264">Order confirmed. Shows order</text>
+        <!--
+@startuml
+
+title Order cupcakes
+
+actor User
+boundary Shop.jsp
+boundary Confirmation.jsp
+participant Session
+participant ShopConfirmation
+participant DataAccessObject as DAO
+database CupcakeWebshop as DB
+
+
+User -> Shop.jsp : Order list of cupcakes
+Shop.jsp -> ShopConfirmation : forward()
+ShopConfirmation -> Session : getSession().getAttribute()
+ShopConfirmation -> DAO : newOrder()
+DAO -> DB : executeUpdate()
+ShopConfirmation -> DAO : newLineItem()
+DAO -> DB : executeUpdate()
+ShopConfirmation -> Confirmation.jsp : forward()
+Confirmation.jsp -> User : Order confirmed. Shows order
+
+
+@enduml
+
+PlantUML version 2017.11(Wed Apr 19 18:18:59 CEST 2017)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Java Version: 1.8.0_144-b01
+Operating System: Windows 10
+OS Version: 10.0
+Default Encoding: Cp1252
+Language: en
+Country: GB
+-->
+    </g>
+</svg>

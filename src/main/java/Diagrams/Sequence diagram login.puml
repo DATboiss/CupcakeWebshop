@@ -1,0 +1,11 @@
+@startuml
+
+title Login
+actor User
+boundary Index.jsp
+participant Session
+participant ShoppingCart
+
+
+
+@enduml

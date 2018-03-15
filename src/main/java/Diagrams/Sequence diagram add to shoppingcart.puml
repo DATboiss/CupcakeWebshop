@@ -1,0 +1,12 @@
+@startuml
+
+title Add to shopping cart
+actor User
+boundary Shop.jsp
+participant ShoppingCart
+
+User -> Shop.jsp : choose cupcake and qty
+Shop.jsp -> ShoppingCart : itemList.add(new LineItem())
+ShoppingCart -> Shop.jsp : print itemList
+
+@enduml
