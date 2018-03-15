@@ -15,6 +15,12 @@ public class Order
     private int totalPrice;
     private int customerID;
 
+    /**
+     *
+     * @param orderID
+     * @param totalPrice
+     * @param customerID
+     */
     public Order(int orderID, int totalPrice, int customerID)
     {
         this.id = orderID;
@@ -22,16 +28,28 @@ public class Order
         this.customerID = customerID;
     }    
 
+    /**
+     *
+     * @return
+     */
     public int getOrderID()
     {
         return id;
     }
 
+    /**
+     *
+     * @return
+     */
     public int getTotalPrice()
     {
         return totalPrice;
     }
 
+    /**
+     *
+     * @return
+     */
     public int getCustomerID()
     {
         return customerID;

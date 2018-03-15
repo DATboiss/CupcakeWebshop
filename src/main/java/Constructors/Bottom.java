@@ -15,6 +15,12 @@ public class Bottom
     private String name;
     private int price;
 
+    /**
+     *
+     * @param id
+     * @param name
+     * @param price
+     */
     public Bottom(int id, String name, int price)
     {
         this.id = id;
@@ -22,23 +28,37 @@ public class Bottom
         this.price = price;
     }
 
+    /**
+     *
+     * @return
+     */
     public int getId()
     {
         return id;
     }
 
+    /**
+     *
+     * @return
+     */
     public String getName()
     {
         return name;
     }
 
+    /**
+     *
+     * @return
+     */
     public int getPrice()
     {
         return price;
     }
     
-    
-    
+    /**
+     *
+     * @return
+     */
     @Override
     public String toString()
     {
