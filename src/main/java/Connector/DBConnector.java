@@ -3,6 +3,10 @@ package Connector;
 import java.sql.Connection;
 import java.sql.DriverManager;
 
+/**
+ *
+ * @author adams
+ */
 public class DBConnector
 {
 
@@ -11,10 +15,18 @@ public class DBConnector
     //Constants
     private static final String IP = "46.101.158.228";
     private static final int PORT = 3306;
+
+    /**
+     *
+     */
     public static final String DATABASE = "CupcakeWebshop";
     private static final String USERNAME = "testuser";
     private static final String PASSWORD = "password123";
 
+    /**
+     *
+     * @throws Exception
+     */
     public DBConnector() throws Exception
     {
         Class.forName("com.mysql.jdbc.Driver").newInstance();
@@ -22,6 +34,10 @@ public class DBConnector
         this.conn = (Connection) DriverManager.getConnection(url, USERNAME, PASSWORD);
     }
 
+    /**
+     *
+     * @return
+     */
     public Connection getConnection()
     {
         return this.conn;

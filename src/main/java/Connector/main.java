@@ -16,6 +16,11 @@ import java.util.ArrayList;
 public class main
 {
 
+    /**
+     *
+     * @param args
+     * @throws Exception
+     */
     public static void main(String[] args) throws Exception
     {
         DataAccessObject dao = new DataAccessObject();

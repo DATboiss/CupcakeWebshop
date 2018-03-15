@@ -1,10 +1,8 @@
 @startuml
 
 Title Logging in
-State "ErrorPage" as error
 
-
-
+State LoggedIn #Khaki
 
 note left of LoggedIn
 Username and role
@@ -12,32 +10,40 @@ stored in session
 end note
 
 [*] -> index.jsp
-index.jsp --> LoginServlet
-LoginServlet --> Registration.jsp
-Registration.jsp --> RegistrationServlet
+
+state registration #Wheat {
+
+index.jsp #Salmon --> LoginServlet #DodgerBlue
+LoginServlet --> Registration.jsp #Salmon
+Registration.jsp --> RegistrationServlet #DodgerBlue
 RegistrationServlet --> Registration.jsp : Registration fails
-RegistrationServlet --> regSucces.jsp  : Registration succesfull
+RegistrationServlet --> regSucces.jsp #Salmon  : Registration succesfull
+}
 
-state userAccess {
-LoginServlet --> Shop.jsp
-regSucces.jsp --> ShoppingCart
+state userAccess #Wheat {
+LoginServlet #DodgerBlue --> ShoppingCart #DodgerBlue
+regSucces.jsp #Salmon --> ShoppingCart
 ShoppingCart --> Shop.jsp
-Shop.jsp --> ShoppingCart : Add lineitem to shopping cart
-Shop.jsp --> OrderConfirmation : Place order
-OrderConfirmation --> Confirmation.jsp
+Shop.jsp #Salmon --> ShoppingCart : Add lineitem to shopping cart
+Shop.jsp -> OrderConfirmation : Place order
+OrderConfirmation #DodgerBlue --> Confirmation.jsp #Salmon
 
-NavBar --> index.jsp
-NavBar --> MyAccountServlet
+NavBar #Gold --> index.jsp
+NavBar --> MyAccountServlet #DodgerBlue
 NavBar --> ShoppingCart
 
 }
 
-state adminAccess {
-NavBar --> AdminServlet
+state adminAccess #Wheat {
+NavBar --> AdminServlet #DodgerBlue
 AdminServlet --> Admin.jsp 
-Admin.jsp --> AdminServlet : Search orders etc.
+Admin.jsp #Salmon --> AdminServlet : Search orders etc.
 }
 
-Confirmation.jsp --> [*]
+userAccess --> [*] : Log out
+adminAccess --> [*] : Log out
 
+registration --> errorPage #Salmon
+userAccess --> errorPage
+adminAccess --> errorPage
 @enduml

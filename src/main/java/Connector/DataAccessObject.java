@@ -22,11 +22,21 @@ public class DataAccessObject
 
     private final DBConnector conn;
 
+    /**
+     *
+     * @throws Exception
+     */
     public DataAccessObject() throws Exception
     {
         this.conn = new DBConnector();
     }
 
+    /**
+     *
+     * @param email
+     * @return
+     * @throws SQLException
+     */
     public Customer getCustomer(String email) throws SQLException
     {
         String sql = "select * from customer where cust_email = '?';";
@@ -48,6 +58,13 @@ public class DataAccessObject
         return customer;
     }
 
+    /**
+     *
+     * @param email
+     * @param password
+     * @return
+     * @throws SQLException
+     */
     public Customer checkCustomer(String email, String password) throws SQLException
     {
         String sql = "select * from customer where cust_email = ? and cust_password = ?;";
@@ -77,6 +94,12 @@ public class DataAccessObject
         return customer;
     }
 
+    /**
+     *
+     * @param prodID
+     * @return
+     * @throws SQLException
+     */
     public LineItem getLineItem(int prodID) throws SQLException
     {
         String sql = "select * from product where prod_id = ?";
@@ -98,6 +121,12 @@ public class DataAccessObject
         return lineItem;
     }
 
+    /**
+     *
+     * @param bottomName
+     * @return
+     * @throws SQLException
+     */
     public Bottom getBottom(String bottomName) throws SQLException
     {
         String sql = "select * from bottom where bot_name = ?";
@@ -115,6 +144,11 @@ public class DataAccessObject
         return bottom;
     }
 
+    /**
+     *
+     * @return
+     * @throws Exception
+     */
     public ArrayList<Bottom> getBottoms() throws Exception
     {
         Statement stmt = conn.getConnection().createStatement();
@@ -141,6 +175,12 @@ public class DataAccessObject
         return bottoms;
     }
 
+    /**
+     *
+     * @param toppingName
+     * @return
+     * @throws SQLException
+     */
     public Topping getTopping(String toppingName) throws SQLException
     {
         String sql = "select * from topping where top_name = ?";
@@ -158,6 +198,11 @@ public class DataAccessObject
         return topping;
     }
 
+    /**
+     *
+     * @return
+     * @throws Exception
+     */
     public ArrayList<Topping> getToppings() throws Exception
     {
         Statement stmt = conn.getConnection().createStatement();
@@ -183,8 +228,20 @@ public class DataAccessObject
         }
         return toppings;
     }
-    
-    
+
+    //husk booleans til at tilføje new users
+
+    /**
+     *
+     * @param email
+     * @param pw
+     * @param balance
+     * @param name
+     * @param address
+     * @param zip
+     * @return
+     * @throws SQLException
+     */
     public boolean newCustomer(String email, String pw, int balance, String name, String address, String zip) throws SQLException
     {
         String sql = "insert into `customer` (`cust_email`, `cust_password`, `cust_balance`, `cust_name`, `cust_address`, `cust_zip`) values (?, ?, ?, ?, ?, ?);";
@@ -207,6 +264,17 @@ public class DataAccessObject
         }
     }
 
+    /**
+     *
+     * @param name
+     * @param qty
+     * @param price
+     * @param bottomID
+     * @param toppingID
+     * @param orderID
+     * @return
+     * @throws SQLException
+     */
     public boolean newLineItem(String name, int qty, int price, int bottomID, int toppingID, int orderID) throws SQLException
     {
         String sql = "insert into product (prod_name, prod_qty, prod_price, bottom_bot_id, topping_top_id, order_order_id) "
@@ -230,6 +298,13 @@ public class DataAccessObject
         }
     }
 
+    /**
+     *
+     * @param order_total_price
+     * @param customer_id
+     * @return
+     * @throws SQLException
+     */
     public boolean newOrder(int order_total_price, int customer_id) throws SQLException
     {
         String sql = "insert into order (order_total_price, customer_cust_id) values (?, ?);";
@@ -249,6 +324,11 @@ public class DataAccessObject
 
     }
 
+    /**
+     *
+     * @return
+     * @throws SQLException
+     */
     public ArrayList<Order> getOrders() throws SQLException
     {
         Statement stmt = conn.getConnection().createStatement();
@@ -275,6 +355,12 @@ public class DataAccessObject
         return orders;
     }
 
+    /**
+     *
+     * @param id
+     * @return
+     * @throws SQLException
+     */
     public ArrayList<Order> getOrders(int id) throws SQLException
     {
         String sql = "select * from order where customer_cust_id = ?;";
