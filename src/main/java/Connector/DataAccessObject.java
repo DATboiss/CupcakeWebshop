@@ -183,8 +183,8 @@ public class DataAccessObject
         }
         return toppings;
     }
-
-    //husk booleans til at tilføje new users
+    
+    
     public boolean newCustomer(String email, String pw, int balance, String name, String address, String zip) throws SQLException
     {
         String sql = "insert into `customer` (`cust_email`, `cust_password`, `cust_balance`, `cust_name`, `cust_address`, `cust_zip`) values (?, ?, ?, ?, ?, ?);";
