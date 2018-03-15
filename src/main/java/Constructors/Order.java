@@ -16,7 +16,7 @@ public class Order
     private int customerID;
 
     /**
-     *
+     *  Constructor for the Order class
      * @param orderID
      * @param totalPrice
      * @param customerID

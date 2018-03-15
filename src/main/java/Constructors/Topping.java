@@ -6,7 +6,7 @@
 package Constructors;
 
 /**
- *
+ * Constructor for the Topping class
  * @author adams
  */
 public class Topping

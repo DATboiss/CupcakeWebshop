@@ -15,7 +15,7 @@ public class Customer {
     private int zip;
 
     /**
-     *
+     * Constructor for the Customer class
      * @param id
      * @param email
      * @param password

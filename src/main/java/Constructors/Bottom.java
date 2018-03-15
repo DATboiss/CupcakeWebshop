@@ -16,7 +16,7 @@ public class Bottom
     private int price;
 
     /**
-     *
+     * Constructor for the Bottom class
      * @param id
      * @param name
      * @param price

@@ -32,9 +32,10 @@ public class DataAccessObject
     }
 
     /**
-     *
+     * This method is used to search for a Customer in the database using an email string. If the method is succesful a
+     * Customer object with values will be returned, otherwise a null object will be returned.
      * @param email
-     * @return
+     * @return Customer
      * @throws SQLException
      */
     public Customer getCustomer(String email) throws SQLException

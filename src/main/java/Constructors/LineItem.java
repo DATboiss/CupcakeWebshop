@@ -20,7 +20,7 @@ public class LineItem
     private int order_id;
 
     /**
-     *
+     * Constructor for the LineItem class
      * @param id
      * @param name
      * @param qty
@@ -41,7 +41,7 @@ public class LineItem
     }
 
     /**
-     *
+     * Update the quantity attribute.
      * @param qty
      */
     public void setQty(int qty)
