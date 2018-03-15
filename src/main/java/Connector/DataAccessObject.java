@@ -23,7 +23,7 @@ public class DataAccessObject
     private final DBConnector conn;
 
     /**
-     *
+     * This class is used to pull data from the Database, and update/insert values into the database.
      * @throws Exception
      */
     public DataAccessObject() throws Exception
@@ -32,8 +32,7 @@ public class DataAccessObject
     }
 
     /**
-     * This method is used to search for a Customer in the database using an email string. If the method is succesful a
-     * Customer object with values will be returned, otherwise a null object will be returned.
+     * Searches the customer table for a row with the corresponding email, and returns it as an object. 
      * @param email
      * @return Customer
      * @throws SQLException
@@ -60,10 +59,11 @@ public class DataAccessObject
     }
 
     /**
-     *
+     * Searches the customer table for a row with the corresponding email and password.
+     * If the Customer is found, a Customer object will be returned, otherwise a null object will be found.
      * @param email
      * @param password
-     * @return
+     * @return Customer
      * @throws SQLException
      */
     public Customer checkCustomer(String email, String password) throws SQLException
@@ -96,9 +96,11 @@ public class DataAccessObject
     }
 
     /**
-     *
+     * Searches the database for a LineItem (Product in the Database)  with an integer, representing the prod_id.
+     * If a LineItem with the corresponding prod_id is found, a LineItem will be returned.
+     * Otherwise a null object will be returned.
      * @param prodID
-     * @return
+     * @return LineItem
      * @throws SQLException
      */
     public LineItem getLineItem(int prodID) throws SQLException
@@ -123,9 +125,9 @@ public class DataAccessObject
     }
 
     /**
-     *
+     * Searches the bottom table for the row with the corresponding bot_name, and returns it as a Bottom object.
      * @param bottomName
-     * @return
+     * @return Bottom
      * @throws SQLException
      */
     public Bottom getBottom(String bottomName) throws SQLException
@@ -146,8 +148,8 @@ public class DataAccessObject
     }
 
     /**
-     *
-     * @return
+     * Takes everything from the bottom table, and inserts it into an ArrayList of Bottom objects.
+     * @return ArrayList<Bottom>
      * @throws Exception
      */
     public ArrayList<Bottom> getBottoms() throws Exception
@@ -177,9 +179,9 @@ public class DataAccessObject
     }
 
     /**
-     *
+     * Searches the topping table of the database, for a row with the corresponding name, and returns it as an object.
      * @param toppingName
-     * @return
+     * @return Topping
      * @throws SQLException
      */
     public Topping getTopping(String toppingName) throws SQLException
@@ -200,8 +202,8 @@ public class DataAccessObject
     }
 
     /**
-     *
-     * @return
+     * Returns everything from the topping table, as Topping objects in an ArrayList.
+     * @return ArrayList<Topping>
      * @throws Exception
      */
     public ArrayList<Topping> getToppings() throws Exception
@@ -230,17 +232,16 @@ public class DataAccessObject
         return toppings;
     }
 
-    //husk booleans til at tilføje new users
 
     /**
-     *
+     * Updates the database, by inserting a new row into the customer table.
      * @param email
      * @param pw
      * @param balance
      * @param name
      * @param address
      * @param zip
-     * @return
+     * @return boolean
      * @throws SQLException
      */
     public boolean newCustomer(String email, String pw, int balance, String name, String address, String zip) throws SQLException
