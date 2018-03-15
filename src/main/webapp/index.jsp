@@ -6,7 +6,10 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-
+<%
+    if (session.getAttribute("customer") == null)
+    {
+%>
 <html>
     <head>
         <link href="RegStylesheet.css" rel="stylesheet">
@@ -21,7 +24,6 @@
         <ul>
             <li><a href="index.jsp">Home</a></li>
             <!-- <li><a href="contact.asp">My User</a></li> -->
-
         </ul>
 
     <center>
@@ -57,5 +59,30 @@
 </body>
 </html>
 
+<% } else { %>
+<html>
+    <head>
+        <link href="RegStylesheet.css" rel="stylesheet">
+        <title>Welcome</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+    <center>
+        <div class="backgroundLogin">
+            <div class="login">
+                <form action="Shoppingcart" method="post">
+                    <p>You are already logged in. Click here if you want to continue to the shop</p>
+                    <input type="submit" name="shop" value="Submit">
+                </form>
+            </div>
+        </div>
+    </center>
+</body>
+</html>
+
+
+<%            
+}
+%>
 
 

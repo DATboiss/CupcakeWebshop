@@ -17,7 +17,7 @@
 <% List<Topping> toppings = (ArrayList<Topping>) request.getSession().getAttribute("toppingList");%>
 <% List<Bottom> bottoms = (ArrayList<Bottom>) request.getSession().getAttribute("bottomList"); %>
 <% ArrayList<LineItem> cart = (ArrayList<LineItem>) request.getSession().getAttribute("itemList");
-   Customer user = ((Customer) request.getSession().getAttribute("Customer"));
+   Customer user = ((Customer) session.getAttribute("customer"));
 %>
 
 <html>
@@ -60,8 +60,7 @@
                     </option>
 
                 </select>
-                    <input type="number" name="amount" placeholder="Amount"><br>
-
+                    <input type="number" name="amount" placeholder="Amount" min="1" max="20" required><br>
                 <br><p><input type="submit" value="Add to cart" name="add"></p>
             </form>
             <form method="POST" action="Confirmation.jsp">

@@ -13,11 +13,11 @@
     <body>
         <div>
             
-        <form method="post" action="Login.jsp">
+        <form method="post" action="Shoppingcart">
             
             <h1>Registration Successful.</h1>
             
-            <input type="submit" name="return" value="Return to the login page">
+            <input type="submit" name="return" value="Go to shop">
             
         </form>
         </div>

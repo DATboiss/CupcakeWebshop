@@ -1,6 +1,7 @@
 package Servlets;
 
 import Connector.DataAccessObject;
+import Constructors.Customer;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.logging.Level;
@@ -11,6 +12,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  *
@@ -50,8 +52,10 @@ public class RegistrationServlet extends HttpServlet
             DataAccessObject dao = new DataAccessObject();
             if (pw.equals(pw2))
             {
-
+                HttpSession session = request.getSession();
                 dao.newCustomer(email, pw, balance, name, address, zip);
+                Customer loggedIn = dao.getCustomer(email);
+                session.setAttribute("customer", loggedIn);
                 String nextJSP = "/regSuccess.jsp";
                 RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(nextJSP);
                 dispatcher.forward(request, response);

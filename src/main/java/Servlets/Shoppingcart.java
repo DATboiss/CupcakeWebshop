@@ -22,6 +22,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  *
@@ -48,18 +49,17 @@ public class Shoppingcart extends HttpServlet
     {
         try (PrintWriter out = response.getWriter())
         {
+            HttpSession session = request.getSession();
             DataAccessObject DAO = new DataAccessObject();
             List<Bottom> bottomList = DAO.getBottoms();
             List<Topping> toppingList = DAO.getToppings();
-            request.getSession().setAttribute("bottomList", bottomList);
-            request.getSession().setAttribute("toppingList", toppingList);
-            ArrayList<LineItem> itemList = (ArrayList<LineItem>) request.getSession().getAttribute("itemList");
-            Customer loggedIn = ((Customer) request.getSession().getAttribute("Customer"));
-            request.getSession().setAttribute("Customer", loggedIn);
+            session.setAttribute("bottomList", bottomList);
+            session.setAttribute("toppingList", toppingList);
+            ArrayList<LineItem> itemList = (ArrayList<LineItem>) session.getAttribute("itemList");
             if (itemList == null)
             {
                 itemList = new ArrayList();
-                request.getSession().setAttribute("itemList", itemList);
+                session.setAttribute("itemList", itemList);
             }
 
             response.setContentType("text/html;charset=UTF-8");
@@ -72,36 +72,27 @@ public class Shoppingcart extends HttpServlet
                 int totalPrice = (selectTop.getPrice() + selectBot.getPrice());
                 int amount = (Integer.parseInt(request.getParameter("amount")));
                 boolean updatedQty = false;
-
                 LineItem item = new LineItem(0, selectTop.getName() + " " + selectBot.getName(), amount, totalPrice, selectBot.getId(), selectTop.getId(), 0);
+                
                 for (int i = 0; i < itemList.size(); i++)
                 {
                     if (itemList.get(i).getName().equals(top + " " + bot))
                     {
+                        updatedQty = true;
                         itemList.get(i).setQty(amount + itemList.get(i).getQty());
                     }
-
                 }
-                itemList.add(item);
-//                for (LineItem lineItem : itemList)
-//                {
-//                    if (lineItem.getName().equals(top + " " + bot))
-//                    {
-//                        int previous = lineItem.getQty();
-//                        item.setQty(amount += previous);
-//                        updatedQty = true;
-//                    } else{
-
-//                    }
-//
-//                }
+                if (updatedQty == false)
+                {
+                    itemList.add(item);
+                }
             }
 
             if (request.getParameter("Cancel") != null)
             {
                 itemList.clear();
             }
-            request.getSession().setAttribute("itemList", itemList);
+            session.setAttribute("itemList", itemList);
             String nextJSP = "/Shop.jsp";
             RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(nextJSP);
             dispatcher.forward(request, response);
