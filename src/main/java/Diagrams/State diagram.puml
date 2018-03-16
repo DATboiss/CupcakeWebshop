@@ -9,36 +9,35 @@ Username and role
 stored in session
 end note
 
-[*] -> index.jsp
+[*] -> index
 
 state registration #Wheat {
-
-index.jsp #Salmon --> LoginServlet #DodgerBlue
-LoginServlet --> Registration.jsp #Salmon
-Registration.jsp --> RegistrationServlet #DodgerBlue
-RegistrationServlet --> Registration.jsp : Registration fails
-RegistrationServlet --> regSucces.jsp #Salmon  : Registration succesfull
+index #Salmon -> Login #DodgerBlue
+Login --> Registration #Salmon
+Registration --> RegistrationServlet #DodgerBlue
+RegistrationServlet --> Registration : Registration fails
+Registration --> regSucces #Salmon  : Registration succesfull
 }
 
 state userAccess #Wheat {
-LoginServlet #DodgerBlue --> ShoppingCart #DodgerBlue
-regSucces.jsp #Salmon --> ShoppingCart
-ShoppingCart --> Shop.jsp
-Shop.jsp #Salmon --> ShoppingCart : Add lineitem to shopping cart
-Shop.jsp -> OrderConfirmation : Place order
-OrderConfirmation #DodgerBlue --> Confirmation.jsp #Salmon
+Login #DodgerBlue --> ShoppingCart #DodgerBlue
+regSucces #Salmon --> ShoppingCart
+ShoppingCart --> Shop
+Shop #Salmon --> ShoppingCart : Add lineitem to shopping cart
+Shop -> OrderConfirmation : Place order
+OrderConfirmation #DodgerBlue --> Confirmation #Salmon
 
-NavBar #Salmon --> NavServlet #DodgerBlue 
-NavServlet --> index.jsp
-NavBar --> MyAccountServlet #DodgerBlue
+NavBar #Salmon --> Navigation #DodgerBlue 
+Navigation -> index
+NavBar --> MyAccount #DodgerBlue
 NavBar --> ShoppingCart
 
 }
 
 state adminAccess #Wheat {
-NavBar --> AdminServlet #DodgerBlue
-AdminServlet --> Admin.jsp 
-Admin.jsp #Salmon --> AdminServlet : Search orders etc.
+NavBar -> Administration #DodgerBlue
+Administration --> Admin
+Admin #Salmon --> AdminServlet #DodgerBlue : Search orders etc.
 }
 
 userAccess --> [*] : Log out
