@@ -28,7 +28,8 @@ Shop.jsp #Salmon --> ShoppingCart : Add lineitem to shopping cart
 Shop.jsp -> OrderConfirmation : Place order
 OrderConfirmation #DodgerBlue --> Confirmation.jsp #Salmon
 
-NavBar #Gold --> index.jsp
+NavBar #Salmon --> NavServlet #DodgerBlue 
+NavServlet --> index.jsp
 NavBar --> MyAccountServlet #DodgerBlue
 NavBar --> ShoppingCart
 
