@@ -63,8 +63,8 @@
                     <input type="number" name="amount" placeholder="Amount" min="1" max="20" required><br>
                 <br><p><input type="submit" value="Add to cart" name="add"></p>
             </form>
-            <form method="POST" action="Confirmation.jsp">
-                <input type="submit" value="Continue">
+            <form method="POST" action="OrderConfirmation">
+                <input type="submit" value="Order">
 
             </form>
             <form method="POST" action="Shoppingcart">

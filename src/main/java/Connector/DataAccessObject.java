@@ -310,7 +310,7 @@ public class DataAccessObject
      */
     public boolean newOrder(int order_total_price, int customer_id) throws SQLException
     {
-        String sql = "insert into order (order_total_price, customer_cust_id) values (?, ?);";
+        String sql = "insert into `order` (order_total_price, customer_cust_id) values (?, ?)";
         PreparedStatement stmt = conn.getConnection().prepareStatement(sql);
         stmt.setInt(1, order_total_price);
         stmt.setInt(2, customer_id);
@@ -336,7 +336,7 @@ public class DataAccessObject
     public ArrayList<Order> getOrders() throws SQLException
     {
         Statement stmt = conn.getConnection().createStatement();
-        String sql = "select * from order;";
+        String sql = "select * from `order`;";
         ArrayList<Order> orders = new ArrayList<Order>();
         Order order = null;
         ResultSet rs = null;
@@ -367,7 +367,7 @@ public class DataAccessObject
      */
     public ArrayList<Order> getOrders(int id) throws SQLException
     {
-        String sql = "select * from order where customer_cust_id = ?;";
+        String sql = "select * from `order` where customer_cust_id = ?;";
         PreparedStatement stmt = conn.getConnection().prepareStatement(sql);
         stmt.setInt(1, id);
         ArrayList<Order> orders = new ArrayList<Order>();
@@ -390,6 +390,22 @@ public class DataAccessObject
             Logger.getLogger(DataAccessObject.class.getName()).log(Level.SEVERE, null, ex);
         }
         return orders;
+    }
+        public Order getOrder(int customerId) throws SQLException
+    {
+        String sql = "select * from `order` where customer_cust_id = ?";
+        PreparedStatement stmt = conn.getConnection().prepareStatement(sql);
+        stmt.setInt(1, customerId);
+        Order order = null;
+        ResultSet rs = stmt.executeQuery();
+        if (rs.next())
+        {
+            int id = rs.getInt("order_id");
+            int totalPrice = rs.getInt("order_total_price");
+            int cust_id = rs.getInt("customer_cust_id");
+            order = new Order(id, totalPrice, cust_id);
+        }
+        return order;
     }
 
 }

@@ -5,23 +5,32 @@
  */
 package Servlets;
 
+import Connector.DataAccessObject;
+import Constructors.Customer;
+import Constructors.LineItem;
+import Constructors.Order;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.ArrayList;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  *
  * @author adams
  */
-@WebServlet(name = "ShopConfirmation", urlPatterns =
+@WebServlet(name = "OrderConfirmation", urlPatterns =
 {
-    "/ShopConfirmation"
+    "/OrderConfirmation"
 })
-public class ShopConfirmation extends HttpServlet
+public class OrderConfirmation extends HttpServlet
 {
 
     /**
@@ -34,21 +43,33 @@ public class ShopConfirmation extends HttpServlet
      * @throws IOException if an I/O error occurs
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException
+            throws ServletException, IOException, Exception
     {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter())
         {
-            /* TODO output your page here. You may use following sample code. */
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>This will contain your order confirmation</title>");            
-            out.println("</head>");
-            out.println("<body>");
-            out.println("<h1>This will contain your order confirmation</h1>");
-            out.println("</body>");
-            out.println("</html>");
+            HttpSession session = request.getSession();
+            ArrayList<LineItem> itemList = ((ArrayList<LineItem>) session.getAttribute("itemList"));
+            DataAccessObject dao = new DataAccessObject();
+            Customer customer = ((Customer) session.getAttribute("customer"));
+            int totalPrice = 0;
+            for (LineItem lineItem : itemList)
+            {
+                totalPrice += lineItem.getPrice();
+            }
+            dao.newOrder(totalPrice, customer.getId());
+            Order order = dao.getOrder(customer.getId());
+            for (LineItem lineItem : itemList)
+            {
+                dao.newLineItem(lineItem.getName(), lineItem.getQty(), lineItem.getPrice(), lineItem.getBot_id(), lineItem.getTop_id(), order.getOrderID());
+            }
+            order = null;
+            
+            String nextJSP = "/Confirmation.jsp";
+            RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(nextJSP);
+            dispatcher.forward(request, response);
+
+
         }
     }
 
@@ -65,7 +86,13 @@ public class ShopConfirmation extends HttpServlet
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException
     {
-        processRequest(request, response);
+        try
+        {
+            processRequest(request, response);
+        } catch (Exception ex)
+        {
+            Logger.getLogger(OrderConfirmation.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 
     /**
@@ -80,7 +107,13 @@ public class ShopConfirmation extends HttpServlet
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException
     {
-        processRequest(request, response);
+        try
+        {
+            processRequest(request, response);
+        } catch (Exception ex)
+        {
+            Logger.getLogger(OrderConfirmation.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 
     /**
