@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="718px" preserveAspectRatio="none" style="width:1367px;height:718px;" version="1.1" viewBox="0 0 1367 718" width="1367px" zoomAndPan="magnify">
+<?xml version="1.0" encoding="UTF-8"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="700px" preserveAspectRatio="none" style="width:1205px;height:700px;" version="1.1" viewBox="0 0 1205 700" width="1205px" zoomAndPan="magnify">
     <defs>
-        <filter height="300%" id="fgcdoc4oqw78p" width="300%" x="-1" y="-1">
+        <filter height="300%" id="faqfb2o2gwcvm" width="300%" x="-1" y="-1">
             <feGaussianBlur result="blurOut" stdDeviation="2.0"/>
             <feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/>
             <feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/>
@@ -8,137 +8,137 @@
         </filter>
     </defs>
     <g>
-        <text fill="#000000" font-family="sans-serif" font-size="18" lengthAdjust="spacingAndGlyphs" textLength="83" x="651" y="18.6855">Logging in</text>
+        <text fill="#000000" font-family="sans-serif" font-size="18" lengthAdjust="spacingAndGlyphs" textLength="83" x="578.5" y="18.6855">Logging in</text>
         <!--cluster registration-->
-        <rect fill="#F5DEB3" filter="url(#fgcdoc4oqw78p)" height="430" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="369" x="30" y="135.6406"/>
-        <rect fill="#FFFFFF" height="396.3906" rx="12.5" ry="12.5" style="stroke: #FFFFFF; stroke-width: 1.0;" width="363" x="33" y="166.25"/>
-        <line style="stroke: #A80036; stroke-width: 1.5;" x1="30" x2="399" y1="163.25" y2="163.25"/>
-        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="71" x="179" y="154.1738">registration</text>
+        <rect fill="#F5DEB3" filter="url(#faqfb2o2gwcvm)" height="558" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="224.004" x="974.216" y="135.6406"/>
+        <rect fill="#FFFFFF" height="524.3906" rx="12.5" ry="12.5" style="stroke: #FFFFFF; stroke-width: 1.0;" width="218.004" x="977.216" y="166.25"/>
+        <line style="stroke: #A80036; stroke-width: 1.5;" x1="974.216" x2="1198.22" y1="163.25" y2="163.25"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="71" x="1050.72" y="154.1738">registration</text>
         <!--cluster userAccess-->
-        <rect fill="#F5DEB3" filter="url(#fgcdoc4oqw78p)" height="284" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="545" x="451" y="135.6406"/>
-        <rect fill="#FFFFFF" height="250.3906" rx="12.5" ry="12.5" style="stroke: #FFFFFF; stroke-width: 1.0;" width="539" x="454" y="166.25"/>
-        <line style="stroke: #A80036; stroke-width: 1.5;" x1="451" x2="996" y1="163.25" y2="163.25"/>
-        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="73" x="687" y="154.1738">userAccess</text>
+        <rect fill="#F5DEB3" filter="url(#faqfb2o2gwcvm)" height="284" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="545" x="372.216" y="135.6406"/>
+        <rect fill="#FFFFFF" height="250.3906" rx="12.5" ry="12.5" style="stroke: #FFFFFF; stroke-width: 1.0;" width="539" x="375.216" y="166.25"/>
+        <line style="stroke: #A80036; stroke-width: 1.5;" x1="372.216" x2="917.216" y1="163.25" y2="163.25"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="73" x="608.216" y="154.1738">userAccess</text>
         <!--cluster adminAccess-->
-        <rect fill="#F5DEB3" filter="url(#fgcdoc4oqw78p)" height="410" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="200" x="1062" y="301.6406"/>
-        <rect fill="#FFFFFF" height="376.3906" rx="12.5" ry="12.5" style="stroke: #FFFFFF; stroke-width: 1.0;" width="194" x="1065" y="332.25"/>
-        <line style="stroke: #A80036; stroke-width: 1.5;" x1="1062" x2="1262" y1="329.25" y2="329.25"/>
-        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="83" x="1120.5" y="320.1738">adminAccess</text>
-        <rect fill="#1E90FF" filter="url(#fgcdoc4oqw78p)" height="50" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="55" x="300.5" y="179.6406"/>
-        <line style="stroke: #A80036; stroke-width: 1.5;" x1="300.5" x2="355.5" y1="207.25" y2="207.25"/>
-        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="35" x="310.5" y="199.1738">Login</text>
-        <rect fill="#FA8072" filter="url(#fgcdoc4oqw78p)" height="50" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="96" x="109" y="345.6406"/>
-        <line style="stroke: #A80036; stroke-width: 1.5;" x1="109" x2="205" y1="373.25" y2="373.25"/>
-        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="76" x="119" y="365.1738">Registration</text>
-        <rect fill="#1E90FF" filter="url(#fgcdoc4oqw78p)" height="50" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="140" x="54" y="491.6406"/>
-        <line style="stroke: #A80036; stroke-width: 1.5;" x1="54" x2="194" y1="519.25" y2="519.25"/>
-        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="120" x="64" y="511.1738">RegistrationServlet</text>
-        <rect fill="#FA8072" filter="url(#fgcdoc4oqw78p)" height="50" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="87" x="254.5" y="491.6406"/>
-        <line style="stroke: #A80036; stroke-width: 1.5;" x1="254.5" x2="341.5" y1="519.25" y2="519.25"/>
-        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="67" x="264.5" y="511.1738">regSucces</text>
-        <rect fill="#1E90FF" filter="url(#fgcdoc4oqw78p)" height="50" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="107" x="475.5" y="345.6406"/>
-        <line style="stroke: #A80036; stroke-width: 1.5;" x1="475.5" x2="582.5" y1="373.25" y2="373.25"/>
-        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="87" x="485.5" y="365.1738">ShoppingCart</text>
-        <rect fill="#FA8072" filter="url(#fgcdoc4oqw78p)" height="50" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="53" x="483.5" y="179.6406"/>
-        <line style="stroke: #A80036; stroke-width: 1.5;" x1="483.5" x2="536.5" y1="207.25" y2="207.25"/>
-        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="33" x="493.5" y="199.1738">Shop</text>
-        <rect fill="#1E90FF" filter="url(#fgcdoc4oqw78p)" height="50" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="137" x="639.5" y="179.6406"/>
-        <line style="stroke: #A80036; stroke-width: 1.5;" x1="639.5" x2="776.5" y1="207.25" y2="207.25"/>
-        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="117" x="649.5" y="199.1738">OrderConfirmation</text>
-        <rect fill="#FA8072" filter="url(#fgcdoc4oqw78p)" height="50" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="100" x="618" y="345.6406"/>
-        <line style="stroke: #A80036; stroke-width: 1.5;" x1="618" x2="718" y1="373.25" y2="373.25"/>
-        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="80" x="628" y="365.1738">Confirmation</text>
-        <rect fill="#FA8072" filter="url(#fgcdoc4oqw78p)" height="50" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="66" x="849" y="179.6406"/>
-        <line style="stroke: #A80036; stroke-width: 1.5;" x1="849" x2="915" y1="207.25" y2="207.25"/>
-        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="46" x="859" y="199.1738">NavBar</text>
-        <rect fill="#1E90FF" filter="url(#fgcdoc4oqw78p)" height="50" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="86" x="878" y="345.6406"/>
-        <line style="stroke: #A80036; stroke-width: 1.5;" x1="878" x2="964" y1="373.25" y2="373.25"/>
-        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="66" x="888" y="365.1738">Navigation</text>
-        <rect fill="#1E90FF" filter="url(#fgcdoc4oqw78p)" height="50" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="89" x="753.5" y="345.6406"/>
-        <line style="stroke: #A80036; stroke-width: 1.5;" x1="753.5" x2="842.5" y1="373.25" y2="373.25"/>
-        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="69" x="763.5" y="365.1738">MyAccount</text>
-        <rect fill="#1E90FF" filter="url(#fgcdoc4oqw78p)" height="50" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="109" x="1105.5" y="345.6406"/>
-        <line style="stroke: #A80036; stroke-width: 1.5;" x1="1105.5" x2="1214.5" y1="373.25" y2="373.25"/>
-        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="89" x="1115.5" y="365.1738">Administration</text>
-        <rect fill="#FA8072" filter="url(#fgcdoc4oqw78p)" height="50" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="59" x="1107.5" y="491.6406"/>
-        <line style="stroke: #A80036; stroke-width: 1.5;" x1="1107.5" x2="1166.5" y1="519.25" y2="519.25"/>
-        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="39" x="1117.5" y="511.1738">Admin</text>
-        <rect fill="#1E90FF" filter="url(#fgcdoc4oqw78p)" height="50" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="103" x="1094.5" y="637.6406"/>
-        <line style="stroke: #A80036; stroke-width: 1.5;" x1="1094.5" x2="1197.5" y1="665.25" y2="665.25"/>
-        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="83" x="1104.5" y="657.1738">AdminServlet</text>
-        <rect fill="#F0E68C" filter="url(#fgcdoc4oqw78p)" height="50" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="79" x="896.5" y="30.6406"/>
-        <line style="stroke: #A80036; stroke-width: 1.5;" x1="896.5" x2="975.5" y1="58.25" y2="58.25"/>
-        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="59" x="906.5" y="50.1738">LoggedIn</text>
-        <polygon fill="#FBFB77" filter="url(#fgcdoc4oqw78p)" points="697,34.1406,697,76.8438,827,76.8438,827,44.1406,817,34.1406,697,34.1406" style="stroke: #A80036; stroke-width: 1.0;"/>
-        <polygon fill="#FBFB77" points="697,34.1406,697,76.8438,827,76.8438,827,59.6406,896.493,55.6406,827,51.6406,827,44.1406,817,34.1406,697,34.1406" style="stroke: #A80036; stroke-width: 1.0;"/>
-        <line style="stroke: #A80036; stroke-width: 1.0;" x1="817" x2="817" y1="34.1406" y2="44.1406"/>
-        <line style="stroke: #A80036; stroke-width: 1.0;" x1="827" x2="817" y1="44.1406" y2="44.1406"/>
-        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="109" x="703" y="52.6357">Username and role</text>
-        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="99" x="703" y="68.9873">stored in session</text>
-        <ellipse cx="1021" cy="55.6406" fill="#000000" filter="url(#fgcdoc4oqw78p)" rx="10" ry="10" style="stroke: none; stroke-width: 1.0;"/>
-        <rect fill="#FA8072" filter="url(#fgcdoc4oqw78p)" height="50" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="53" x="1100.5" y="30.6406"/>
-        <line style="stroke: #A80036; stroke-width: 1.5;" x1="1100.5" x2="1153.5" y1="58.25" y2="58.25"/>
-        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="33" x="1110.5" y="50.1738">index</text>
-        <ellipse cx="1331" cy="516.6406" fill="none" filter="url(#fgcdoc4oqw78p)" rx="10" ry="10" style="stroke: #000000; stroke-width: 1.0;"/>
-        <ellipse cx="1331.5" cy="517.1406" fill="#000000" rx="6" ry="6" style="stroke: none; stroke-width: 1.0;"/>
-        <rect fill="#FA8072" filter="url(#fgcdoc4oqw78p)" height="50" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="84" x="954" y="491.6406"/>
-        <line style="stroke: #A80036; stroke-width: 1.5;" x1="954" x2="1038" y1="519.25" y2="519.25"/>
-        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="64" x="964" y="511.1738">errorPage</text>
-        <path d="M1031.35,55.6406 C1052.68,55.6406 1074.01,55.6406 1095.34,55.6406 " fill="none" style="stroke: #A80036; stroke-width: 1.0;"/>
-        <polygon fill="#A80036" points="1100.47,55.6406,1091.47,51.6406,1095.47,55.6406,1091.47,59.6406,1100.47,55.6406" style="stroke: #A80036; stroke-width: 1.0;"/>
-        <path d="M1100.32,66.6056 C1085.44,71.7176 1066.43,77.5136 1049,80.6406 C973.527,94.1816 421.882,74.3616 360,119.6406 C342.732,132.2756 334.782,155.4716 331.122,174.2916 " fill="none" style="stroke: #A80036; stroke-width: 1.0;"/>
-        <polygon fill="#A80036" points="330.199,179.4716,335.7157,171.3128,331.0761,174.5492,327.8398,169.9095,330.199,179.4716" style="stroke: #A80036; stroke-width: 1.0;"/>
-        <path d="M302.768,229.8396 C271.612,259.7206 218.73,310.4376 185.952,341.8746 " fill="none" style="stroke: #A80036; stroke-width: 1.0;"/>
-        <polygon fill="#A80036" points="182.057,345.6096,191.321,342.2661,185.6653,342.1484,185.783,336.4928,182.057,345.6096" style="stroke: #A80036; stroke-width: 1.0;"/>
-        <path d="M108.964,394.7556 C90.0885,406.5466 70.4626,422.8446 60,443.6406 C51.7553,460.0276 62.3251,475.5906 77.1003,488.0266 " fill="none" style="stroke: #A80036; stroke-width: 1.0;"/>
-        <polygon fill="#A80036" points="81.367,491.4496,76.8499,482.6977,77.4669,488.3208,71.8438,488.9379,81.367,491.4496" style="stroke: #A80036; stroke-width: 1.0;"/>
-        <path d="M103.6393,491.5256 C94.439,477.6426 86.8576,459.7966 93,443.6406 C99.3559,426.9236 111.569,411.6086 123.638,399.4426 " fill="none" style="stroke: #A80036; stroke-width: 1.0;"/>
-        <polygon fill="#A80036" points="127.372,395.7696,118.1506,399.2289,123.8073,399.2757,123.7604,404.9324,127.372,395.7696" style="stroke: #A80036; stroke-width: 1.0;"/>
-        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="96" x="94" y="458.1357">Registration fails</text>
-        <path d="M180.6,395.7426 C205.408,421.0786 244.395,460.8956 270.559,487.6156 " fill="none" style="stroke: #A80036; stroke-width: 1.0;"/>
-        <polygon fill="#A80036" points="274.323,491.4596,270.8842,482.2306,270.8248,487.8871,265.1683,487.8277,274.323,491.4596" style="stroke: #A80036; stroke-width: 1.0;"/>
-        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="131" x="245" y="458.1357">Registration succesfull</text>
-        <path d="M355.527,228.1006 C391.939,257.8096 456.078,310.1416 495.334,342.1716 " fill="none" style="stroke: #A80036; stroke-width: 1.0;"/>
-        <polygon fill="#A80036" points="499.523,345.5896,495.0769,336.8014,495.6484,342.4294,490.0205,343.0008,499.523,345.5896" style="stroke: #A80036; stroke-width: 1.0;"/>
-        <path d="M336.994,491.4736 C352.006,482.1596 369.307,471.4146 385,461.6406 C418.967,440.4846 457.398,416.4606 486.01,398.5576 " fill="none" style="stroke: #A80036; stroke-width: 1.0;"/>
-        <polygon fill="#A80036" points="490.515,395.7386,480.7639,397.1228,486.2767,398.3913,485.0082,403.9041,490.515,395.7386" style="stroke: #A80036; stroke-width: 1.0;"/>
-        <path d="M542.42,345.6026 C554.85,325.8586 575.278,299.0416 601,285.6406 C617.041,277.2836 669.855,291.0446 682,277.6406 C687.372,271.7126 686.734,266.0896 682,259.6406 C665.28,236.8666 586.596,219.3566 541.664,211.0136 " fill="none" style="stroke: #A80036; stroke-width: 1.0;"/>
-        <polygon fill="#A80036" points="536.624,210.0896,544.7552,215.6469,541.542,210.9912,546.1977,207.7781,536.624,210.0896" style="stroke: #A80036; stroke-width: 1.0;"/>
-        <path d="M506.197,229.7686 C504.907,239.0776 503.633,249.8296 503,259.6406 C502.485,267.6236 501.902,269.7166 503,277.6406 C505.978,299.1306 512.693,322.6596 518.553,340.5436 " fill="none" style="stroke: #A80036; stroke-width: 1.0;"/>
-        <polygon fill="#A80036" points="520.179,345.4316,521.133,335.6291,518.6004,340.6874,513.5422,338.1548,520.179,345.4316" style="stroke: #A80036; stroke-width: 1.0;"/>
-        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="169" x="504" y="274.1357">Add lineitem to shopping cart</text>
-        <path d="M536.703,204.6406 C561.654,204.6406 600.077,204.6406 634.215,204.6406 " fill="none" style="stroke: #A80036; stroke-width: 1.0;"/>
-        <polygon fill="#A80036" points="639.218,204.6406,630.218,200.6406,634.218,204.6406,630.218,208.6406,639.218,204.6406" style="stroke: #A80036; stroke-width: 1.0;"/>
-        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="66" x="555" y="198.1357">Place order</text>
-        <path d="M702.885,229.6916 C699.847,243.7086 695.847,261.7086 692,277.6406 C686.9,298.7606 680.7,322.4836 675.879,340.5496 " fill="none" style="stroke: #A80036; stroke-width: 1.0;"/>
-        <polygon fill="#A80036" points="674.558,345.4886,680.7491,337.829,675.8508,340.6587,673.0212,335.7604,674.558,345.4886" style="stroke: #A80036; stroke-width: 1.0;"/>
-        <path d="M887.755,229.8396 C894.774,259.3566 906.628,309.2036 914.121,340.7156 " fill="none" style="stroke: #A80036; stroke-width: 1.0;"/>
-        <polygon fill="#A80036" points="915.285,345.6096,917.0936,335.9282,914.1279,340.7454,909.3107,337.7797,915.285,345.6096" style="stroke: #A80036; stroke-width: 1.0;"/>
-        <path d="M936.876,345.5176 C974.377,288.5386 1068.29,145.8426 1108.39,84.9236 " fill="none" style="stroke: #A80036; stroke-width: 1.0;"/>
-        <polygon fill="#A80036" points="1111.18,80.6816,1102.8868,85.9941,1108.428,84.8561,1109.566,90.3973,1111.18,80.6816" style="stroke: #A80036; stroke-width: 1.0;"/>
-        <path d="M869.606,229.8396 C854.425,259.4776 828.745,309.6146 812.616,341.1036 " fill="none" style="stroke: #A80036; stroke-width: 1.0;"/>
-        <polygon fill="#A80036" points="810.309,345.6096,817.9721,339.4227,812.5884,341.1594,810.8517,335.7757,810.309,345.6096" style="stroke: #A80036; stroke-width: 1.0;"/>
-        <path d="M848.89,221.3906 C811.646,238.3416 748.909,264.6176 692,277.6406 C672.211,282.1686 619.053,276.3576 601,285.6406 C577.02,297.9706 557.689,322.0376 545.119,341.2606 " fill="none" style="stroke: #A80036; stroke-width: 1.0;"/>
-        <polygon fill="#A80036" points="542.384,345.5326,550.6062,340.1109,545.0806,341.3221,543.8694,335.7964,542.384,345.5326" style="stroke: #A80036; stroke-width: 1.0;"/>
-        <path d="M915.238,227.7916 C916.494,228.4396 917.751,229.0586 919,229.6406 C996.092,265.5766 1033.36,235.4116 1102,285.6406 C1121.38,299.8226 1136.5,322.5286 1146.43,340.7596 " fill="none" style="stroke: #A80036; stroke-width: 1.0;"/>
-        <polygon fill="#A80036" points="1148.84,345.2906,1148.1391,335.4667,1146.4893,340.8777,1141.0783,339.2279,1148.84,345.2906" style="stroke: #A80036; stroke-width: 1.0;"/>
-        <path d="M1156.15,395.7426 C1152.17,420.6636 1145.95,459.5936 1141.69,486.2906 " fill="none" style="stroke: #A80036; stroke-width: 1.0;"/>
-        <polygon fill="#A80036" points="1140.86,491.4596,1146.228,483.2022,1141.6477,486.5221,1138.3279,481.9418,1140.86,491.4596" style="stroke: #A80036; stroke-width: 1.0;"/>
-        <path d="M1138.51,541.7426 C1140.06,566.6636 1142.5,605.5936 1144.17,632.2906 " fill="none" style="stroke: #A80036; stroke-width: 1.0;"/>
-        <polygon fill="#A80036" points="1144.49,637.4596,1147.9211,628.2278,1144.1783,632.4694,1139.9367,628.7265,1144.49,637.4596" style="stroke: #A80036; stroke-width: 1.0;"/>
-        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="107" x="1143" y="604.1357">Search orders etc.</text>
-        <path d="M996.0538,205.5538 C996.2107,205.5541 996.3697,205.5545 996.5308,205.5549 C996.853,205.5559 997.1837,205.5572 997.5226,205.5591 C1002.9458,205.5879 1010.4957,205.7323 1019.6766,206.1744 C1038.0383,207.0586 1062.924,209.1336 1090.3678,213.857 C1145.2553,223.3039 1210.375,243.3446 1254,285.6406 C1317.1,346.8246 1328.49,461.1436 1330.55,501.2716 " fill="none" style="stroke: #A80036; stroke-width: 1.0;"/>
-        <polygon fill="#A80036" points="1330.79,506.6386,1334.3841,497.469,1330.5667,501.6436,1326.3921,497.8262,1330.79,506.6386" style="stroke: #A80036; stroke-width: 1.0;"/>
-        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="43" x="1323" y="376.1357">Log out</text>
-        <path d="M1262.822,494.3228 C1263.201,494.4415 1263.5791,494.5599 1263.9564,494.678 C1264.7108,494.9142 1265.4616,495.1493 1266.2086,495.3832 C1269.1965,496.3187 1272.1236,497.235 1274.9802,498.1291 C1280.6935,499.9173 1286.1251,501.6166 1291.1981,503.2033 C1301.3442,506.3767 1310.0563,509.0996 1316.72,511.1816 " fill="none" style="stroke: #A80036; stroke-width: 1.0;"/>
-        <polygon fill="#A80036" points="1321.74,512.7486,1314.3533,506.2343,1316.97,511.2495,1311.9548,513.8662,1321.74,512.7486" style="stroke: #A80036; stroke-width: 1.0;"/>
-        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="43" x="1154" y="458.1357">Log out</text>
-        <path d="M399.0469,318.6273 C399.1279,319.0177 399.2097,319.4084 399.2922,319.7992 C399.6223,321.3626 399.964,322.9293 400.3177,324.4982 C401.0251,327.6362 401.7806,330.7836 402.5871,333.9331 C405.8133,346.5311 409.8572,359.1628 414.9151,371.3621 C425.0309,395.7608 439.2025,418.4299 459,435.6406 C531.81,498.9366 831.544,512.1586 948.733,514.9156 " fill="none" style="stroke: #A80036; stroke-width: 1.0;"/>
-        <polygon fill="#A80036" points="953.837,515.0316,944.9296,510.8295,948.8383,514.9188,944.749,518.8275,953.837,515.0316" style="stroke: #A80036; stroke-width: 1.0;"/>
-        <path d="M993.5342,420.0821 C993.5459,420.5342 993.5575,420.9854 993.5691,421.4358 C993.6621,425.0393 993.7538,428.5906 993.8438,432.0801 C994.0239,439.0592 994.1976,445.7909 994.3629,452.1973 C994.6936,465.0102 994.9906,476.5221 995.238,486.1096 " fill="none" style="stroke: #A80036; stroke-width: 1.0;"/>
-        <polygon fill="#A80036" points="995.375,491.4146,999.1397,482.3137,995.245,486.4163,991.1424,482.5217,995.375,491.4146" style="stroke: #A80036; stroke-width: 1.0;"/>
-        <path d="M1061.886,392.8854 C1061.8388,393.0038 1061.7914,393.1226 1061.7439,393.2417 C1061.5537,393.7183 1061.3606,394.2005 1061.1649,394.6883 C1060.7734,395.6639 1060.3711,396.6615 1059.9582,397.6792 C1059.1325,399.7147 1058.2648,401.8309 1057.3588,404.0132 C1050.11,421.4721 1040.4,443.1651 1030,461.6406 C1025.28,470.0306 1019.84,478.9466 1014.72,487.0656 " fill="none" style="stroke: #A80036; stroke-width: 1.0;"/>
-        <polygon fill="#A80036" points="1011.92,491.4856,1020.1235,486.0357,1014.6021,487.2658,1013.3719,481.7444,1011.92,491.4856" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <rect fill="#F5DEB3" filter="url(#faqfb2o2gwcvm)" height="392" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="200.0002" x="92.2158" y="301.6406"/>
+        <rect fill="#FFFFFF" height="358.3906" rx="12.5" ry="12.5" style="stroke: #FFFFFF; stroke-width: 1.0;" width="194.0002" x="95.2158" y="332.25"/>
+        <line style="stroke: #A80036; stroke-width: 1.5;" x1="92.2158" x2="292.216" y1="329.25" y2="329.25"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="83" x="150.716" y="320.1738">adminAccess</text>
+        <rect fill="#1E90FF" filter="url(#faqfb2o2gwcvm)" height="50" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="55" x="1017.72" y="179.6406"/>
+        <line style="stroke: #A80036; stroke-width: 1.5;" x1="1017.72" x2="1072.72" y1="207.25" y2="207.25"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="35" x="1027.72" y="199.1738">Login</text>
+        <rect fill="#FA8072" filter="url(#faqfb2o2gwcvm)" height="50" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="96" x="1012.22" y="345.6406"/>
+        <line style="stroke: #A80036; stroke-width: 1.5;" x1="1012.22" x2="1108.22" y1="373.25" y2="373.25"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="76" x="1022.22" y="365.1738">Registration</text>
+        <rect fill="#1E90FF" filter="url(#faqfb2o2gwcvm)" height="50" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="140" x="1020.22" y="491.6406"/>
+        <line style="stroke: #A80036; stroke-width: 1.5;" x1="1020.22" x2="1160.22" y1="519.25" y2="519.25"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="120" x="1030.22" y="511.1738">RegistrationServlet</text>
+        <rect fill="#FA8072" filter="url(#faqfb2o2gwcvm)" height="50" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="87" x="1006.72" y="619.6406"/>
+        <line style="stroke: #A80036; stroke-width: 1.5;" x1="1006.72" x2="1093.72" y1="647.25" y2="647.25"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="67" x="1016.72" y="639.1738">regSucces</text>
+        <rect fill="#1E90FF" filter="url(#faqfb2o2gwcvm)" height="50" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="107" x="650.716" y="345.6406"/>
+        <line style="stroke: #A80036; stroke-width: 1.5;" x1="650.716" x2="757.716" y1="373.25" y2="373.25"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="87" x="660.716" y="365.1738">ShoppingCart</text>
+        <rect fill="#FA8072" filter="url(#faqfb2o2gwcvm)" height="50" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="53" x="530.716" y="179.6406"/>
+        <line style="stroke: #A80036; stroke-width: 1.5;" x1="530.716" x2="583.716" y1="207.25" y2="207.25"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="33" x="540.716" y="199.1738">Shop</text>
+        <rect fill="#1E90FF" filter="url(#faqfb2o2gwcvm)" height="50" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="137" x="686.716" y="179.6406"/>
+        <line style="stroke: #A80036; stroke-width: 1.5;" x1="686.716" x2="823.716" y1="207.25" y2="207.25"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="117" x="696.716" y="199.1738">OrderConfirmation</text>
+        <rect fill="#FA8072" filter="url(#faqfb2o2gwcvm)" height="50" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="100" x="793.216" y="345.6406"/>
+        <line style="stroke: #A80036; stroke-width: 1.5;" x1="793.216" x2="893.216" y1="373.25" y2="373.25"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="80" x="803.216" y="365.1738">Confirmation</text>
+        <rect fill="#FA8072" filter="url(#faqfb2o2gwcvm)" height="50" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="66" x="425.216" y="179.6406"/>
+        <line style="stroke: #A80036; stroke-width: 1.5;" x1="425.216" x2="491.216" y1="207.25" y2="207.25"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="46" x="435.216" y="199.1738">NavBar</text>
+        <rect fill="#1E90FF" filter="url(#faqfb2o2gwcvm)" height="50" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="86" x="529.216" y="345.6406"/>
+        <line style="stroke: #A80036; stroke-width: 1.5;" x1="529.216" x2="615.216" y1="373.25" y2="373.25"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="66" x="539.216" y="365.1738">Navigation</text>
+        <rect fill="#1E90FF" filter="url(#faqfb2o2gwcvm)" height="50" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="89" x="404.716" y="345.6406"/>
+        <line style="stroke: #A80036; stroke-width: 1.5;" x1="404.716" x2="493.716" y1="373.25" y2="373.25"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="69" x="414.716" y="365.1738">MyAccount</text>
+        <rect fill="#1E90FF" filter="url(#faqfb2o2gwcvm)" height="50" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="109" x="151.716" y="345.6406"/>
+        <line style="stroke: #A80036; stroke-width: 1.5;" x1="151.716" x2="260.716" y1="373.25" y2="373.25"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="89" x="161.716" y="365.1738">Administration</text>
+        <rect fill="#FA8072" filter="url(#faqfb2o2gwcvm)" height="50" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="59" x="142.716" y="491.6406"/>
+        <line style="stroke: #A80036; stroke-width: 1.5;" x1="142.716" x2="201.716" y1="519.25" y2="519.25"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="39" x="152.716" y="511.1738">Admin</text>
+        <rect fill="#1E90FF" filter="url(#faqfb2o2gwcvm)" height="50" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="103" x="124.716" y="619.6406"/>
+        <line style="stroke: #A80036; stroke-width: 1.5;" x1="124.716" x2="227.716" y1="647.25" y2="647.25"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="83" x="134.716" y="639.1738">AdminServlet</text>
+        <rect fill="#F0E68C" filter="url(#faqfb2o2gwcvm)" height="50" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="79" x="698.716" y="30.6406"/>
+        <line style="stroke: #A80036; stroke-width: 1.5;" x1="698.716" x2="777.716" y1="58.25" y2="58.25"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="59" x="708.716" y="50.1738">LoggedIn</text>
+        <polygon fill="#FBFB77" filter="url(#faqfb2o2gwcvm)" points="499.216,34.1406,499.216,76.8438,629.216,76.8438,629.216,44.1406,619.216,34.1406,499.216,34.1406" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <polygon fill="#FBFB77" points="499.216,34.1406,499.216,76.8438,629.216,76.8438,629.216,59.6406,698.709,55.6406,629.216,51.6406,629.216,44.1406,619.216,34.1406,499.216,34.1406" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <line style="stroke: #A80036; stroke-width: 1.0;" x1="619.216" x2="619.216" y1="34.1406" y2="44.1406"/>
+        <line style="stroke: #A80036; stroke-width: 1.0;" x1="629.216" x2="619.216" y1="44.1406" y2="44.1406"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="109" x="505.216" y="52.6357">Username and role</text>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="99" x="505.216" y="68.9873">stored in session</text>
+        <ellipse cx="823.216" cy="55.6406" fill="#000000" filter="url(#faqfb2o2gwcvm)" rx="10" ry="10" style="stroke: none; stroke-width: 1.0;"/>
+        <rect fill="#FA8072" filter="url(#faqfb2o2gwcvm)" height="50" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="53" x="902.716" y="30.6406"/>
+        <line style="stroke: #A80036; stroke-width: 1.5;" x1="902.716" x2="955.716" y1="58.25" y2="58.25"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="33" x="912.716" y="50.1738">index</text>
+        <ellipse cx="26.2158" cy="516.6406" fill="none" filter="url(#faqfb2o2gwcvm)" rx="10" ry="10" style="stroke: #000000; stroke-width: 1.0;"/>
+        <ellipse cx="26.7158" cy="517.1406" fill="#000000" rx="6" ry="6" style="stroke: none; stroke-width: 1.0;"/>
+        <rect fill="#FA8072" filter="url(#faqfb2o2gwcvm)" height="50" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="84" x="316.216" y="491.6406"/>
+        <line style="stroke: #A80036; stroke-width: 1.5;" x1="316.216" x2="400.216" y1="519.25" y2="519.25"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="64" x="326.216" y="511.1738">errorPage</text>
+        <path d="M833.567,55.6406 C854.898,55.6406 876.228,55.6406 897.558,55.6406 " fill="none" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <polygon fill="#A80036" points="902.688,55.6406,893.688,51.6406,897.688,55.6406,893.688,59.6406,902.688,55.6406" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <path d="M955.859,70.8126 C974.473,81.9106 998.681,98.9176 1014.22,119.6406 C1026.3,135.7596 1034.09,157.0846 1038.84,174.2146 " fill="none" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <polygon fill="#A80036" points="1040.22,179.3866,1041.7642,169.6596,1038.9308,174.5557,1034.0347,171.7223,1040.22,179.3866" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <path d="M1047.43,229.8396 C1050.12,259.2346 1054.65,308.7936 1057.53,340.3256 " fill="none" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <polygon fill="#A80036" points="1058.02,345.6096,1061.1842,336.2829,1057.5649,340.6304,1053.2174,337.0111,1058.02,345.6096" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <path d="M1047.25,395.9246 C1039.19,414.3866 1031.81,440.1806 1040.22,461.6406 C1043.98,471.2506 1050.35,480.1726 1057.3,487.8836 " fill="none" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <polygon fill="#A80036" points="1060.75,491.5696,1057.51,482.269,1057.3292,487.9229,1051.6753,487.7422,1060.75,491.5696" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <path d="M1085.18,491.4596 C1079.98,466.5096 1071.87,427.5776 1066.31,400.9056 " fill="none" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <polygon fill="#A80036" points="1065.24,395.7426,1063.1581,405.3689,1066.259,400.6377,1070.9902,403.7386,1065.24,395.7426" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="96" x="1079.22" y="458.1357">Registration fails</text>
+        <path d="M1082.5,541.9346 C1075.92,562.6776 1066.43,592.5606 1059.44,614.5696 " fill="none" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <polygon fill="#A80036" points="1057.9,619.4211,1064.4331,612.051,1059.4112,614.655,1056.8072,609.6331,1057.9,619.4211" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="131" x="1073.22" y="586.1357">Registration succesfull</text>
+        <path d="M1017.41,227.7156 C1016.34,228.3846 1015.28,229.0296 1014.22,229.6406 C965.155,257.8986 951.388,264.9286 896.216,277.6406 C870.172,283.6416 800.111,273.6716 776.216,285.6406 C752.107,297.7166 732.788,321.8076 720.256,341.1056 " fill="none" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <polygon fill="#A80036" points="717.53,345.3946,725.7341,339.9456,720.2125,341.1751,718.983,335.6535,717.53,345.3946" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <path d="M1016.68,619.4758 C964.383,581.5076 860.648,505.0396 776.216,435.6406 C762.165,424.0916 747.059,410.8056 734.33,399.3426 " fill="none" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <polygon fill="#A80036" points="730.459,395.8466,734.4562,404.8479,734.1693,399.1983,739.8189,398.9114,730.459,395.8466" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <path d="M714.898,345.3726 C723.675,321.3406 732.037,284.6156 714.216,259.6406 C699.415,238.8976 630.165,221.0486 588.74,211.9906 " fill="none" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <polygon fill="#A80036" points="583.832,210.9296,591.7829,216.742,588.719,211.9867,593.4742,208.9228,583.832,210.9296" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <path d="M539.304,229.6536 C530.13,245.0666 523.169,264.5696 535.216,277.6406 C550.024,293.7076 613.787,275.6426 633.216,285.6406 C657.051,297.9066 676.095,321.9796 688.436,341.2216 " fill="none" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <polygon fill="#A80036" points="691.12,345.4976,689.7219,335.7485,688.4613,341.2631,682.9467,340.0025,691.12,345.4976" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="169" x="536.216" y="274.1357">Add lineitem to shopping cart</text>
+        <path d="M583.919,204.6406 C608.87,204.6406 647.293,204.6406 681.43,204.6406 " fill="none" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <polygon fill="#A80036" points="686.434,204.6406,677.434,200.6406,681.434,204.6406,677.434,208.6406,686.434,204.6406" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="66" x="602.216" y="198.1357">Place order</text>
+        <path d="M768.2,229.8396 C784.104,259.4776 811.006,309.6146 827.903,341.1036 " fill="none" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <polygon fill="#A80036" points="830.321,345.6096,829.5899,335.7879,827.9567,341.2039,822.5407,339.5708,830.321,345.6096" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <path d="M462.066,229.6896 C465.754,245.3166 472.832,265.0516 486.216,277.6406 C494.713,285.6336 501.763,278.8036 511.216,285.6406 C531.005,299.9546 546.937,322.6526 557.549,340.8476 " fill="none" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <polygon fill="#A80036" points="560.132,345.3686,559.1411,335.5697,557.6519,341.0271,552.1946,339.5379,560.132,345.3686" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <path d="M582.867,345.2786 C592.851,325.6146 609.763,299.0866 633.216,285.6406 C648.907,276.6446 696.604,281.7626 714.216,277.6406 C772.97,263.8896 796.283,269.9166 841.216,229.6406 C885.162,190.2496 910.165,123.7866 921.576,85.7286 " fill="none" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <polygon fill="#A80036" points="923.031,80.7796,916.6554,88.2864,921.621,85.5767,924.3307,90.5423,923.031,80.7796" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <path d="M456.888,229.8396 C455.275,259.2346 452.555,308.7936 450.825,340.3256 " fill="none" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <polygon fill="#A80036" points="450.535,345.6096,455.0227,336.8426,450.8093,340.6172,447.0347,336.4038,450.535,345.6096" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <path d="M471.925,229.8576 C482.732,246.4226 499.429,267.2046 520.216,277.6406 C565.211,300.2306 588.324,262.8446 633.216,285.6406 C657.117,297.7776 676.155,321.8636 688.476,341.1426 " fill="none" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <polygon fill="#A80036" points="691.156,345.4276,689.7742,335.6762,688.5043,341.1887,682.9918,339.9189,691.156,345.4276" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <path d="M425.012,227.2496 C379.345,256.9686 297.186,310.4376 247.58,342.7206 " fill="none" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <polygon fill="#A80036" points="243.179,345.5846,252.9039,344.0267,247.3693,342.8568,248.5393,337.3222,243.179,345.5846" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <path d="M200.525,395.7426 C194.641,420.6636 185.449,459.5936 179.146,486.2906 " fill="none" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <polygon fill="#A80036" points="177.925,491.4596,183.8857,483.6193,179.0737,486.5934,176.0997,481.7814,177.925,491.4596" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <path d="M172.987,541.9346 C173.643,562.5906 174.586,592.3096 175.284,614.2916 " fill="none" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <polygon fill="#A80036" points="175.447,619.4211,179.1569,610.2977,175.287,614.4237,171.161,610.5537,175.447,619.4211" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="107" x="176.216" y="586.1357">Search orders etc.</text>
+        <path d="M371.887,206.282 C370.2354,206.4154 368.3557,206.5702 366.2637,206.7471 C357.8955,207.4544 346.1306,208.5135 331.9835,209.9603 C303.6892,212.854 265.8661,217.2987 226.6312,223.5818 C148.1614,236.1479 64.0444,256.0676 39.2158,285.6406 C-14.4631,349.5766 10.7514,462.1596 21.8921,501.5526 " fill="none" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <polygon fill="#A80036" points="23.4226,506.8196,24.7514,497.0608,22.0269,502.0184,17.0694,499.2939,23.4226,506.8196" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="43" x="40.2158" y="376.1357">Log out</text>
+        <path d="M92.0885,387.4559 C92.013,387.6029 91.937,387.7507 91.8606,387.8994 C91.7078,388.1967 91.5534,388.4973 91.3973,388.8011 C86.4018,398.522 79.7257,411.5134 72.5484,425.4802 C58.1937,453.4139 41.8339,485.2491 32.9042,502.6256 " fill="none" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <polygon fill="#A80036" points="30.4939,507.3156,38.1657,501.1395,32.7795,502.8686,31.0505,497.4825,30.4939,507.3156" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="43" x="64.2158" y="458.1357">Log out</text>
+        <path d="M974.1051,307.209 C974.0293,307.5941 973.9529,307.9795 973.8758,308.3652 C973.7215,309.1368 973.5646,309.9096 973.405,310.6838 C973.0857,312.232 972.7554,313.7853 972.4139,315.3426 C971.0477,321.5719 969.5007,327.8665 967.7498,334.1677 C964.248,346.7701 959.9305,359.399 954.6124,371.5854 C943.9761,395.9583 929.3373,418.5609 909.216,435.6406 C833.607,499.8206 525.191,512.5126 405.765,515.0216 " fill="none" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <polygon fill="#A80036" points="400.565,515.1276,409.6443,518.9442,405.564,515.0262,409.482,510.9459,400.565,515.1276" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <path d="M372.2004,318.5851 C367.94,378.6194 363.0335,447.7596 360.312,486.1096 " fill="none" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <polygon fill="#A80036" points="359.935,491.4146,364.5625,482.7206,360.2892,486.4272,356.5826,482.1539,359.935,491.4146" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <path d="M292.282,494.236 C292.3519,494.2585 292.4218,494.281 292.4916,494.3035 C293.0508,494.4837 293.611,494.6643 294.1722,494.8453 C295.2945,495.2071 296.4204,495.5704 297.5481,495.9344 C302.059,497.3904 306.599,498.8586 311.055,500.3016 " fill="none" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <polygon fill="#A80036" points="315.966,501.8926,308.6354,495.3152,311.209,500.3527,306.1715,502.9263,315.966,501.8926" style="stroke: #A80036; stroke-width: 1.0;"/>
         <!--
 @startuml
 
@@ -158,7 +158,7 @@ index #Salmon -> Login #DodgerBlue
 Login - -> Registration #Salmon
 Registration - -> RegistrationServlet #DodgerBlue
 RegistrationServlet - -> Registration : Registration fails
-Registration - -> regSucces #Salmon  : Registration succesfull
+RegistrationServlet - -> regSucces #Salmon  : Registration succesfull
 }
 
 state userAccess #Wheat {
