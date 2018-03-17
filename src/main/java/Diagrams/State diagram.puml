@@ -16,7 +16,7 @@ index #Salmon -> Login #DodgerBlue
 Login --> Registration #Salmon
 Registration --> RegistrationServlet #DodgerBlue
 RegistrationServlet --> Registration : Registration fails
-Registration --> regSucces #Salmon  : Registration succesfull
+RegistrationServlet --> regSucces #Salmon  : Registration succesfull
 }
 
 state userAccess #Wheat {
