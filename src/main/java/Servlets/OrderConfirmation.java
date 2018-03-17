@@ -12,6 +12,7 @@ import Constructors.Order;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
+import java.util.Random;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.servlet.RequestDispatcher;
@@ -48,27 +49,30 @@ public class OrderConfirmation extends HttpServlet
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter())
         {
+            
             HttpSession session = request.getSession();
             ArrayList<LineItem> itemList = ((ArrayList<LineItem>) session.getAttribute("itemList"));
             DataAccessObject dao = new DataAccessObject();
             Customer customer = ((Customer) session.getAttribute("customer"));
+            Random random = new Random();
+            int orderId = random.nextInt(10000000)+1;
+            
             int totalPrice = 0;
+            
             for (LineItem lineItem : itemList)
             {
                 totalPrice += lineItem.getPrice();
             }
-            dao.newOrder(totalPrice, customer.getId());
-            Order order = dao.getOrder(customer.getId());
+            dao.newOrder(orderId, totalPrice, customer.getId());
+            Order order = dao.getOrder(orderId, customer.getId());
             for (LineItem lineItem : itemList)
             {
                 dao.newLineItem(lineItem.getName(), lineItem.getQty(), lineItem.getPrice(), lineItem.getBot_id(), lineItem.getTop_id(), order.getOrderID());
             }
-            order = null;
-            
+            session.setAttribute("orderId", order.getOrderID());
             String nextJSP = "/Confirmation.jsp";
             RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(nextJSP);
             dispatcher.forward(request, response);
-
 
         }
     }

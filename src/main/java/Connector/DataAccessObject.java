@@ -308,12 +308,13 @@ public class DataAccessObject
      * @return boolean
      * @throws SQLException
      */
-    public boolean newOrder(int order_total_price, int customer_id) throws SQLException
+    public boolean newOrder(int order_id, int order_total_price, int customer_id) throws SQLException
     {
-        String sql = "insert into `order` (order_total_price, customer_cust_id) values (?, ?)";
+        String sql = "insert into `order` (order_id, order_total_price, customer_cust_id) values (?, ?, ?)";
         PreparedStatement stmt = conn.getConnection().prepareStatement(sql);
-        stmt.setInt(1, order_total_price);
-        stmt.setInt(2, customer_id);
+        stmt.setInt(1, order_id);
+        stmt.setInt(2, order_total_price);
+        stmt.setInt(3, customer_id);
         try
         {
             stmt.executeUpdate();
@@ -391,11 +392,12 @@ public class DataAccessObject
         }
         return orders;
     }
-        public Order getOrder(int customerId) throws SQLException
+        public Order getOrder(int orderId, int customerId) throws SQLException
     {
-        String sql = "select * from `order` where customer_cust_id = ?";
+        String sql = "select * from `order` where order_id = ? and customer_cust_id = ?";
         PreparedStatement stmt = conn.getConnection().prepareStatement(sql);
-        stmt.setInt(1, customerId);
+        stmt.setInt(1, orderId);
+        stmt.setInt(2, customerId);
         Order order = null;
         ResultSet rs = stmt.executeQuery();
         if (rs.next())

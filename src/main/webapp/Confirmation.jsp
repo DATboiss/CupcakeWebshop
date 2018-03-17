@@ -19,6 +19,7 @@
         <h1>Order successful!</h1>
         <b>
             <% out.println("Your shopping cart:");%></b>
+            <% out.println("Order Id: " + session.getAttribute("orderId"));%></b>
             <% for (LineItem item : itemList)
                 {
                     out.println(item.getQty() + item.getName());

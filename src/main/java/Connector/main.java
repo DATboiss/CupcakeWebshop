@@ -24,8 +24,10 @@ public class main
     public static void main(String[] args) throws Exception
     {
         DataAccessObject dao = new DataAccessObject();
-        System.out.println("==newCustomer==");
-        System.out.println(dao.newCustomer("hejmeddig@gmail.com", "kasper123", 5, "Kasper Ø", "Lyngbyvej 30", "9000"));
+        System.out.println("===ORDER ID ====");
+        System.out.println(dao.getOrder(7467124, 2).getCustomerID());
+        System.out.println(dao.getOrder(7467124, 2).getOrderID());
+        System.out.println(dao.getOrder(7467124, 2).getTotalPrice());
         System.out.println("");
 
         System.out.println("==getBottom==");
@@ -52,13 +54,6 @@ public class main
         {
             System.out.println(topping);
         }
-        System.out.println("");
-
-//        System.out.println("==newOrder==");
-//        System.out.println(dao.newOrder(10, 2));
-//        
-//        System.out.println("==newLineItem==");
-//        System.out.println(dao.newLineItem("ChocolateNutmeg", 3, 5, 3, 1, 1));
     }
 
 }
