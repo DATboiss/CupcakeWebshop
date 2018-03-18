@@ -33,7 +33,7 @@ public class DataAccessObject
 
     /**
      * Searches the customer table for a row with the corresponding email, and returns it as an object. 
-     * @param email
+     * @param email - The users email
      * @return Customer
      * @throws SQLException
      */
@@ -61,8 +61,8 @@ public class DataAccessObject
     /**
      * Searches the customer table for a row with the corresponding email and password.
      * If the Customer is found, a Customer object will be returned, otherwise a null object will be found.
-     * @param email
-     * @param password
+     * @param email - The users email
+     * @param password - The users password
      * @return Customer
      * @throws SQLException
      */
@@ -99,7 +99,7 @@ public class DataAccessObject
      * Searches the database for a LineItem (Product in the Database)  with an integer, representing the prod_id.
      * If a LineItem with the corresponding prod_id is found, a LineItem will be returned.
      * Otherwise a null object will be returned.
-     * @param prodID
+     * @param prodID - Product id
      * @return LineItem
      * @throws SQLException
      */
@@ -126,7 +126,7 @@ public class DataAccessObject
 
     /**
      * Searches the bottom table for the row with the corresponding bot_name, and returns it as a Bottom object.
-     * @param bottomName
+     * @param bottomName - Self explanatory
      * @return Bottom
      * @throws SQLException
      */
@@ -149,7 +149,7 @@ public class DataAccessObject
 
     /**
      * Takes everything from the bottom table, and inserts it into an ArrayList of Bottom objects.
-     * @return ArrayList<Bottom>
+     * @return ArrayList - returns an arraylist of Bottom
      * @throws Exception
      */
     public ArrayList<Bottom> getBottoms() throws Exception
@@ -180,7 +180,7 @@ public class DataAccessObject
 
     /**
      * Searches the topping table of the database, for a row with the corresponding name, and returns it as an object.
-     * @param toppingName
+     * @param toppingName - Self explanatory
      * @return Topping
      * @throws SQLException
      */
@@ -203,7 +203,7 @@ public class DataAccessObject
 
     /**
      * Returns everything from the topping table, as Topping objects in an ArrayList.
-     * @return ArrayList<Topping>
+     * @return ArrayList - ArrayListt of Topping
      * @throws Exception
      */
     public ArrayList<Topping> getToppings() throws Exception
@@ -235,12 +235,12 @@ public class DataAccessObject
 
     /**
      * Updates the database, by inserting a new row into the customer table.
-     * @param email
-     * @param pw
-     * @param balance
-     * @param name
-     * @param address
-     * @param zip
+     * @param email - Self explanatory
+     * @param pw - Self explanatory
+     * @param balance - Self explanatory
+     * @param name - Self explanatory
+     * @param address - Self explanatory
+     * @param zip - Self explanatory
      * @return boolean
      * @throws SQLException
      */
@@ -268,12 +268,12 @@ public class DataAccessObject
 
     /**
      * Creates a new LineItem. An Order is needed in order to make this object. 
-     * @param name
-     * @param qty
-     * @param price
-     * @param bottomID
-     * @param toppingID
-     * @param orderID
+     * @param name - Self explanatory
+     * @param qty - Self explanatory
+     * @param price - Self explanatory
+     * @param bottomID - Self explanatory
+     * @param toppingID - Self explanatory
+     * @param orderID - Self explanatory
      * @return boolean
      * @throws SQLException
      */
@@ -303,8 +303,8 @@ public class DataAccessObject
     /**
      * Add an order to database. PreparedStatements are used to protect from SQL injections. Method will return true if succesfully added to database.
      * Otherwise it will return false if add was either by already used email or that the database is down
-     * @param order_total_price
-     * @param customer_id
+     * @param order_total_price - Total Price of the order
+     * @param customer_id - Self explanatory
      * @return boolean
      * @throws SQLException
      */
@@ -330,8 +330,8 @@ public class DataAccessObject
 
     /**
      * Gives an ArrrayList of all orders. This is used to show a list of all orders. Methods used to administrators
-     * @param
-     * @return ArrayList<Order> 
+     * 
+     * @return ArrayList - ArrayList of Order
      * @throws SQLException
      */
     public ArrayList<Order> getOrders() throws SQLException
@@ -362,8 +362,8 @@ public class DataAccessObject
 
     /**
      * Gives an ArrrayList of user specific orders. This is used to show the list of orders for an customer
-     * @param id
-     * @return ArrayList<Order> 
+     * @param id - the id of the customer.
+     * @return ArrayList - ArrayList of Order 
      * @throws SQLException
      */
     public ArrayList<Order> getOrders(int id) throws SQLException
