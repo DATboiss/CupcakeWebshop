@@ -7,7 +7,6 @@ package Servlets;
 
 import Connector.DataAccessObject;
 import Constructors.Bottom;
-import Constructors.Customer;
 import Constructors.LineItem;
 import Constructors.Topping;
 import java.io.IOException;
