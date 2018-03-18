@@ -28,7 +28,6 @@ import javax.servlet.http.HttpSession;
  * which are the items the user will add to their shoppingcart. 
  * The servlet can also clear the shopping cart (ArrayList of LineItem), and Update the shopping cart.
  * This servlet forwards to the Shop.jsp page.
- * 
  * @author adams
  */
 @WebServlet(name = "ShoppingCart", urlPatterns =
