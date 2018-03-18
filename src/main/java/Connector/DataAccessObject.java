@@ -14,7 +14,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 /**
- *
+ * This class is used to pull data from the Database, and update/insert values into the database.
  * @author emilv
  */
 public class DataAccessObject
@@ -23,7 +23,7 @@ public class DataAccessObject
     private final DBConnector conn;
 
     /**
-     * This class is used to pull data from the Database, and update/insert values into the database.
+     * 
      * @throws Exception
      */
     public DataAccessObject() throws Exception
