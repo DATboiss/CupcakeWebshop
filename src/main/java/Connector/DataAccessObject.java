@@ -392,12 +392,11 @@ public class DataAccessObject
         }
         return orders;
     }
-        public Order getOrder(int orderId, int customerId) throws SQLException
+        public Order getOrder(int orderId) throws SQLException
     {
-        String sql = "select * from `order` where order_id = ? and customer_cust_id = ?";
+        String sql = "select * from `order` where order_id = ?";
         PreparedStatement stmt = conn.getConnection().prepareStatement(sql);
         stmt.setInt(1, orderId);
-        stmt.setInt(2, customerId);
         Order order = null;
         ResultSet rs = stmt.executeQuery();
         if (rs.next())

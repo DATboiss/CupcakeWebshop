@@ -13,7 +13,7 @@
     <body>
         <div>
             
-        <form method="post" action="Shoppingcart">
+        <form method="post" action="ShoppingCart">
             
             <h1>Registration Successful.</h1>
             

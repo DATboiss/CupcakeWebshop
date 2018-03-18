@@ -70,7 +70,7 @@
     <center>
         <div class="backgroundLogin">
             <div class="login">
-                <form action="Shoppingcart" method="post">
+                <form action="ShoppingCart" method="post">
                     <p>You are already logged in. Click here if you want to continue to the shop</p>
                     <input type="submit" name="shop" value="Submit">
                 </form>

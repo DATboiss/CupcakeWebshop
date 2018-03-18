@@ -47,7 +47,7 @@ public class LoginServlet extends HttpServlet
             if (login != null)
             {
                 session.setAttribute("customer", login);
-                String nextJSP = "/Shoppingcart";
+                String nextJSP = "/ShoppingCart";
                 RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(nextJSP);
                 dispatcher.forward(request, response);
             }

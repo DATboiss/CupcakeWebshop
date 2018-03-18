@@ -18,7 +18,7 @@
 <body>
     <ul>
         <li><a href="index.jsp">Home</a></li>
-        <li><a href="Shoppingcart">Shoppingcart</a></li>
+        <li><a href="ShoppingCart">Shoppingcart</a></li>
        <!-- <li><a href="contact.asp">My User</a></li> -->
         
     </ul>

@@ -25,14 +25,18 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 /**
- *
+ * This servlet is used to save 3 ArrayLists in the sessioon. 1 for bottoms and 1 for toppings, which are used in 2 dropdown menus in the Shop.jsp page. The third ArrayList holds LineItem objects,
+ * which are the items the user will add to their shoppingcart. 
+ * The servlet can also clear the shopping cart (ArrayList of LineItem), and Update the shopping cart.
+ * This servlet forwards to the Shop.jsp page.
+ * 
  * @author adams
  */
-@WebServlet(name = "Shoppingcart", urlPatterns =
+@WebServlet(name = "ShoppingCart", urlPatterns =
 {
-    "/Shoppingcart"
+    "/ShoppingCart"
 })
-public class Shoppingcart extends HttpServlet
+public class ShoppingCart extends HttpServlet
 {
 
     /**
@@ -55,11 +59,11 @@ public class Shoppingcart extends HttpServlet
             List<Topping> toppingList = DAO.getToppings();
             session.setAttribute("bottomList", bottomList);
             session.setAttribute("toppingList", toppingList);
-            ArrayList<LineItem> itemList = (ArrayList<LineItem>) session.getAttribute("itemList");
+            ArrayList<LineItem> itemList = (ArrayList<LineItem>) session.getAttribute("shoppingCart");
             if (itemList == null)
             {
                 itemList = new ArrayList();
-                session.setAttribute("itemList", itemList);
+                session.setAttribute("shoppingCart", itemList);
             }
 
             response.setContentType("text/html;charset=UTF-8");
@@ -92,7 +96,7 @@ public class Shoppingcart extends HttpServlet
             {
                 itemList.clear();
             }
-            session.setAttribute("itemList", itemList);
+            session.setAttribute("shoppingCart", itemList);
             String nextJSP = "/Shop.jsp";
             RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(nextJSP);
             dispatcher.forward(request, response);
@@ -118,7 +122,7 @@ public class Shoppingcart extends HttpServlet
             processRequest(request, response);
         } catch (Exception ex)
         {
-            Logger.getLogger(Shoppingcart.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(ShoppingCart.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 
@@ -139,7 +143,7 @@ public class Shoppingcart extends HttpServlet
             processRequest(request, response);
         } catch (Exception ex)
         {
-            Logger.getLogger(Shoppingcart.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(ShoppingCart.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 

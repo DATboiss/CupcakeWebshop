@@ -16,7 +16,7 @@
 
 <% List<Topping> toppings = (ArrayList<Topping>) request.getSession().getAttribute("toppingList");%>
 <% List<Bottom> bottoms = (ArrayList<Bottom>) request.getSession().getAttribute("bottomList"); %>
-<% ArrayList<LineItem> cart = (ArrayList<LineItem>) request.getSession().getAttribute("itemList");
+<% ArrayList<LineItem> cart = (ArrayList<LineItem>) request.getSession().getAttribute("shoppingCart");
    Customer user = ((Customer) session.getAttribute("customer"));
 %>
 
@@ -30,7 +30,7 @@
     <body> 
         <ul>
             <li><a href="index.jsp">Home</a></li>
-            <li><a href="Shoppingcart">Shoppingcart</a></li>
+            <li><a href="ShoppingCart">Shoppingcart</a></li>
             <ul class="">
             <li><a><% out.println(user.getName()); %></a></li>
             </ul>
@@ -39,7 +39,7 @@
         </ul>
         <div class="shopcart">
             <h1>Welcome to Cutetastic cupcakes </h1>
-            <form method="POST" action="Shoppingcart">
+            <form method="POST" action="ShoppingCart">
                 <p> Choose your favourite bottom and toppings</p>
                 <p>Toppings</p>
                 <select  name="Toppings">
@@ -60,14 +60,14 @@
                     </option>
 
                 </select>
-                    <input type="number" name="amount" placeholder="Amount" min="1" max="20" required><br>
+                    <input type="number" name="amount" placeholder="Amount" min="1" required><br>
                 <br><p><input type="submit" value="Add to cart" name="add"></p>
             </form>
             <form method="POST" action="OrderConfirmation">
                 <input type="submit" value="Order">
 
             </form>
-            <form method="POST" action="Shoppingcart">
+            <form method="POST" action="ShoppingCart">
                 <p><input type="submit" value="Cancel" name="cancel"></p>
                     <% session.setAttribute("top", request.getParameter("Toppings"));
                         session.setAttribute("bot", request.getParameter("Bottoms"));

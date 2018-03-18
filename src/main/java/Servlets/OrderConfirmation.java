@@ -51,7 +51,7 @@ public class OrderConfirmation extends HttpServlet
         {
             
             HttpSession session = request.getSession();
-            ArrayList<LineItem> itemList = ((ArrayList<LineItem>) session.getAttribute("itemList"));
+            ArrayList<LineItem> itemList = ((ArrayList<LineItem>) session.getAttribute("shoppingCart"));
             DataAccessObject dao = new DataAccessObject();
             Customer customer = ((Customer) session.getAttribute("customer"));
             Random random = new Random();
@@ -64,7 +64,7 @@ public class OrderConfirmation extends HttpServlet
                 totalPrice += lineItem.getPrice();
             }
             dao.newOrder(orderId, totalPrice, customer.getId());
-            Order order = dao.getOrder(orderId, customer.getId());
+            Order order = dao.getOrder(orderId);
             for (LineItem lineItem : itemList)
             {
                 dao.newLineItem(lineItem.getName(), lineItem.getQty(), lineItem.getPrice(), lineItem.getBot_id(), lineItem.getTop_id(), order.getOrderID());
