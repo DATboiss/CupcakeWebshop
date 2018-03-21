@@ -39,7 +39,7 @@ public class DataAccessObject
      */
     public Customer getCustomer(String email) throws SQLException
     {
-        String sql = "select * from customer where cust_email = '?';";
+        String sql = "select * from customer where cust_email = ?";
         PreparedStatement stmt = conn.getConnection().prepareStatement(sql);
         stmt.setString(1, email);
         Customer customer = null;
