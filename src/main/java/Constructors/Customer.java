@@ -4,8 +4,9 @@ package Constructors;
  *
  * @author emilv
  */
-public class Customer {
-    
+public class Customer
+{
+
     private int id;
     private String email;
     private String password;
@@ -16,6 +17,7 @@ public class Customer {
 
     /**
      * Constructor for the Customer class
+     *
      * @param id
      * @param email
      * @param password
@@ -107,9 +109,5 @@ public class Customer {
     {
         return "Customer{" + "id=" + id + ", email=" + email + ", password=" + password + ", balance=" + balance + ", name=" + name + ", address=" + address + ", zip=" + zip + '}';
     }
-    
-    
 
-   
-    
 }

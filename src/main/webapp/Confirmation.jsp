@@ -43,17 +43,17 @@
                     </tr>
                 </thead>
                 <tbody>
-                <%
-                    for (LineItem item : itemList)
-                    { %> 
+                    <%
+                        for (LineItem item : itemList)
+                        { %> 
                     <tr>
-                        <th scope='row'><% out.print(count); %></th>
+                        <th scope='row'><% out.print(count++); %></th>
                         <td><% out.print(item.getQty());%></td>
                         <td><% out.print(item.getName()); %></td>
-                        <td><% out.print(item.getPrice());%></td>
-                    <% count++;
-                        }
-                    %>
+                        <td><% out.print(item.getPrice() * item.getQty());%></td>
+                        <%
+                            }
+                        %>
                     </tr>
                 </tbody>
             </table>

@@ -49,16 +49,16 @@ public class OrderConfirmation extends HttpServlet
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter())
         {
-            
+
             HttpSession session = request.getSession();
             ArrayList<LineItem> itemList = ((ArrayList<LineItem>) session.getAttribute("shoppingCart"));
             DataAccessObject dao = new DataAccessObject();
             Customer customer = ((Customer) session.getAttribute("customer"));
             Random random = new Random();
-            int orderId = random.nextInt(10000000)+1;
-            
+            int orderId = random.nextInt(10000000) + 1;
+
             int totalPrice = 0;
-            
+
             for (LineItem lineItem : itemList)
             {
                 totalPrice += lineItem.getPrice();
@@ -69,7 +69,7 @@ public class OrderConfirmation extends HttpServlet
             {
                 dao.newLineItem(lineItem.getName(), lineItem.getQty(), lineItem.getPrice(), lineItem.getBot_id(), lineItem.getTop_id(), order.getOrderID());
             }
-            session.setAttribute("orderId", order.getOrderID());
+            session.setAttribute("orderId", order.getOrderID()); // rest
             String nextJSP = "/Confirmation.jsp";
             RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(nextJSP);
             dispatcher.forward(request, response);

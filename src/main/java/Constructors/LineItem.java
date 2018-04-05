@@ -11,16 +11,18 @@ package Constructors;
  */
 public class LineItem
 {
+
     private int id;
     private String name;
     private int qty;
-    private int price; 
+    private int price;
     private int bot_id;
     private int top_id;
     private int order_id;
 
     /**
      * Constructor for the LineItem class
+     *
      * @param id
      * @param name
      * @param qty
@@ -42,13 +44,14 @@ public class LineItem
 
     /**
      * Update the quantity attribute.
+     *
      * @param qty
      */
     public void setQty(int qty)
     {
         this.qty = qty;
     }
-    
+
     /**
      *
      * @return

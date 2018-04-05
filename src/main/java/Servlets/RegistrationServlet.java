@@ -61,7 +61,7 @@ public class RegistrationServlet extends HttpServlet
                 dispatcher.forward(request, response);
             } else
             {
-            request.setAttribute("errorMessage", "Passwords do not match.");
+                request.setAttribute("errorMessage", "Passwords do not match.");
                 String nextJSP = "/Registration.jsp";
                 RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(nextJSP);
                 dispatcher.forward(request, response);

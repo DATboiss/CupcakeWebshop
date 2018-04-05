@@ -14,7 +14,9 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 /**
- * This class is used to pull data from the Database, and update/insert values into the database.
+ * This class is used to pull data from the Database, and update/insert values
+ * into the database.
+ *
  * @author emilv
  */
 public class DataAccessObject
@@ -23,7 +25,7 @@ public class DataAccessObject
     private final DBConnector conn;
 
     /**
-     * 
+     *
      * @throws Exception
      */
     public DataAccessObject() throws Exception
@@ -32,7 +34,9 @@ public class DataAccessObject
     }
 
     /**
-     * Searches the customer table for a row with the corresponding email, and returns it as an object. 
+     * Searches the customer table for a row with the corresponding email, and
+     * returns it as an object.
+     *
      * @param email - The users email
      * @return Customer
      * @throws SQLException
@@ -59,8 +63,10 @@ public class DataAccessObject
     }
 
     /**
-     * Searches the customer table for a row with the corresponding email and password.
-     * If the Customer is found, a Customer object will be returned, otherwise a null object will be found.
+     * Searches the customer table for a row with the corresponding email and
+     * password. If the Customer is found, a Customer object will be returned,
+     * otherwise a null object will be found.
+     *
      * @param email - The users email
      * @param password - The users password
      * @return Customer
@@ -96,9 +102,11 @@ public class DataAccessObject
     }
 
     /**
-     * Searches the database for a LineItem (Product in the Database)  with an integer, representing the prod_id.
-     * If a LineItem with the corresponding prod_id is found, a LineItem will be returned.
-     * Otherwise a null object will be returned.
+     * Searches the database for a LineItem (Product in the Database) with an
+     * integer, representing the prod_id. If a LineItem with the corresponding
+     * prod_id is found, a LineItem will be returned. Otherwise a null object
+     * will be returned.
+     *
      * @param prodID - Product id
      * @return LineItem
      * @throws SQLException
@@ -125,7 +133,9 @@ public class DataAccessObject
     }
 
     /**
-     * Searches the bottom table for the row with the corresponding bot_name, and returns it as a Bottom object.
+     * Searches the bottom table for the row with the corresponding bot_name,
+     * and returns it as a Bottom object.
+     *
      * @param bottomName - Self explanatory
      * @return Bottom
      * @throws SQLException
@@ -148,7 +158,9 @@ public class DataAccessObject
     }
 
     /**
-     * Takes everything from the bottom table, and inserts it into an ArrayList of Bottom objects.
+     * Takes everything from the bottom table, and inserts it into an ArrayList
+     * of Bottom objects.
+     *
      * @return ArrayList - returns an arraylist of Bottom
      * @throws Exception
      */
@@ -179,7 +191,9 @@ public class DataAccessObject
     }
 
     /**
-     * Searches the topping table of the database, for a row with the corresponding name, and returns it as an object.
+     * Searches the topping table of the database, for a row with the
+     * corresponding name, and returns it as an object.
+     *
      * @param toppingName - Self explanatory
      * @return Topping
      * @throws SQLException
@@ -202,7 +216,9 @@ public class DataAccessObject
     }
 
     /**
-     * Returns everything from the topping table, as Topping objects in an ArrayList.
+     * Returns everything from the topping table, as Topping objects in an
+     * ArrayList.
+     *
      * @return ArrayList - ArrayListt of Topping
      * @throws Exception
      */
@@ -232,9 +248,9 @@ public class DataAccessObject
         return toppings;
     }
 
-
     /**
      * Updates the database, by inserting a new row into the customer table.
+     *
      * @param email - Self explanatory
      * @param pw - Self explanatory
      * @param balance - Self explanatory
@@ -267,7 +283,8 @@ public class DataAccessObject
     }
 
     /**
-     * Creates a new LineItem. An Order is needed in order to make this object. 
+     * Creates a new LineItem. An Order is needed in order to make this object.
+     *
      * @param name - Self explanatory
      * @param qty - Self explanatory
      * @param price - Self explanatory
@@ -301,8 +318,11 @@ public class DataAccessObject
     }
 
     /**
-     * Add an order to database. PreparedStatements are used to protect from SQL injections. Method will return true if succesfully added to database.
-     * Otherwise it will return false if add was either by already used email or that the database is down
+     * Add an order to database. PreparedStatements are used to protect from SQL
+     * injections. Method will return true if succesfully added to database.
+     * Otherwise it will return false if add was either by already used email or
+     * that the database is down
+     *
      * @param order_total_price - Total Price of the order
      * @param customer_id - Self explanatory
      * @return boolean
@@ -329,8 +349,9 @@ public class DataAccessObject
     }
 
     /**
-     * Gives an ArrrayList of all orders. This is used to show a list of all orders. Methods used to administrators
-     * 
+     * Gives an ArrrayList of all orders. This is used to show a list of all
+     * orders. Methods used to administrators
+     *
      * @return ArrayList - ArrayList of Order
      * @throws SQLException
      */
@@ -361,9 +382,11 @@ public class DataAccessObject
     }
 
     /**
-     * Gives an ArrrayList of user specific orders. This is used to show the list of orders for an customer
+     * Gives an ArrrayList of user specific orders. This is used to show the
+     * list of orders for an customer
+     *
      * @param id - the id of the customer.
-     * @return ArrayList - ArrayList of Order 
+     * @return ArrayList - ArrayList of Order
      * @throws SQLException
      */
     public ArrayList<Order> getOrders(int id) throws SQLException
@@ -392,7 +415,8 @@ public class DataAccessObject
         }
         return orders;
     }
-        public Order getOrder(int orderId) throws SQLException
+
+    public Order getOrder(int orderId) throws SQLException
     {
         String sql = "select * from `order` where order_id = ?";
         PreparedStatement stmt = conn.getConnection().prepareStatement(sql);
@@ -410,4 +434,3 @@ public class DataAccessObject
     }
 
 }
-

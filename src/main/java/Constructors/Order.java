@@ -11,12 +11,14 @@ package Constructors;
  */
 public class Order
 {
+
     private int id;
     private int totalPrice;
     private int customerID;
 
     /**
-     *  Constructor for the Order class
+     * Constructor for the Order class
+     *
      * @param orderID
      * @param totalPrice
      * @param customerID
@@ -26,7 +28,7 @@ public class Order
         this.id = orderID;
         this.totalPrice = totalPrice;
         this.customerID = customerID;
-    }    
+    }
 
     /**
      *
@@ -54,6 +56,5 @@ public class Order
     {
         return customerID;
     }
-    
-    
+
 }

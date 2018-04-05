@@ -7,10 +7,12 @@ package Constructors;
 
 /**
  * Constructor for the Topping class
+ *
  * @author adams
  */
 public class Topping
 {
+
     private int id;
     private String name;
     private int price;

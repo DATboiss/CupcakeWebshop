@@ -17,7 +17,7 @@
 <% List<Topping> toppings = (ArrayList<Topping>) request.getSession().getAttribute("toppingList");%>
 <% List<Bottom> bottoms = (ArrayList<Bottom>) request.getSession().getAttribute("bottomList"); %>
 <% ArrayList<LineItem> cart = (ArrayList<LineItem>) request.getSession().getAttribute("shoppingCart");
-   Customer user = ((Customer) session.getAttribute("customer"));
+    Customer user = ((Customer) session.getAttribute("customer"));
 %>
 
 <html>
@@ -32,7 +32,7 @@
             <li><a href="index.jsp">Home</a></li>
             <li><a href="ShoppingCart">Shoppingcart</a></li>
             <ul class="">
-            <li><a><% out.println(user.getName()); %></a></li>
+                <li><a><% out.println(user.getName()); %></a></li>
             </ul>
             <!--<li><a href="contact.asp">My User</a></li> -->
 
@@ -60,7 +60,7 @@
                     </option>
 
                 </select>
-                    <input type="number" name="amount" placeholder="Amount" min="1" required><br>
+                <input type="number" name="amount" placeholder="Amount" min="1" required><br>
                 <br><p><input type="submit" value="Add to cart" name="add"></p>
             </form>
             <form method="POST" action="OrderConfirmation">
@@ -81,8 +81,6 @@
                 <% out.println("Your shopping cart:");%></b>
             <br>
             <%  //Test to see if it's working
-                out.println("is cart empty??");
-                out.println(cart.isEmpty() + " " + cart.size());
                 for (LineItem item : cart)
                 {
             %> <p> <%  out.println(item.getQty() + " " + item.getName() + " " + item.getPrice() + " kr."); %> </p><%

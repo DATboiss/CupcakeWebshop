@@ -12,15 +12,15 @@
     </head>
     <body>
         <div>
-            
-        <form method="post" action="ShoppingCart">
-            
-            <h1>Registration Successful.</h1>
-            
-            <input type="submit" name="return" value="Go to shop">
-            
-        </form>
+
+            <form method="post" action="ShoppingCart">
+
+                <h1>Registration Successful.</h1>
+
+                <input type="submit" name="return" value="Go to shop">
+
+            </form>
         </div>
-             
+
     </body>
 </html>

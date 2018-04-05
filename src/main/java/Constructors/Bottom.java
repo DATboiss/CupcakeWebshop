@@ -11,12 +11,14 @@ package Constructors;
  */
 public class Bottom
 {
+
     private int id;
     private String name;
     private int price;
 
     /**
      * Constructor for the Bottom class
+     *
      * @param id
      * @param name
      * @param price
@@ -54,7 +56,7 @@ public class Bottom
     {
         return price;
     }
-    
+
     /**
      *
      * @return
@@ -62,9 +64,7 @@ public class Bottom
     @Override
     public String toString()
     {
-        return  name +  price + " kr.";
+        return name + price + " kr.";
     }
-    
-     
-    
+
 }

@@ -24,10 +24,13 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 /**
- * This servlet is used to save 3 ArrayLists in the sessioon. 1 for bottoms and 1 for toppings, which are used in 2 dropdown menus in the Shop.jsp page. The third ArrayList holds LineItem objects,
- * which are the items the user will add to their shoppingcart. 
- * The servlet can also clear the shopping cart (ArrayList of LineItem), and Update the shopping cart.
- * This servlet forwards to the Shop.jsp page.
+ * This servlet is used to save 3 ArrayLists in the sessioon. 1 for bottoms and
+ * 1 for toppings, which are used in 2 dropdown menus in the Shop.jsp page. The
+ * third ArrayList holds LineItem objects, which are the items the user will add
+ * to their shoppingcart. The servlet can also clear the shopping cart
+ * (ArrayList of LineItem), and Update the shopping cart. This servlet forwards
+ * to the Shop.jsp page.
+ *
  * @author adams
  */
 @WebServlet(name = "ShoppingCart", urlPatterns =
@@ -75,7 +78,7 @@ public class ShoppingCart extends HttpServlet
                 int amount = (Integer.parseInt(request.getParameter("amount")));
                 boolean updatedQty = false;
                 LineItem item = new LineItem(0, selectTop.getName() + " " + selectBot.getName(), amount, totalPrice, selectBot.getId(), selectTop.getId(), 0);
-                
+
                 for (int i = 0; i < itemList.size(); i++)
                 {
                     if (itemList.get(i).getName().equals(top + " " + bot))

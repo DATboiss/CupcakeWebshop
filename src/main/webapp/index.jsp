@@ -59,7 +59,8 @@
 </body>
 </html>
 
-<% } else { %>
+<% } else
+{ %>
 <html>
     <head>
         <link href="RegStylesheet.css" rel="stylesheet">
@@ -81,8 +82,8 @@
 </html>
 
 
-<%            
-}
+<%
+    }
 %>
 
 
